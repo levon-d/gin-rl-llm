@@ -1,0 +1,4 @@
+MethodName,BaselineRuntime(ms),BestRuntime(ms),RuntimeReduction(ms),ImprovementPercent,BestPatch
+"com.google.gson.internal.bind.DefaultDateTypeAdapter.com.google.gson.internal.bind.DefaultDateTypeAdapter.deserializeToDate(JsonReader)",74.00,58.00,16.00,21.62,"|"
+"com.google.gson.internal.bind.util.ISO8601Utils.com.google.gson.internal.bind.util.ISO8601Utils.parse(String,ParsePosition)",11.00,10.00,1.00,9.09,"| gin.edit.matched.MatchedCopyStatement 'src/main/java/com/google/gson/internal/bind/util/ISO8601Utils.java':508 -> 'src/main/java/com/google/gson/internal/bind/util/ISO8601Utils.java':984:984 |"
+"TOTAL",85.00,68.00,17.00,20.00,""

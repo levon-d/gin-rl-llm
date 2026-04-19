@@ -1,0 +1,4 @@
+MethodName,BaselineRuntime(ms),BestRuntime(ms),RuntimeReduction(ms),ImprovementPercent,BestPatch
+"com.google.gson.internal.bind.DefaultDateTypeAdapter.com.google.gson.internal.bind.DefaultDateTypeAdapter.deserializeToDate(JsonReader)",76.00,59.00,17.00,22.37,"|"
+"com.google.gson.internal.bind.util.ISO8601Utils.com.google.gson.internal.bind.util.ISO8601Utils.parse(String,ParsePosition)",10.00,10.00,0.00,0.00,"|"
+"TOTAL",86.00,69.00,17.00,19.77,""

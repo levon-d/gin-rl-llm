@@ -1,0 +1,15 @@
+Metric,Value,Percentage
+TotalPatches,100,100.00
+CompilingPatches,10,10.00
+PassingPatches,4,4.00
+ImprovingPatches,4,4.00
+
+Operator,Attempts,Passes,PassRate,Improvements,ImprovementRate
+MatchedDeleteStatement,9,0,0.00,0,0.00
+CopyStatement,19,1,5.26,1,5.26
+MatchedReplaceStatement,10,1,10.00,1,10.00
+ReplaceStatement,14,0,0.00,0,0.00
+MatchedSwapStatement,14,1,7.14,1,7.14
+MatchedCopyStatement,11,1,9.09,1,9.09
+DeleteStatement,9,0,0.00,0,0.00
+SwapStatement,14,0,0.00,0,0.00

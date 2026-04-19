@@ -1,0 +1,190 @@
+"MethodName","Iteration","EvaluationNumber","Patch","Compiled","AllTestsPassed","TotalExecutionTime(ms)","Runtime(ms)","RuntimeImprovement(ms)"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","-1","0","|","true","true","7732.4346","7732.0","0.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","1","1","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2934 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3305:3598 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","2","2","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3640 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","3","3","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3630 MINUS -> LOGICAL_COMPLEMENT |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","4","4","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3612 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3456 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","5","5","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3518 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3518 |","true","true","8305.53","8305.0","-573.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","6","6","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3403 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3403 |","true","true","8371.139","8371.0","-639.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","7","7","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3305
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    int p1 = pelsP[p1Idx];
+    int p0 = pelsP[p0Idx];
+    int q0 = pelsQ[q0Idx];
+    int q1 = pelsQ[q1Idx];
+    int alphaThresh = alphaTab[indexAlpha];
+    int betaThresh = betaTab[indexBeta];
+    boolean filterEnabled = abs(p0 - q0) < alphaThresh && abs(p1 - p0) < betaThresh && abs(q1 - q0) < betaThresh;
+    if (!filterEnabled)
+        return;
+    // System.out.printf(""%h %h %h %h %h %h %h %h\n"", q3, q2, q1, q0, p0,
+    // p1, p2, p3);
+    int tC0 = tcs[bs - 1][indexAlpha];
+    boolean conditionP, conditionQ;
+    int tC;
+    if (!isChroma) {
+        int ap = abs(pelsP[p2Idx] - p0);
+        int aq = abs(pelsQ[q2Idx] - q0);
+        tC = tC0 + ((ap < betaThresh) ? 1 : 0) + ((aq < betaThresh) ? 1 : 0);
+        conditionP = ap < betaThresh;
+        conditionQ = aq < betaThresh;
+    } else {
+        tC = tC0 + 1;
+        conditionP = false;
+        conditionQ = false;
+    }
+    int sigma = ((((q0 - p0) << 2) + (p1 - q1) + 4) >> 3);
+    sigma = sigma < -tC ? -tC : (sigma > tC ? tC : sigma);
+    int p0n = p0 + sigma;
+    p0n = p0n < -128 ? -128 : p0n;
+    int q0n = q0 - sigma;
+    q0n = q0n < -128 ? -128 : q0n;
+    if (conditionP) {
+        int p2 = pelsP[p2Idx];
+        // <<PLACEHOLDER>>
+        ;
+        diff = diff < -tC0 ? -tC0 : (diff > tC0 ? tC0 : diff);
+        int p1n = p1 + diff;
+        pelsP[p1Idx] = (byte) clip(p1n, -128, 127);
+    }
+    if (conditionQ) {
+        int q2 = pelsQ[q2Idx];
+        int diff = (q2 + ((p0 + q0 + 1) >> 1) - (q1 << 1)) >> 1;
+        diff = diff < -tC0 ? -tC0 : (diff > tC0 ? tC0 : diff);
+        int q1n = q1 + diff;
+        pelsQ[q1Idx] = (byte) clip(q1n, -128, 127);
+    }
+    pelsQ[q0Idx] = (byte) clip(q0n, -128, 127);
+    pelsP[p0Idx] = (byte) clip(p0n, -128, 127);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","8","8","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3305
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int p1 = pelsP[p1Idx];
+    int p0 = pelsP[p0Idx];
+    int q0 = pelsQ[q0Idx];
+    int q1 = pelsQ[q1Idx];
+    int alphaThresh = alphaTab[indexAlpha];
+    int betaThresh = betaTab[indexBeta];
+    boolean filterEnabled = abs(p0 - q0) < alphaThresh && abs(p1 - p0) < betaThresh && abs(q1 - q0) < betaThresh;
+    if (!filterEnabled)
+        return;
+    // System.out.printf(""%h %h %h %h %h %h %h %h\n"", q3, q2, q1, q0, p0,
+    // p1, p2, p3);
+    int tC0 = tcs[bs - 1][indexAlpha];
+    boolean conditionP, conditionQ;
+    int tC;
+    if (!isChroma) {
+        int ap = abs(pelsP[p2Idx] - p0);
+        int aq = abs(pelsQ[q2Idx] - q0);
+        tC = tC0 + ((ap < betaThresh) ? 1 : 0) + ((aq < betaThresh) ? 1 : 0);
+        conditionP = ap < betaThresh;
+        conditionQ = aq < betaThresh;
+    } else {
+        tC = tC0 + 1;
+        conditionP = false;
+        conditionQ = false;
+    }
+    int sigma = ((((q0 - p0) << 2) + (p1 - q1) + 4) >> 3);
+    sigma = sigma < -tC ? -tC : (sigma > tC ? tC : sigma);
+    int p0n = p0 + sigma;
+    p0n = p0n < -128 ? -128 : p0n;
+    int q0n = q0 - sigma;
+    q0n = q0n < -128 ? -128 : q0n;
+    if (conditionP) {
+        int p2 = pelsP[p2Idx];
+        int diff = (p2 + ((p0 + q0 + 1) >> 1) - (p1 << 1)) >> 1;
+        diff = diff < -tC0 ? -tC0 : (diff > tC0 ? tC0 : diff);
+        int p1n = p1 + diff;
+        pelsP[p1Idx] = (byte) clip(p1n, -128, 127);
+    }
+    if (conditionQ) {
+        int q2 = pelsQ[q2Idx];
+        int diff = (q2 + ((p0 + q0 + 1) >> 1) - (q1 << 1)) >> 1;
+        diff = diff < -tC0 ? -tC0 : (diff > tC0 ? tC0 : diff);
+        int q1n = q1 + diff;
+        pelsQ[q1Idx] = (byte) clip(q1n, -128, 127);
+    }
+    pelsQ[q0Idx] = (byte) clip(q0n, -128, 127);
+    pelsP[p0Idx] = (byte) clip(p0n, -128, 127);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","9","9","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3508 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3517:3518 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","10","10","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3161 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3517:3518 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","11","11","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3748 SIGNED_RIGHT_SHIFT -> UNSIGNED_RIGHT_SHIFT |","true","false","12742.85","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","12","12","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":1216 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3713 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","13","13","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3598 |","true","true","9669.009","9669.0","-1937.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","14","14","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":1671 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3806 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","15","15","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":630 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3639 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","16","16","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3703 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","17","17","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3598 |","true","true","5267.309","5267.0","2465.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","18","18","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3598 | gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3639 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","19","19","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3598 | gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":1157 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3732:3733 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","20","20","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3598 | gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3508 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3678 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","21","21","|","true","true","3061.814","3061.0","4671.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","22","22","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3305 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3517:3517 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","23","23","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":1390 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3639:3650 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","24","24","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":1403 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3732 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","25","25","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3503 LESS -> GREATER_EQUALS |","true","false","2824.518","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","26","26","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3608 MINUS -> PLUS |","true","true","3160.921","3160.0","4572.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","27","27","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3517
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    tC = tC0 + 1;
+    // <<PLACEHOLDER>>
+    ;
+    conditionQ = false;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","28","28","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3517
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    tC = tC0 + 1;
+    conditionP = false;
+    conditionQ = false;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    tC = tC0 + 1;
+    conditionP = false;
+    conditionQ = false;
+}
+
+!!! |","true","true","4883.8003","4883.0","2849.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","29","29","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3782 MINUS -> BITWISE_COMPLEMENT |","true","false","4791.5264","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","30","30","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2918 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3733 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","31","31","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2525 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3806 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","32","32","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3436 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","33","33","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3639
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int p2 = pelsP[p2Idx];
+    int diff = (p2 + ((p0 + q0 + 1) >> 1) - (p1 << 1)) >> 1;
+    diff = diff < -tC0 ? -tC0 : (diff > tC0 ? tC0 : diff);
+    int p1n = p1 + diff;
+    pelsP[p1Idx] = (byte) clip(p1n, -128, 127);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or clas

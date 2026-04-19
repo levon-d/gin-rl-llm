@@ -1,0 +1,12 @@
+MethodName,BaselineRuntime(ms),BestRuntime(ms),RuntimeReduction(ms),ImprovementPercent,BestPatch
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)",2942.00,2428.00,514.00,17.47,"|"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()",4039.00,3488.00,551.00,13.64,"|"
+"org.junit.runners.ParentRunner.org.junit.runners.ParentRunner.shouldRun(Filter,T)",3703.00,3429.00,274.00,7.40,"|"
+"org.junit.runner.Description.org.junit.runner.Description.formatDisplayName(String,String)",3433.00,3239.00,194.00,5.65,"|"
+"org.junit.runner.Computer.org.junit.runner.Computer.getSuite(RunnerBuilder,Class<?>[])",3433.00,3291.00,142.00,4.14,"| gin.edit.statement.MoveStatement 'src/main/java/org/junit/runner/Computer.java':93 -> 'src/main/java/org/junit/runner/Computer.java':92:93 | gin.edit.matched.MatchedReplaceStatement 'src/main/java/org/junit/runner/Computer.java':93 -> 'src/main/java/org/junit/runner/Computer.java':93 |"
+"org.junit.runner.notification.RunNotifier.org.junit.runner.notification.RunNotifier.wrapIfNotThreadSafe(RunListener)",2494.00,2366.00,128.00,5.13,"| gin.edit.statement.MoveStatement 'src/main/java/org/junit/runner/notification/RunNotifier.java':123 -> 'src/main/java/org/junit/runner/notification/RunNotifier.java':123:123 | gin.edit.statement.MoveStatement 'src/main/java/org/junit/runner/notification/RunNotifier.java':124 -> 'src/main/java/org/junit/runner/notification/RunNotifier.java':123:124 |"
+"org.junit.internal.builders.IgnoredBuilder.org.junit.internal.builders.IgnoredBuilder.runnerForClass(Class<?>)",587.00,562.00,25.00,4.26,"|"
+"org.junit.runners.model.TestClass.org.junit.runners.model.TestClass.runsTopToBottom(Class<?extendsAnnotation>)",1072.00,1015.00,57.00,5.32,"|"
+"org.junit.internal.TextListener.org.junit.internal.TextListener.elapsedTimeAsString(long)",96.00,53.00,43.00,44.79,"|"
+"org.junit.internal.builders.JUnit4Builder.org.junit.internal.builders.JUnit4Builder.runnerForClass(Class<?>)",379.00,248.00,131.00,34.56,"| gin.edit.matched.MatchedSwapStatement 'src/main/java/org/junit/internal/builders/JUnit4Builder.java':38 <-> 'src/main/java/org/junit/internal/builders/JUnit4Builder.java':38 |"
+"TOTAL",22178.00,20119.00,2059.00,9.28,""

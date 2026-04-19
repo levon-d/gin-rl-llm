@@ -1,0 +1,1085 @@
+"MethodName","Iteration","EvaluationNumber","Patch","Compiled","AllTestsPassed","TotalExecutionTime(ms)","Runtime(ms)","RuntimeImprovement(ms)"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","-1","0","|","true","true","6626.153","6626.0","0.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","1","1","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2103 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3408 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","2","2","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3356 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3732:3806 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","3","3","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3703 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3822 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","4","4","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3305
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    int p1 = pelsP[p1Idx];
+    int p0 = pelsP[p0Idx];
+    int q0 = pelsQ[q0Idx];
+    int q1 = pelsQ[q1Idx];
+    int alphaThresh = alphaTab[indexAlpha];
+    int betaThresh = betaTab[indexBeta];
+    boolean filterEnabled = abs(p0 - q0) < alphaThresh && abs(p1 - p0) < betaThresh && abs(q1 - q0) < betaThresh;
+    if (!filterEnabled)
+        return;
+    // System.out.printf(""%h %h %h %h %h %h %h %h\n"", q3, q2, q1, q0, p0,
+    // p1, p2, p3);
+    int tC0 = tcs[bs - 1][indexAlpha];
+    boolean conditionP, conditionQ;
+    int tC;
+    if (!isChroma) {
+        int ap = abs(pelsP[p2Idx] - p0);
+        int aq = abs(pelsQ[q2Idx] - q0);
+        tC = tC0 + ((ap < betaThresh) ? 1 : 0) + ((aq < betaThresh) ? 1 : 0);
+        conditionP = ap < betaThresh;
+        conditionQ = aq < betaThresh;
+    } else {
+        tC = tC0 + 1;
+        conditionP = false;
+        conditionQ = false;
+    }
+    int sigma = ((((q0 - p0) << 2) + (p1 - q1) + 4) >> 3);
+    sigma = sigma < -tC ? -tC : (sigma > tC ? tC : sigma);
+    int p0n = p0 + sigma;
+    p0n = p0n < -128 ? -128 : p0n;
+    int q0n = q0 - sigma;
+    q0n = q0n < -128 ? -128 : q0n;
+    if (conditionP) {
+        int p2 = pelsP[p2Idx];
+        int diff = (p2 + ((p0 + q0 + 1) >> 1) - (p1 << 1)) >> 1;
+        diff = diff < -tC0 ? -tC0 : (diff > tC0 ? tC0 : diff);
+        int p1n = p1 + diff;
+        pelsP[p1Idx] = (byte) clip(p1n, -128, 127);
+    }
+    if (conditionQ) {
+        int q2 = pelsQ[q2Idx];
+        int diff = (q2 + ((p0 + q0 + 1) >> 1) - (q1 << 1)) >> 1;
+        diff = diff < -tC0 ? -tC0 : (diff > tC0 ? tC0 : diff);
+        int q1n = q1 + diff;
+        pelsQ[q1Idx] = (byte) clip(q1n, -128, 127);
+    }
+    // <<PLACEHOLDER>>
+    ;
+    pelsP[p0Idx] = (byte) clip(p0n, -128, 127);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int p1 = pelsP[p1Idx];
+    int p0 = pelsP[p0Idx];
+    int q0 = pelsQ[q0Idx];
+    int q1 = pelsQ[q1Idx];
+    int alphaThresh = alphaTab[indexAlpha];
+    int betaThresh = betaTab[indexBeta];
+    boolean filterEnabled = Math.abs(p0 - q0) < alphaThresh && Math.abs(p1 - p0) < betaThresh && Math.abs(q1 - q0) < betaThresh;
+    if (!filterEnabled)
+        return;
+    int tC0 = tcs[bs - 1][indexAlpha];
+    boolean conditionP, conditionQ;
+    int tC;
+    if (!isChroma) {
+        int ap = Math.abs(pelsP[p2Idx] - p0);
+        int aq = Math.abs(pelsQ[q2Idx] - q0);
+        tC = tC0 + ((ap < betaThresh) ? 1 : 0) + ((aq < betaThresh) ? 1 : 0);
+        conditionP = ap < betaThresh;
+        conditionQ = aq < betaThresh;
+    } else {
+        tC = tC0 + 1;
+        conditionP = false;
+        conditionQ = false;
+    }
+    int sigma = ((((q0 - p0) << 2) + (p1 - q1) + 4) >> 3);
+    sigma = sigma < -tC ? -tC : (sigma > tC ? tC : sigma);
+    int p0n = p0 + sigma;
+    p0n = p0n < -128 ? -128 : p0n;
+    int q0n = q0 - sigma;
+    q0n = q0n < -128 ? -128 : q0n;
+    if (conditionP) {
+        int p2 = pelsP[p2Idx];
+        int diff = (p2 + ((p0 + q0 + 1) >> 1) - (p1 << 1)) >> 1;
+        diff = diff < -tC0 ? -tC0 : (diff > tC0 ? tC0 : diff);
+        int p1n = p1 + diff;
+        pelsP[p1Idx] = (byte) clip(p1n, -128, 127);
+    }
+    if (conditionQ) {
+        int q2 = pelsQ[q2Idx];
+        int diff = (q2 + ((p0 + q0 + 1) >> 1) - (q1 << 1)) >> 1;
+        diff = diff < -tC0 ? -tC0 : (diff > tC0 ? tC0 : diff);
+        int q1n = q1 + diff;
+        pelsQ[q1Idx] = (byte) clip(q1n, -128, 127);
+    }
+    pelsP[p0Idx] = (byte) clip(p0n, -128, 127);
+}
+
+!!! |","true","false","6018.915","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","5","5","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3147 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3326 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","6","6","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3396 MINUS -> PLUS |","true","false","5644.279","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","7","7","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3531 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","8","8","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2934 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3440:3499 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","9","9","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3431 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3536 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","10","10","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3732
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int q2 = pelsQ[q2Idx];
+    int diff = (q2 + ((p0 + q0 + 1) >> 1) - (q1 << 1)) >> 1;
+    diff = diff < -tC0 ? -tC0 : (diff > tC0 ? tC0 : diff);
+    int q1n = q1 + diff;
+    pelsQ[q1Idx] = (byte) clip(q1n, -128, 127);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","11","11","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":869 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3305:3356 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","12","12","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3779 MINUS -> BITWISE_COMPLEMENT |","true","false","5627.356","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","13","13","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3471 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","14","14","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3743 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","15","15","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":1862 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3639:3713 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","16","16","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3531 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3366 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","17","17","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3588 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3678 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","18","18","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3526 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3305:3622 |","true","false","5356.0522","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","19","19","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3346 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","20","20","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":763 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3440:3471 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","21","21","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2793 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3806 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","22","22","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":1058 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3407 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","23","23","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3617 MINUS -> PLUS |","true","false","5750.5396","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","24","24","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3404 LOGICAL_COMPLEMENT -> MINUS |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","25","25","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3440
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    int ap = abs(pelsP[p2Idx] - p0);
+    int aq = abs(pelsQ[q2Idx] - q0);
+    tC = tC0 + ((ap < betaThresh) ? 1 : 0) + ((aq < betaThresh) ? 1 : 0);
+    // <<PLACEHOLDER>>
+    ;
+    conditionQ = aq < betaThresh;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int ap = Math.abs(pelsP[p2Idx] - p0);
+    int aq = Math.abs(pelsQ[q2Idx] - q0);
+    tC = tC0 + ((ap < betaThresh) ? 1 : 0) + ((aq < betaThresh) ? 1 : 0);
+    // <<PLACEHOLDER>>
+    ;
+    boolean conditionQ = aq < betaThresh;
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","26","26","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3517
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    tC = tC0 + 1;
+    conditionP = false;
+    conditionQ = false;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    tC = tC0 + 1;
+    conditionP = false;
+    conditionQ = false;
+}
+
+!!! |","true","true","7822.965","7822.0","-1196.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","27","27","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3732
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int q2 = pelsQ[q2Idx];
+    int diff = (q2 + ((p0 + q0 + 1) >> 1) - (q1 << 1)) >> 1;
+    diff = diff < -tC0 ? -tC0 : (diff > tC0 ? tC0 : diff);
+    int q1n = q1 + diff;
+    pelsQ[q1Idx] = (byte) clip(q1n, -128, 127);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","28","28","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3771 |","true","false","4844.418","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","29","29","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2047 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3440:3508 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","30","30","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":937 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3713 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","31","31","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3636 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3366 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","32","32","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3678 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3639:3703 |","true","false","5154.9062","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","33","33","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3431 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","34","34","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":1212 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3305:3316 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","35","35","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3403 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3636 |","true","false","5383.006","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","36","36","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3441 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3598 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","37","37","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3556 MINUS -> MULTIPLY |","true","false","5266.2466","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","38","38","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3571 MINUS -> BITWISE_COMPLEMENT |","true","false","7025.9507","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","39","39","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3440
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    int ap = abs(pelsP[p2Idx] - p0);
+    int aq = abs(pelsQ[q2Idx] - q0);
+    tC = tC0 + ((ap < betaThresh) ? 1 : 0) + ((aq < betaThresh) ? 1 : 0);
+    conditionP = ap < betaThresh;
+    conditionQ = aq < betaThresh;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int ap = Math.abs(pelsP[p2Idx] - p0);
+    int aq = Math.abs(pelsQ[q2Idx] - q0);
+    tC = tC0 + (ap < betaThresh ? 1 : 0) + (aq < betaThresh ? 1 : 0);
+    boolean conditionP = ap < betaThresh;
+    boolean conditionQ = aq < betaThresh;
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","40","40","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3732
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int q2 = pelsQ[q2Idx];
+    int diff = (q2 + ((p0 + q0 + 1) >> 1) - (q1 << 1)) >> 1;
+    diff = diff < -tC0 ? -tC0 : (diff > tC0 ? tC0 : diff);
+    int q1n = q1 + diff;
+    pelsQ[q1Idx] = (byte) clip(q1n, -128, 127);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","41","41","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3517
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    tC = tC0 + 1;
+    conditionP = false;
+    conditionQ = false;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","42","42","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 |","true","true","5219.474","5219.0","1407.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","43","43","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3531 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","44","44","|","true","true","5510.2817","5510.0","1116.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","45","45","|","true","true","5454.3555","5454.0","1172.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","46","46","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2489 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3440:3499 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","47","47","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":524 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3471 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","48","48","|","true","true","6695.385","6695.0","-69.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","49","49","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3456 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3732:3796 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","50","50","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3640 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","51","51","|","true","true","6077.917","6077.0","549.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","52","52","|","true","true","7791.1943","7791.0","-1165.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","53","53","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2116 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3822 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","54","54","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3376 MINUS -> DIVIDE |","true","false","367.15637","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","55","55","|","true","true","5791.154","5791.0","835.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","56","56","|","true","true","7030.4155","7030.0","-404.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","57","57","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3440
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    // <<PLACEHOLDER>>
+    ;
+    int aq = abs(pelsQ[q2Idx] - q0);
+    tC = tC0 + ((ap < betaThresh) ? 1 : 0) + ((aq < betaThresh) ? 1 : 0);
+    conditionP = ap < betaThresh;
+    conditionQ = aq < betaThresh;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","58","58","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":524 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3517:3526 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","59","59","|","true","true","5302.6553","5302.0","1324.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","60","60","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3508 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3456 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","61","61","|","true","true","5285.053","5285.0","1341.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","62","62","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3632 MINUS -> BITWISE_COMPLEMENT |","true","true","5245.984","5245.0","1381.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","63","63","|","true","true","5248.4326","5248.0","1378.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","64","64","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3440 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3732 |","true","false","5013.9673","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","65","65","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3404 LOGICAL_COMPLEMENT -> MINUS |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","66","66","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3305 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","67","67","|","true","true","5444.509","5444.0","1182.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","68","68","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2817 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3517:3517 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","69","69","|","true","true","7533.8853","7533.0","-907.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","70","70","|","true","true","5664.2295","5664.0","962.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","71","71","|","true","true","5541.9434","5541.0","1085.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","72","72","|","true","true","6869.387","6869.0","-243.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","73","73","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3517 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3732:3732 |","true","true","6083.437","6083.0","543.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","74","74","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":4113 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3517:3518 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","75","75","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3732
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int q2 = pelsQ[q2Idx];
+    int diff = (q2 + ((p0 + q0 + 1) >> 1) - (q1 << 1)) >> 1;
+    diff = diff < -tC0 ? -tC0 : (diff > tC0 ? tC0 : diff);
+    int q1n = q1 + diff;
+    pelsQ[q1Idx] = (byte) clip(q1n, -128, 127);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","76","76","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2722 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3499 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","77","77","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3508 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3636 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","78","78","|","true","true","5604.438","5604.0","1022.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","79","79","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3531 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3305:3336 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","80","80","|","true","true","5293.205","5293.0","1333.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","81","81","|","true","true","5566.46","5566.0","1060.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","82","82","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3536 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","83","83","|","true","true","7411.1343","7411.0","-785.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","84","84","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3694 GREATER -> GREATER_EQUALS |","true","true","6814.169","6814.0","-188.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","85","85","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3517
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    tC = tC0 + 1;
+    conditionP = false;
+    conditionQ = false;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    tC++;
+    boolean conditionP = false;
+    boolean conditionQ = false;
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","86","86","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3556 MINUS -> REMAINDER |","true","false","203.10341","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","87","87","|","true","true","5786.229","5786.0","840.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","88","88","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3703 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3346 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","89","89","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3835 MINUS -> LOGICAL_COMPLEMENT |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","90","90","|","true","true","5661.526","5661.0","965.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","91","91","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3431 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3306 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","92","92","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3408 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","93","93","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3316 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3517:3526 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","94","94","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3563 |","true","false","5549.4243","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","95","95","|","true","true","5747.2627","5747.0","879.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","96","96","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3806 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3639:3703 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","97","97","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3404 LOGICAL_COMPLEMENT -> BITWISE_COMPLEMENT |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","98","98","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3622 | gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3517 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3639:3678 |","true","false","5443.3237","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)","99","99","|","true","true","6373.4155","6373.0","253.0"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","-1","0","|","true","true","3051.353","3051.0","0.0"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","1","1","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1012 POSTFIX_INCREMENT -> PREFIX_DECREMENT |","true","false","1545.0858","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","2","2","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2193 |","true","false","2735.6047","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","3","3","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":808
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    int a = sp[sOff + 0] + sp[sOff + 5];
+    int b = sp[sOff + 1] + sp[sOff + 4];
+    int c = sp[sOff + 2] + sp[sOff + 3];
+    pn[dOff] = a + 5 * ((c << 2) - b);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int a = sp[sOff] + sp[sOff + 5];
+    int b = sp[sOff + 1] + sp[sOff + 4];
+    int c = sp[sOff + 2] + sp[sOff + 3];
+    int result = a + 5 * ((c << 2) - b);
+    pn[dOff] = result;
+}
+
+!!! |","true","true","1546.7782","1546.0","1505.0"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","4","4","|","true","true","1719.2471","1719.0","1332.0"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","5","5","|","true","true","1914.2527","1914.0","1137.0"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","6","6","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":808
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    int a = sp[sOff + 0] + sp[sOff + 5];
+    int b = sp[sOff + 1] + sp[sOff + 4];
+    // <<PLACEHOLDER>>
+    ;
+    pn[dOff] = a + 5 * ((c << 2) - b);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int a = sp[sOff + 0] + sp[sOff + 5];
+    int b = sp[sOff + 1] + sp[sOff + 4];
+    int c = sp[sOff + 2] + sp[sOff + 3]; // Added line to calculate c
+    pn[dOff] = a + 5 * ((c << 2) - b);
+}
+
+!!! | gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1669 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":807:807 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","7","7","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":808
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    int a = sp[sOff + 0] + sp[sOff + 5];
+    int b = sp[sOff + 1] + sp[sOff + 4];
+    // <<PLACEHOLDER>>
+    ;
+    pn[dOff] = a + 5 * ((c << 2) - b);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int a = sp[sOff + 0] + sp[sOff + 5];
+    int b = sp[sOff + 1] + sp[sOff + 4];
+    int c = sp[sOff + 2] + sp[sOff + 3];
+    pn[dOff] = a + 5 * ((c << 2) - b);
+}
+
+!!! | gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1284 MULTIPLY -> LEFT_SHIFT |","true","false","2574.7224","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","8","8","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":808
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    int a = sp[sOff + 0] + sp[sOff + 5];
+    int b = sp[sOff + 1] + sp[sOff + 4];
+    int c = sp[sOff + 2] + sp[sOff + 3];
+    // <<PLACEHOLDER>>
+    ;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! | gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2550 <-> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":704 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","9","9","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":808
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    int a = sp[sOff + 0] + sp[sOff + 5];
+    int b = sp[sOff + 1] + sp[sOff + 4];
+    int c = sp[sOff + 2] + sp[sOff + 3];
+    // <<PLACEHOLDER>>
+    ;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int a = sp[sOff + 0] + sp[sOff + 5];
+    int b = sp[sOff + 1] + sp[sOff + 4];
+    int c = sp[sOff + 2] + sp[sOff + 3];
+    // Perform some operation using a, b, and c
+    int result = a + b + c;
+    // <<PLACEHOLDER>>
+    ;
+}
+
+!!! | gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":3456 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1890 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","10","10","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":808
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    // <<PLACEHOLDER>>
+    ;
+    int b = sp[sOff + 1] + sp[sOff + 4];
+    int c = sp[sOff + 2] + sp[sOff + 3];
+    pn[dOff] = a + 5 * ((c << 2) - b);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! | gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2895 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2779:2780 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","11","11","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":808
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    int a = sp[sOff + 0] + sp[sOff + 5];
+    int b = sp[sOff + 1] + sp[sOff + 4];
+    int c = sp[sOff + 2] + sp[sOff + 3];
+    pn[dOff] = a + 5 * ((c << 2) - b);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int a = sp[sOff] + sp[sOff + 5];
+    int b = sp[sOff + 1] + sp[sOff + 4];
+    int c = sp[sOff + 2] + sp[sOff + 3];
+    int intermediate = (c << 2) - b;
+    pn[dOff] = a + 5 * intermediate;
+}
+
+!!! | gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1614 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1276 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","12","12","|","true","true","3068.4026","3068.0","-17.0"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","13","13","|","true","true","3189.8953","3189.0","-138.0"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","14","14","|","true","true","3102.233","3102.0","-51.0"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","15","15","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":808
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    int a = sp[sOff + 0] + sp[sOff + 5];
+    // <<PLACEHOLDER>>
+    ;
+    int c = sp[sOff + 2] + sp[sOff + 3];
+    pn[dOff] = a + 5 * ((c << 2) - b);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int a = sp[sOff + 0] + sp[sOff + 5];
+    // Perform some operation with b
+    b = b * 2;
+    ;
+    int c = sp[sOff + 2] + sp[sOff + 3];
+    pn[dOff] = a + 5 * ((c << 2) - b);
+}
+
+!!! | gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2769
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    if (mf2 == scores[i]) {
+        sel = i;
+        break;
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","16","16","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":808
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    int a = sp[sOff + 0] + sp[sOff + 5];
+    // <<PLACEHOLDER>>
+    ;
+    int c = sp[sOff + 2] + sp[sOff + 3];
+    pn[dOff] = a + 5 * ((c << 2) - b);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int a = sp[sOff + 0] + sp[sOff + 5];
+    int b = sp[sOff + 1] + sp[sOff + 4];
+    int c = sp[sOff + 2] + sp[sOff + 3];
+    pn[dOff] = a + 5 * ((c << 2) - b);
+}
+
+!!! | gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1581 <-> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2392 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","18","18","|","true","true","1950.3109","1950.0","1101.0"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","19","19","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":808
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    // <<PLACEHOLDER>>
+    ;
+    int b = sp[sOff + 1] + sp[sOff + 4];
+    int c = sp[sOff + 2] + sp[sOff + 3];
+    pn[dOff] = a + 5 * ((c << 2) - b);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! | gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1252 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","20","20","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":808
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    int a = sp[sOff + 0] + sp[sOff + 5];
+    int b = sp[sOff + 1] + sp[sOff + 4];
+    int c = sp[sOff + 2] + sp[sOff + 3];
+    pn[dOff] = a + 5 * ((c << 2) - b);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int a = sp[sOff] + sp[sOff + 5];
+    int b = sp[sOff + 1] + sp[sOff + 4];
+    int c = sp[sOff + 2] + sp[sOff + 3];
+    pn[dOff] = a + 5 * ((c << 2) - b);
+}
+
+!!! | gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1946 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","21","21","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":808
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    int a = sp[sOff + 0] + sp[sOff + 5];
+    int b = sp[sOff + 1] + sp[sOff + 4];
+    // <<PLACEHOLDER>>
+    ;
+    pn[dOff] = a + 5 * ((c << 2) - b);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! | gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":3119 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":642:736 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","22","22","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":808
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    int a = sp[sOff + 0] + sp[sOff + 5];
+    // <<PLACEHOLDER>>
+    ;
+    int c = sp[sOff + 2] + sp[sOff + 3];
+    pn[dOff] = a + 5 * ((c << 2) - b);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! | gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2031 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2030 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","23","23","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":808
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    int a = sp[sOff + 0] + sp[sOff + 5];
+    int b = sp[sOff + 1] + sp[sOff + 4];
+    int c = sp[sOff + 2] + sp[sOff + 3];
+    // <<PLACEHOLDER>>
+    ;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int a = sp[sOff + 0] + sp[sOff + 5];
+    int b = sp[sOff + 1] + sp[sOff + 4];
+    int c = sp[sOff + 2] + sp[sOff + 3];
+    int d = a * b * c;
+    // <<PLACEHOLDER>>
+    ;
+}
+
+!!! | gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2786 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":787:788 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","24","24","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":808
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    // <<PLACEHOLDER>>
+    ;
+    int b = sp[sOff + 1] + sp[sOff + 4];
+    int c = sp[sOff + 2] + sp[sOff + 3];
+    pn[dOff] = a + 5 * ((c << 2) - b);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! | gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1709 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1086 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","25","25","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":808
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    int a = sp[sOff + 0] + sp[sOff + 5];
+    // <<PLACEHOLDER>>
+    ;
+    int c = sp[sOff + 2] + sp[sOff + 3];
+    pn[dOff] = a + 5 * ((c << 2) - b);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! | gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1104 <-> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1596 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","26","26","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":808
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    int a = sp[sOff + 0] + sp[sOff + 5];
+    int b = sp[sOff + 1] + sp[sOff + 4];
+    // <<PLACEHOLDER>>
+    ;
+    pn[dOff] = a + 5 * ((c << 2) - b);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int a = sp[sOff + 0] + sp[sOff + 5];
+    int b = sp[sOff + 1] + sp[sOff + 4];
+    // Perform some operation with a and b
+    int c = a * b;
+    ;
+    pn[dOff] = a + 5 * ((c << 2) - b);
+}
+
+!!! | gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1407 MINUS -> DIVIDE |","true","false","1253.6577","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","27","27","|","true","true","1414.5532","1414.0","1637.0"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","28","28","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1142 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":808:869 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","29","29","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":995 POSTFIX_INCREMENT -> PREFIX_INCREMENT |","true","true","1477.3137","1477.0","1574.0"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","30","30","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1849
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    int a = pn[off + 16] + pn[off + 96];
+    int b = pn[off + 32] + pn[off + 80];
+    int c = pn[off + 48] + pn[off + 64];
+    int interpPos = a + 5 * ((c << 2) - b);
+    int diagNP = clip((interpPos + 512) >> 10, -128, 127);
+    int ver = (diagNP + verP20 + 1) >> 1;
+    int hor = (diagNP + horN20 + 1) >> 1;
+    scores[6] += MathUtil.abs(patch[off] - diagNP);
+    scores[15] += MathUtil.abs(patch[off] - ver);
+    scores[16] += MathUtil.abs(patch[off] - hor);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int a = pn[off + 16] + pn[off + 96];
+    int b = pn[off + 32] + pn[off + 80];
+    int c = pn[off + 48] + pn[off + 64];
+    int interpPos = a + 5 * ((c << 2) - b);
+    int diagNP = clip((interpPos + 512) >> 10, -128, 127);
+    int ver = (diagNP + verP20 + 1) >> 1;
+    int hor = (diagNP + horN20 + 1) >> 1;
+    scores[6] += MathUtil.abs(patch[off] - diagNP);
+    scores[15] += MathUtil.abs(patch[off] - ver);
+    scores[16] += MathUtil.abs(patch[off] - hor);
+}
+
+!!! |","true","true","1725.9669","1725.0","1326.0"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","31","31","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1203
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int a = sp[3 + sof + 0] + sp[3 + sof + 110];
+    int b = sp[3 + sof + 22] + sp[3 + sof + 88];
+    int c = sp[3 + sof + 44] + sp[3 + sof + 66];
+    int verNeg = a + 5 * ((c << 2) - b);
+    verN20 = clip((verNeg + 16) >> 5, -128, 127);
+    int verN10 = (verN20 + sp[sof + 69] + 1) >> 1;
+    int dnn = (verN20 + horN20 + 1) >> 1;
+    int dpn = (verN20 + horP20 + 1) >> 1;
+    scores[3] += MathUtil.abs(patch[off] - verN20);
+    scores[11] += MathUtil.abs(patch[off] - verN10);
+    scores[21] += MathUtil.abs(patch[off] - dnn);
+    scores[22] += MathUtil.abs(patch[off] - dpn);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","32","32","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":787 <-> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1361 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","33","33","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":784 POSTFIX_INCREMENT -> PREFIX_INCREMENT |","true","true","2086.061","2086.0","965.0"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","34","34","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2211
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    int a = pp[off + 16] + pp[off + 96];
+    int b = pp[off + 32] + pp[off + 80];
+    int c = pp[off + 48] + pp[off + 64];
+    int interpPos = a + 5 * ((c << 2) - b);
+    int diagPP = clip((interpPos + 512) >> 10, -128, 127);
+    // <<PLACEHOLDER>>
+    ;
+    int hor = (diagPP + horP20 + 1) >> 1;
+    scores[8] += MathUtil.abs(patch[off] - diagPP);
+    scores[19] += MathUtil.abs(patch[off] - ver);
+    scores[20] += MathUtil.abs(patch[off] - hor);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","35","35","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":807 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","36","36","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1015 POSTFIX_INCREMENT -> PREFIX_DECREMENT |","true","false","978.04114","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","37","37","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2431 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1849:1870 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","38","38","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":689 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","39","39","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2338 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2779:2780 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","40","40","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":746 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2175 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","41","41","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":136 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2769:2770 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","42","42","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":3443 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2697 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","43","43","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1019 <-> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1994 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","44","44","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2283 MINUS -> MULTIPLY |","true","false","1600.4891","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","46","46","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2769
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    if (mf2 == scores[i]) {
+        sel = i;
+        break;
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","47","47","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2142 <-> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2787 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","48","48","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":804 POSTFIX_INCREMENT -> PREFIX_DECREMENT |","true","false","1018.88586","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","49","49","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1929 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","50","50","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2737 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1849:1994 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","51","51","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1438
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    int a = sp[3 + sof + 22] + sp[3 + sof + 132];
+    int b = sp[3 + sof + 44] + sp[3 + sof + 110];
+    int c = sp[3 + sof + 66] + sp[3 + sof + 88];
+    int verPos = a + 5 * ((c << 2) - b);
+    // <<PLACEHOLDER>>
+    ;
+    int verP10 = (verP20 + sp[sof + 69] + 1) >> 1;
+    int dnp = (verP20 + horN20 + 1) >> 1;
+    int dpp = (verP20 + horP20 + 1) >> 1;
+    scores[4] += MathUtil.abs(patch[off] - verP20);
+    scores[12] += MathUtil.abs(patch[off] - verP10);
+    scores[23] += MathUtil.abs(patch[off] - dnp);
+    scores[24] += MathUtil.abs(patch[off] - dpp);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","52","52","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":808
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int a = sp[sOff + 0] + sp[sOff + 5];
+    int b = sp[sOff + 1] + sp[sOff + 4];
+    int c = sp[sOff + 2] + sp[sOff + 3];
+    pn[dOff] = a + 5 * ((c << 2) - b);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int sum0 = sp[sOff] + sp[sOff + 5];
+    int sum1 = sp[sOff + 1] + sp[sOff + 4];
+    int sum2 = sp[sOff + 2] + sp[sOff + 3];
+    pn[dOff] = sum0 + 5 * ((sum2 << 2) - sum1);
+}
+
+!!! |","true","true","1644.8704","1644.0","1407.0"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","53","53","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1669 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","54","54","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2030 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1438:1581 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","55","55","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":642 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":766 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","56","56","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":3386 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":890:890 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","57","57","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":3430 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2601 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","58","58","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1122 <-> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2550 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","59","59","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1482 PLUS -> SIGNED_RIGHT_SHIFT |","true","false","1756.156","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","60","60","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1581 <-> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2110 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","61","61","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2769
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    if (mf2 == scores[i]) {
+        sel = i;
+        break;
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","62","62","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1061 MINUS -> BITWISE_COMPLEMENT |","true","true","1275.6029","1275.0","1776.0"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","63","63","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1061 MINUS -> BITWISE_COMPLEMENT | gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1009 POSTFIX_INCREMENT -> PREFIX_INCREMENT |","true","true","1603.4741","1603.0","1448.0"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","64","64","|","true","true","2019.2726","2019.0","1032.0"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","65","65","|","true","true","2345.4626","2345.0","706.0"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","66","66","|","true","true","1779.6724","1779.0","1272.0"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","67","67","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1061 MINUS -> BITWISE_COMPLEMENT | gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1765 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":807:808 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","68","68","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1061 MINUS -> BITWISE_COMPLEMENT | gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1543 MINUS -> BITWISE_COMPLEMENT |","true","true","1796.3707","1796.0","1255.0"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","69","69","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1061 MINUS -> BITWISE_COMPLEMENT | gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1203
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    int a = sp[3 + sof + 0] + sp[3 + sof + 110];
+    int b = sp[3 + sof + 22] + sp[3 + sof + 88];
+    int c = sp[3 + sof + 44] + sp[3 + sof + 66];
+    int verNeg = a + 5 * ((c << 2) - b);
+    verN20 = clip((verNeg + 16) >> 5, -128, 127);
+    // <<PLACEHOLDER>>
+    ;
+    int dnn = (verN20 + horN20 + 1) >> 1;
+    int dpn = (verN20 + horP20 + 1) >> 1;
+    scores[3] += MathUtil.abs(patch[off] - verN20);
+    scores[11] += MathUtil.abs(patch[off] - verN10);
+    scores[21] += MathUtil.abs(patch[off] - dnn);
+    scores[22] += MathUtil.abs(patch[off] - dpn);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","70","70","|","true","true","1271.8065","1271.0","1780.0"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","71","71","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1543 MINUS -> LOGICAL_COMPLEMENT |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","72","72","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1795 |","true","false","1569.1698","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","73","73","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1203
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int a = sp[3 + sof + 0] + sp[3 + sof + 110];
+    int b = sp[3 + sof + 22] + sp[3 + sof + 88];
+    int c = sp[3 + sof + 44] + sp[3 + sof + 66];
+    int verNeg = a + 5 * ((c << 2) - b);
+    verN20 = clip((verNeg + 16) >> 5, -128, 127);
+    int verN10 = (verN20 + sp[sof + 69] + 1) >> 1;
+    int dnn = (verN20 + horN20 + 1) >> 1;
+    int dpn = (verN20 + horP20 + 1) >> 1;
+    scores[3] += MathUtil.abs(patch[off] - verN20);
+    scores[11] += MathUtil.abs(patch[off] - verN10);
+    scores[21] += MathUtil.abs(patch[off] - dnn);
+    scores[22] += MathUtil.abs(patch[off] - dpn);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int indexA = 3 + sof + 0;
+    int indexB = 3 + sof + 110;
+    int indexC = 3 + sof + 22;
+    int indexD = 3 + sof + 88;
+    int indexE = 3 + sof + 44;
+    int indexF = 3 + sof + 66;
+
+    int a = sp[indexA] + sp[indexB];
+    int b = sp[indexC] + sp[indexD];
+    int c = sp[indexE] + sp[indexF];
+    int verNeg = a + 5 * ((c << 2) - b);
+    verN20 = clip((verNeg + 16) >> 5, -128, 127);
+    int verN10 = (verN20 + sp[sof + 69] + 1) >> 1;
+    int dnn = (verN20 + horN20 + 1) >> 1;
+    int dpn = (verN20 + horP20 + 1) >> 1;
+    scores[3] += MathUtil.abs(patch[off] - verN20);
+    scores[11] += MathUtil.abs(patch[off] - verN10);
+    scores[21] += MathUtil.abs(patch[off] - dnn);
+    scores[22] += MathUtil.abs(patch[off] - dpn);
+}
+
+!!! |","true","true","1400.2573","1400.0","1651.0"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","74","74","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2779
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sel = i;
+    break;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+   {
+       switch (i) {
+           case 0:
+           case 1:
+           case 2:
+           case 3:
+           case 4:
+               sel = i;
+               break;
+           default:
+               break;
+       }
+   }
+   
+!!! |","true","false","1237.4728","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","75","75","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1581 <-> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1669 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","76","76","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":746 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","77","77","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":3541 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1018:1064 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","78","78","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":3150 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":869 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","79","79","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1042 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1018:1064 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","80","80","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":766 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":766 |","true","true","1812.685","1812.0","1239.0"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","81","81","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1765 <-> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1346 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","82","82","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1678 PLUS -> MINUS |","true","true","1770.9575","1770.0","1281.0"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","83","83","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1770 SIGNED_RIGHT_SHIFT -> REMAINDER |","true","false","1679.918","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","84","84","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2127 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2780 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","85","85","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1543 MINUS -> LOGICAL_COMPLEMENT |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","86","86","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2769
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    if (mf2 == scores[i]) {
+        sel = i;
+        break;
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","87","87","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":642 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":890:890 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","88","88","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2516 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","89","89","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":890
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int a = sp[sOff + 1] + sp[sOff + 6];
+    int b = sp[sOff + 2] + sp[sOff + 5];
+    int c = sp[sOff + 3] + sp[sOff + 4];
+    pp[dOff] = a + 5 * ((c << 2) - b);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int a = sp[sOff + 1] + sp[sOff + 6];
+    int b = sp[sOff + 2] + sp[sOff + 5];
+    int c = sp[sOff + 3] + sp[sOff + 4];
+    int temp = (c << 2) - b;
+    pp[dOff] = a + 5 * temp;
+}
+
+!!! |","true","true","7402.5107","7402.0","-4351.0"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","90","90","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2124 MINUS -> BITWISE_COMPLEMENT |","true","true","3765.561","3765.0","-714.0"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","91","91","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1295 <-> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2750 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","92","92","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1438
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    int a = sp[3 + sof + 22] + sp[3 + sof + 132];
+    int b = sp[3 + sof + 44] + sp[3 + sof + 110];
+    // <<PLACEHOLDER>>
+    ;
+    int verPos = a + 5 * ((c << 2) - b);
+    verP20 = clip((verPos + 16) >> 5, -128, 127);
+    int verP10 = (verP20 + sp[sof + 69] + 1) >> 1;
+    int dnp = (verP20 + horN20 + 1) >> 1;
+    int dpp = (verP20 + horP20 + 1) >> 1;
+    scores[4] += MathUtil.abs(patch[off] - verP20);
+    scores[12] += MathUtil.abs(patch[off] - verP10);
+    scores[23] += MathUtil.abs(patch[off] - dnp);
+    scores[24] += MathUtil.abs(patch[off] - dpp);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","93","93","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1071 SIGNED_RIGHT_SHIFT -> UNSIGNED_RIGHT_SHIFT |","true","false","3362.563","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","94","94","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":787 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","95","95","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":3140 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2769:2769 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","96","96","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":736 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2392 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","97","97","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1276 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":1438:1546 |","true","true","3340.715","3340.0","-289.0"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","98","98","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":3036 <-> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2779 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)","99","99","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":972 -> ""src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java"":2012 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.encode.MBEncoderHelper.org.jcodec.cod

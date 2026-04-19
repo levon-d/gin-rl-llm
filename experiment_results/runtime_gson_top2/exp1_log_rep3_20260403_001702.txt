@@ -1,0 +1,430 @@
+2026-04-03 00:19:17 gin.util.Sampler.printCommandlineArguments() INFO: Project directory, required: /Users/""/repos/gson/gson
+2026-04-03 00:19:17 gin.util.Sampler.printCommandlineArguments() INFO: Method file, required: /Users/""/repos/gin-rl/gson_top2.csv
+2026-04-03 00:19:17 gin.util.Sampler.printCommandlineArguments() INFO: Project name, required for maven and gradle projects: gson
+2026-04-03 00:19:17 gin.util.Sampler.printCommandlineArguments() INFO: Classpath, required for non-maven and non-gradle projects:
+2026-04-03 00:19:17 gin.util.Sampler.printCommandlineArguments() INFO: Path to maven bin directory, e.g. /usr/local, required for maven projects: /opt/homebrew/Cellar/maven/3.9.13/libexec
+2026-04-03 00:19:17 gin.util.Sampler.printCommandlineArguments() INFO: Output CSV file: /Users/""/repos/gin-rl/experiment_results/runtime_gson_top2/exp1_random_rep3_20260403_001702.csv
+2026-04-03 00:19:17 gin.util.Sampler.printCommandlineArguments() INFO: Output file for storing the execution time: sampler_timing.csv
+2026-04-03 00:19:17 gin.util.Sampler.printCommandlineArguments() INFO: Timeout in milliseconds: 10000
+2026-04-03 00:19:17 gin.util.Sampler.printCommandlineArguments() INFO: Repeat each test r times: 1
+2026-04-03 00:19:17 gin.util.Sampler.printCommandlineArguments() INFO: Number of methods from the method data to sample from. 0 for all.: 0
+2026-04-03 00:19:17 gin.util.Sampler.printCommandlineArguments() INFO: Run tests in a separate jvm: true
+2026-04-03 00:19:17 gin.util.Sampler.printCommandlineArguments() INFO: Run every repetition in a new jvm. Includes option '-j': false
+2026-04-03 00:19:17 gin.util.Sampler.printCommandlineArguments() INFO: Run every test in a new jvm. Includes options '-j' and '-jj': false
+2026-04-03 00:19:17 gin.util.Sampler.printCommandlineArguments() INFO: Fail fast. If set to true, the tests will stop at the first failure and the next patch will be executed. You probably don't want to set this to true for Automatic Program Repair.: false
+2026-04-03 00:19:17 gin.util.Sampler.printCommandlineArguments() INFO: OpenAI API key for LLM edits: demo
+2026-04-03 00:19:17 gin.util.Sampler.printCommandlineArguments() INFO: OpenAI API model name for LLM edits; e.g. gpt-3.5-turbo or gpt-4; full list at https://github.com/langchain4j/langchain4j/blob/main/langchain4j-open-ai/src/main/java/dev/langchain4j/model/openai/OpenAiModelName.java: gpt-3.5-turbo
+2026-04-03 00:19:17 gin.util.Sampler.printCommandlineArguments() INFO: model type; OpenAI  or a name of an ollama model: OpenAI
+2026-04-03 00:19:17 gin.util.Sampler.printCommandlineArguments() INFO: model timeout in seconds: 30
+2026-04-03 00:19:17 gin.util.Sampler.printCommandlineArguments() INFO: Prompt Type for LLM edits: MEDIUM
+2026-04-03 00:19:17 gin.util.Sampler.printCommandlineArguments() INFO: Prompt Template for LLM edits:
+2026-04-03 00:19:17 gin.util.Sampler.setUp() INFO: Calculating classpath..
+[WARN] Maven will be executed in interactive mode, but no input stream has been configured for this MavenInvoker instance.
+2026-04-03 00:19:18 gin.util.Sampler.setUp() INFO: Classpath: /Users/""/repos/gson/gson/target/classes:/Users/""/repos/gson/gson/target/test-classes:/Users/""/.m2/repository/com/google/errorprone/error_prone_annotations/2.47.0/error_prone_annotations-2.47.0.jar:/Users/""/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/""/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/Users/""/.m2/repository/com/google/truth/truth/1.4.5/truth-1.4.5.jar:/Users/""/.m2/repository/org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar:/Users/""/.m2/repository/com/google/auto/value/auto-value-annotations/1.11.0/auto-value-annotations-1.11.0.jar:/Users/""/.m2/repository/org/ow2/asm/asm/9.8/asm-9.8.jar:/Users/""/.m2/repository/com/google/guava/guava-testlib/33.5.0-jre/guava-testlib-33.5.0-jre.jar:/Users/""/.m2/repository/com/google/j2objc/j2objc-annotations/3.1/j2objc-annotations-3.1.jar:/Users/""/.m2/repository/com/google/guava/guava/33.5.0-jre/guava-33.5.0-jre.jar:/Users/""/.m2/repository/com/google/guava/failureaccess/1.0.3/failureaccess-1.0.3.jar:/Users/""/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar
+2026-04-03 00:19:18 gin.util.RandomSampler.Setup() INFO: === RandomSampler with Runtime Tracking ===
+2026-04-03 00:19:18 gin.util.RandomSampler.Setup() INFO: Edit types: 8 operators
+2026-04-03 00:19:18 gin.util.RandomSampler.Setup() INFO: LLM edits enabled: false
+2026-04-03 00:19:18 gin.util.RandomSampler.Setup() INFO: ==========================================
+2026-04-03 00:19:18 gin.util.RandomSampler.printAdditionalArguments() INFO: Edit types: [class gin.edit.statement.DeleteStatement, class gin.edit.statement.CopyStatement, class gin.edit.statement.ReplaceStatement, class gin.edit.statement.SwapStatement, class gin.edit.matched.MatchedDeleteStatement, class gin.edit.matched.MatchedCopyStatement, class gin.edit.matched.MatchedReplaceStatement, class gin.edit.matched.MatchedSwapStatement]
+2026-04-03 00:19:18 gin.util.RandomSampler.printAdditionalArguments() INFO: Number of edits per patch: 1
+2026-04-03 00:19:18 gin.util.RandomSampler.printAdditionalArguments() INFO: Number of patches: 100
+2026-04-03 00:19:18 gin.util.RandomSampler.printAdditionalArguments() INFO: Random seed for method selection: 3223
+2026-04-03 00:19:18 gin.util.RandomSampler.printAdditionalArguments() INFO: Random seed for edit type selection: 3123
+2026-04-03 00:19:18 gin.util.RandomSampler.sampleMethodsHook() INFO: Number of methods: 2
+2026-04-03 00:19:18 gin.util.RandomSampler.sampleMethodsHook() INFO: Number of patches to generate: 100
+2026-04-03 00:19:18 gin.util.RandomSampler.sampleMethodsHook() INFO: Getting baseline runtime for all methods...
+2026-04-03 00:19:18 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/11812214116567268923
+2026-04-03 00:19:21 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/11812214116567268923
+2026-04-03 00:19:21 gin.util.RandomSampler.sampleMethodsHook() INFO: Method com.google.gson.internal.bind.DefaultDateTypeAdapter.deserializeToDate(JsonReader) (ID=1): baseline = 63.0 ms
+2026-04-03 00:19:21 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/4596244049805142895
+2026-04-03 00:19:23 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/4596244049805142895
+2026-04-03 00:19:23 gin.util.RandomSampler.sampleMethodsHook() INFO: Method com.google.gson.internal.bind.util.ISO8601Utils.parse(String,ParsePosition) (ID=2): baseline = 10.0 ms
+2026-04-03 00:19:23 gin.util.RandomSampler.sampleMethodsHook() INFO: Generating and testing random patches...
+2026-04-03 00:19:23 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-04-03 00:19:23 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/12331308953625488604
+2026-04-03 00:19:24 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/12331308953625488604/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:24 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/12331308953625488604
+2026-04-03 00:19:24 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.ReplaceStatement]
+2026-04-03 00:19:24 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/10499137563973328518
+2026-04-03 00:19:24 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/10499137563973328518/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:24 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/10499137563973328518
+2026-04-03 00:19:24 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-04-03 00:19:24 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5795119067844552179
+2026-04-03 00:19:24 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5795119067844552179/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:24 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5795119067844552179
+2026-04-03 00:19:24 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-04-03 00:19:24 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/17623873516392081461
+2026-04-03 00:19:24 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/17623873516392081461/com/google/gson/internal/bind/util/ISO8601Utils.java
+2026-04-03 00:19:24 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/17623873516392081461
+2026-04-03 00:19:24 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-04-03 00:19:24 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/11742359136643083271
+2026-04-03 00:19:24 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/11742359136643083271/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:24 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/11742359136643083271
+2026-04-03 00:19:24 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-04-03 00:19:24 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/15011038242057207017
+2026-04-03 00:19:26 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/15011038242057207017
+2026-04-03 00:19:26 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-04-03 00:19:26 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5707103396641644951
+2026-04-03 00:19:26 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5707103396641644951/com/google/gson/internal/bind/util/ISO8601Utils.java
+2026-04-03 00:19:26 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5707103396641644951
+2026-04-03 00:19:26 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-04-03 00:19:26 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/4742715636080733429
+2026-04-03 00:19:26 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/4742715636080733429/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:26 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/4742715636080733429
+2026-04-03 00:19:26 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-04-03 00:19:26 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/16264891982118842561
+2026-04-03 00:19:26 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/16264891982118842561/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:26 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/16264891982118842561
+2026-04-03 00:19:26 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-04-03 00:19:26 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/2373779926619410087
+2026-04-03 00:19:26 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/2373779926619410087/com/google/gson/internal/bind/util/ISO8601Utils.java
+2026-04-03 00:19:26 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/2373779926619410087
+2026-04-03 00:19:26 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-04-03 00:19:26 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/450649304663810032
+2026-04-03 00:19:26 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/450649304663810032/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:26 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/450649304663810032
+2026-04-03 00:19:26 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-04-03 00:19:26 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/12140630024697757321
+2026-04-03 00:19:26 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/12140630024697757321/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:26 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/12140630024697757321
+2026-04-03 00:19:26 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-04-03 00:19:26 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/13744137939551620070
+2026-04-03 00:19:27 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/13744137939551620070/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:27 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/13744137939551620070
+2026-04-03 00:19:27 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-04-03 00:19:27 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/16058238095787599522
+2026-04-03 00:19:29 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/16058238095787599522
+2026-04-03 00:19:29 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-04-03 00:19:29 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/17752024446998683509
+2026-04-03 00:19:31 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/17752024446998683509
+2026-04-03 00:19:31 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-04-03 00:19:31 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/16097952570527306466
+2026-04-03 00:19:31 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/16097952570527306466/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:31 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/16097952570527306466
+2026-04-03 00:19:31 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-04-03 00:19:31 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/12612757196549212849
+2026-04-03 00:19:31 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/12612757196549212849/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:31 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/12612757196549212849
+2026-04-03 00:19:31 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.ReplaceStatement]
+2026-04-03 00:19:31 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/11106057770888113135
+2026-04-03 00:19:31 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/11106057770888113135/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:31 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/11106057770888113135
+2026-04-03 00:19:31 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-04-03 00:19:31 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/15345626008002281727
+2026-04-03 00:19:31 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/15345626008002281727/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:31 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/15345626008002281727
+2026-04-03 00:19:31 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-04-03 00:19:31 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/7826957565933158899
+2026-04-03 00:19:31 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/7826957565933158899/com/google/gson/internal/bind/util/ISO8601Utils.java
+2026-04-03 00:19:31 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/7826957565933158899
+2026-04-03 00:19:31 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-04-03 00:19:31 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/12481238403370509631
+2026-04-03 00:19:31 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/12481238403370509631/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:31 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/12481238403370509631
+2026-04-03 00:19:31 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-04-03 00:19:31 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/13730137249004748802
+2026-04-03 00:19:31 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/13730137249004748802/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:31 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/13730137249004748802
+2026-04-03 00:19:31 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.ReplaceStatement]
+2026-04-03 00:19:31 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5617996983123314615
+2026-04-03 00:19:32 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5617996983123314615/com/google/gson/internal/bind/util/ISO8601Utils.java
+2026-04-03 00:19:32 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5617996983123314615
+2026-04-03 00:19:32 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-04-03 00:19:32 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5474976677724573634
+2026-04-03 00:19:32 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5474976677724573634/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:32 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5474976677724573634
+2026-04-03 00:19:32 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-04-03 00:19:32 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/14740244823868282715
+2026-04-03 00:19:36 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/14740244823868282715
+2026-04-03 00:19:36 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-04-03 00:19:36 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/17809646006876138043
+2026-04-03 00:19:38 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/17809646006876138043
+2026-04-03 00:19:38 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-04-03 00:19:38 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/1577720778309393639
+2026-04-03 00:19:39 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/1577720778309393639/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:39 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/1577720778309393639
+2026-04-03 00:19:39 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-04-03 00:19:39 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/17707691472641476237
+2026-04-03 00:19:39 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/17707691472641476237/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:39 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/17707691472641476237
+2026-04-03 00:19:39 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-04-03 00:19:39 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/7396345071177991492
+2026-04-03 00:19:39 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/7396345071177991492/com/google/gson/internal/bind/util/ISO8601Utils.java
+2026-04-03 00:19:39 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/7396345071177991492
+2026-04-03 00:19:39 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-04-03 00:19:39 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/8610595474813388268
+2026-04-03 00:19:39 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/8610595474813388268/com/google/gson/internal/bind/util/ISO8601Utils.java
+2026-04-03 00:19:39 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/8610595474813388268
+2026-04-03 00:19:39 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-04-03 00:19:39 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/1410292882432307619
+2026-04-03 00:19:39 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/1410292882432307619
+2026-04-03 00:19:39 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-04-03 00:19:39 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/14125758600583611015
+2026-04-03 00:19:41 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/14125758600583611015
+2026-04-03 00:19:41 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-04-03 00:19:41 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5154503358227869632
+2026-04-03 00:19:41 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5154503358227869632
+2026-04-03 00:19:41 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-04-03 00:19:41 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5171266038888769721
+2026-04-03 00:19:43 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5171266038888769721
+2026-04-03 00:19:43 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.ReplaceStatement]
+2026-04-03 00:19:43 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/17009147342934755148
+2026-04-03 00:19:43 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/17009147342934755148/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:43 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/17009147342934755148
+2026-04-03 00:19:43 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-04-03 00:19:43 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/9777602266223783198
+2026-04-03 00:19:46 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/9777602266223783198
+2026-04-03 00:19:46 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.ReplaceStatement]
+2026-04-03 00:19:46 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/2015759015541971652
+2026-04-03 00:19:46 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/2015759015541971652/com/google/gson/internal/bind/util/ISO8601Utils.java
+2026-04-03 00:19:46 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/2015759015541971652
+2026-04-03 00:19:46 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.ReplaceStatement]
+2026-04-03 00:19:46 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/9211359535278789174
+2026-04-03 00:19:46 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/9211359535278789174/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:46 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/9211359535278789174
+2026-04-03 00:19:46 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-04-03 00:19:46 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/12867556024989551021
+2026-04-03 00:19:46 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/12867556024989551021/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:46 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/12867556024989551021
+2026-04-03 00:19:46 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-04-03 00:19:46 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/7943616830310000332
+2026-04-03 00:19:46 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/7943616830310000332/com/google/gson/internal/bind/util/ISO8601Utils.java
+2026-04-03 00:19:46 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/7943616830310000332
+2026-04-03 00:19:46 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-04-03 00:19:46 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/7815711721531273221
+2026-04-03 00:19:48 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/7815711721531273221
+2026-04-03 00:19:48 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.ReplaceStatement]
+2026-04-03 00:19:48 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/12716807808188489694
+2026-04-03 00:19:48 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/12716807808188489694/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:48 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/12716807808188489694
+2026-04-03 00:19:48 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-04-03 00:19:48 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/394690625779034784
+2026-04-03 00:19:50 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/394690625779034784
+2026-04-03 00:19:51 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.ReplaceStatement]
+2026-04-03 00:19:51 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/12686760152641483739
+2026-04-03 00:19:51 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/12686760152641483739/com/google/gson/internal/bind/util/ISO8601Utils.java
+2026-04-03 00:19:51 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/12686760152641483739
+2026-04-03 00:19:51 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-04-03 00:19:51 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/1553464448472841173
+2026-04-03 00:19:51 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/1553464448472841173
+2026-04-03 00:19:51 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-04-03 00:19:51 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/4316595424327658873
+2026-04-03 00:19:51 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/4316595424327658873/com/google/gson/internal/bind/util/ISO8601Utils.java
+2026-04-03 00:19:51 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/4316595424327658873
+2026-04-03 00:19:51 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-04-03 00:19:51 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/2091006784453970419
+2026-04-03 00:19:51 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/2091006784453970419/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:51 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/2091006784453970419
+2026-04-03 00:19:51 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-04-03 00:19:51 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/4047638273465216722
+2026-04-03 00:19:53 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/4047638273465216722
+2026-04-03 00:19:53 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.ReplaceStatement]
+2026-04-03 00:19:53 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/14666599007496123275
+2026-04-03 00:19:53 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/14666599007496123275/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:53 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/14666599007496123275
+2026-04-03 00:19:53 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-04-03 00:19:53 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/8350093232502338516
+2026-04-03 00:19:53 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/8350093232502338516/com/google/gson/internal/bind/util/ISO8601Utils.java
+2026-04-03 00:19:53 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/8350093232502338516
+2026-04-03 00:19:53 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-04-03 00:19:53 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/9844537170144534324
+2026-04-03 00:19:53 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/9844537170144534324/com/google/gson/internal/bind/util/ISO8601Utils.java
+2026-04-03 00:19:53 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/9844537170144534324
+2026-04-03 00:19:53 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-04-03 00:19:53 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/10683881074380369635
+2026-04-03 00:19:53 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/10683881074380369635/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:53 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/10683881074380369635
+2026-04-03 00:19:53 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-04-03 00:19:53 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/4867691449213421430
+2026-04-03 00:19:53 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/4867691449213421430/com/google/gson/internal/bind/util/ISO8601Utils.java
+2026-04-03 00:19:53 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/4867691449213421430
+2026-04-03 00:19:53 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-04-03 00:19:53 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/15868375331435845868
+2026-04-03 00:19:53 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/15868375331435845868/com/google/gson/internal/bind/util/ISO8601Utils.java
+2026-04-03 00:19:53 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/15868375331435845868
+2026-04-03 00:19:53 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-04-03 00:19:53 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/1995040825620433789
+2026-04-03 00:19:53 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/1995040825620433789/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:53 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/1995040825620433789
+2026-04-03 00:19:53 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-04-03 00:19:53 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/7714267713605297535
+2026-04-03 00:19:53 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/7714267713605297535/com/google/gson/internal/bind/util/ISO8601Utils.java
+2026-04-03 00:19:53 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/7714267713605297535
+2026-04-03 00:19:53 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-04-03 00:19:53 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/17329971049947114245
+2026-04-03 00:19:56 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/17329971049947114245
+2026-04-03 00:19:56 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-04-03 00:19:56 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/18025152433301977938
+2026-04-03 00:19:56 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/18025152433301977938/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:56 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/18025152433301977938
+2026-04-03 00:19:56 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-04-03 00:19:56 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/15390815204140383032
+2026-04-03 00:19:56 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/15390815204140383032/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:56 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/15390815204140383032
+2026-04-03 00:19:56 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-04-03 00:19:56 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/17106522927858647470
+2026-04-03 00:19:56 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/17106522927858647470/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:56 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/17106522927858647470
+2026-04-03 00:19:56 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-04-03 00:19:56 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5211839638587707750
+2026-04-03 00:19:58 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5211839638587707750
+2026-04-03 00:19:58 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-04-03 00:19:58 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/10921357452208437501
+2026-04-03 00:19:58 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/10921357452208437501/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:58 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/10921357452208437501
+2026-04-03 00:19:58 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-04-03 00:19:58 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/8655447498631075492
+2026-04-03 00:19:58 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/8655447498631075492/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:58 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/8655447498631075492
+2026-04-03 00:19:58 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.ReplaceStatement]
+2026-04-03 00:19:58 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5953662439717588034
+2026-04-03 00:19:58 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5953662439717588034
+2026-04-03 00:19:58 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-04-03 00:19:58 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/14310797872314498248
+2026-04-03 00:19:58 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/14310797872314498248/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:58 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/14310797872314498248
+2026-04-03 00:19:58 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-04-03 00:19:58 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/17840141351297837236
+2026-04-03 00:19:58 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/17840141351297837236/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:58 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/17840141351297837236
+2026-04-03 00:19:58 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-04-03 00:19:58 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/10807226203150084519
+2026-04-03 00:19:58 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/10807226203150084519/com/google/gson/internal/bind/util/ISO8601Utils.java
+2026-04-03 00:19:58 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/10807226203150084519
+2026-04-03 00:19:58 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-04-03 00:19:58 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5494140013760356891
+2026-04-03 00:19:58 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5494140013760356891/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:58 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5494140013760356891
+2026-04-03 00:19:58 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-04-03 00:19:58 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/8580145755883089766
+2026-04-03 00:19:58 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/8580145755883089766
+2026-04-03 00:19:58 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-04-03 00:19:58 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/7749298800057242454
+2026-04-03 00:19:58 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/7749298800057242454
+2026-04-03 00:19:58 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-04-03 00:19:58 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/14861465877319712291
+2026-04-03 00:19:58 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/14861465877319712291
+2026-04-03 00:19:58 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-04-03 00:19:58 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/7722560277075175303
+2026-04-03 00:19:58 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/7722560277075175303/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:58 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/7722560277075175303
+2026-04-03 00:19:58 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-04-03 00:19:58 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/16472009919404216463
+2026-04-03 00:19:58 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/16472009919404216463/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:19:58 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/16472009919404216463
+2026-04-03 00:19:58 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-04-03 00:19:58 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/16912802308005285473
+2026-04-03 00:20:01 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/16912802308005285473
+2026-04-03 00:20:01 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-04-03 00:20:01 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/2195370899010533421
+2026-04-03 00:20:01 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/2195370899010533421/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:20:01 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/2195370899010533421
+2026-04-03 00:20:01 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.ReplaceStatement]
+2026-04-03 00:20:01 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/332907364235326939
+2026-04-03 00:20:01 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/332907364235326939
+2026-04-03 00:20:01 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-04-03 00:20:01 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/11424749065425887868
+2026-04-03 00:20:01 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/11424749065425887868/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:20:01 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/11424749065425887868
+2026-04-03 00:20:01 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-04-03 00:20:01 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/3452767803054095230
+2026-04-03 00:20:01 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/3452767803054095230
+2026-04-03 00:20:01 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-04-03 00:20:01 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/13246420680046129206
+2026-04-03 00:20:01 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/13246420680046129206/com/google/gson/internal/bind/util/ISO8601Utils.java
+2026-04-03 00:20:01 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/13246420680046129206
+2026-04-03 00:20:01 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-04-03 00:20:01 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/6862133582871752701
+2026-04-03 00:20:01 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/6862133582871752701/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:20:01 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/6862133582871752701
+2026-04-03 00:20:01 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-04-03 00:20:01 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/14085825627878853937
+2026-04-03 00:20:03 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/14085825627878853937
+2026-04-03 00:20:03 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-04-03 00:20:03 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/16181651242222377008
+2026-04-03 00:20:03 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/16181651242222377008/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:20:03 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/16181651242222377008
+2026-04-03 00:20:03 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-04-03 00:20:03 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5046998263655225139
+2026-04-03 00:20:03 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5046998263655225139/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:20:03 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5046998263655225139
+2026-04-03 00:20:03 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-04-03 00:20:03 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/3025273057038744688
+2026-04-03 00:20:03 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/3025273057038744688
+2026-04-03 00:20:03 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-04-03 00:20:03 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/4391508319764149451
+2026-04-03 00:20:12 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/4391508319764149451
+2026-04-03 00:20:12 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-04-03 00:20:12 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/9255199243825473855
+2026-04-03 00:20:12 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/9255199243825473855
+2026-04-03 00:20:12 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-04-03 00:20:12 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5025377412427823539
+2026-04-03 00:20:15 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5025377412427823539
+2026-04-03 00:20:15 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-04-03 00:20:15 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/7203723228081523147
+2026-04-03 00:20:15 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/7203723228081523147
+2026-04-03 00:20:15 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-04-03 00:20:15 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/11856349447229298052
+2026-04-03 00:20:15 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/11856349447229298052/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:20:15 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/11856349447229298052
+2026-04-03 00:20:15 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-04-03 00:20:15 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5625908584614078628
+2026-04-03 00:20:17 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5625908584614078628
+2026-04-03 00:20:17 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-04-03 00:20:17 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/538147562796248328
+2026-04-03 00:20:19 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/538147562796248328
+2026-04-03 00:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-04-03 00:20:19 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/1933357719602427341
+2026-04-03 00:20:19 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/1933357719602427341/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:20:19 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/1933357719602427341
+2026-04-03 00:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-04-03 00:20:19 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/10570445006962263166
+2026-04-03 00:20:19 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/10570445006962263166
+2026-04-03 00:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-04-03 00:20:19 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5044609831486599944
+2026-04-03 00:20:19 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5044609831486599944/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:20:19 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/5044609831486599944
+2026-04-03 00:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-04-03 00:20:19 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/4398623651372377525
+2026-04-03 00:20:22 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/4398623651372377525
+2026-04-03 00:20:22 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-04-03 00:20:22 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/12910060091800324198
+2026-04-03 00:20:22 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/12910060091800324198/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:20:22 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/12910060091800324198
+2026-04-03 00:20:22 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-04-03 00:20:22 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/6549818240029804068
+2026-04-03 00:20:22 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/6549818240029804068/com/google/gson/internal/bind/util/ISO8601Utils.java
+2026-04-03 00:20:22 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/6549818240029804068
+2026-04-03 00:20:22 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-04-03 00:20:22 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/3436491440459110037
+2026-04-03 00:20:22 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/3436491440459110037/com/google/gson/internal/bind/DefaultDateTypeAdapter.java
+2026-04-03 00:20:22 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/3436491440459110037
+2026-04-03 00:20:22 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-04-03 00:20:22 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/10695286658992846575
+2026-04-03 00:20:22 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/10695286658992846575/com/google/gson/internal/bind/util/ISO8601Utils.java
+2026-04-03 00:20:22 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/10695286658992846575
+2026-04-03 00:20:22 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-04-03 00:20:22 gin.test.ExternalTestRunner.createTempDirectory() INFO: Created temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/1293510728676665605
+2026-04-03 00:20:22 gin.test.Compiler.compileFile() WARNING: Error during compilation of source on disk: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/1293510728676665605/com/google/gson/internal/bind/util/ISO8601Utils.java
+2026-04-03 00:20:22 gin.test.ExternalTestRunner.deleteTempDirectory() INFO: Deleted temp dir: /var/folders/hh/tn08kl1j0xnd2fmc74qdhlz40000gn/T/1293510728676665605
+2026-04-03 00:20:22 gin.util.RandomSampler.sampleMethodsHook() INFO: Progress: 100/100 patches tested
+2026-04-03 00:20:22 gin.util.RandomSampler.sampleMethodsHook() INFO: Results saved to: /Users/""/repos/gin-rl/experiment_results/runtime_gson_top2/exp1_random_rep3_20260403_001702.csv
+2026-04-03 00:20:22 gin.util.RandomSampler.printSummary() INFO: ============================================================
+2026-04-03 00:20:22 gin.util.RandomSampler.printSummary() INFO: RANDOM SAMPLING SUMMARY
+2026-04-03 00:20:22 gin.util.RandomSampler.printSummary() INFO: ============================================================
+2026-04-03 00:20:22 gin.util.RandomSampler.printSummary() INFO: Total patches tested: 100
+2026-04-03 00:20:22 gin.util.RandomSampler.printSummary() INFO: Compiling patches: 20 (20.0%)
+2026-04-03 00:20:22 gin.util.RandomSampler.printSummary() INFO: Test-passing patches: 13 (13.0%)
+2026-04-03 00:20:22 gin.util.RandomSampler.printSummary() INFO: Runtime-improving patches: 4 (4.0%)
+2026-04-03 00:20:22 gin.util.RandomSampler.printSummary() INFO:
+2026-04-03 00:20:22 gin.util.RandomSampler.printSummary() INFO: OPERATOR SUCCESS RATES (single-edit patches):
+2026-04-03 00:20:22 gin.util.RandomSampler.printSummary() INFO:   MatchedDeleteStatement: 15 attempts, 6.7% pass, 0.0% improve
+2026-04-03 00:20:22 gin.util.RandomSampler.printSummary() INFO:   CopyStatement: 8 attempts, 12.5% pass, 0.0% improve
+2026-04-03 00:20:22 gin.util.RandomSampler.printSummary() INFO:   MatchedReplaceStatement: 13 attempts, 38.5% pass, 15.4% improve
+2026-04-03 00:20:22 gin.util.RandomSampler.printSummary() INFO:   ReplaceStatement: 11 attempts, 0.0% pass, 0.0% improve
+2026-04-03 00:20:22 gin.util.RandomSampler.printSummary() INFO:   MatchedSwapStatement: 14 attempts, 21.4% pass, 14.3% improve
+2026-04-03 00:20:22 gin.util.RandomSampler.printSummary() INFO:   MatchedCopyStatement: 7 attempts, 0.0% pass, 0.0% improve
+2026-04-03 00:20:22 gin.util.RandomSampler.printSummary() INFO:   DeleteStatement: 17 attempts, 17.6% pass, 0.0% improve
+2026-04-03 00:20:22 gin.util.RandomSampler.printSummary() INFO:   SwapStatement: 15 attempts, 0.0% pass, 0.0% improve
+2026-04-03 00:20:22 gin.util.RandomSampler.printSummary() INFO: ============================================================
+2026-04-03 00:20:22 gin.util.RandomSampler.writeSummaryCSV() INFO: Summary saved to: /Users/""/repos/gin-rl/experiment_results/runtime_gson_top2/exp1_random_rep3_20260403_001702_summary.csv

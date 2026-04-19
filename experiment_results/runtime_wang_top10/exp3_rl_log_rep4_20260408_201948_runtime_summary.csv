@@ -1,0 +1,12 @@
+MethodName,BaselineRuntime(ms),BestRuntime(ms),RuntimeReduction(ms),ImprovementPercent,BestPatch
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)",3595.00,2669.00,926.00,25.76,"|"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)",1072.00,1059.00,13.00,1.21,"|"
+"org.jcodec.codecs.h264.encode.MBEncoderHelper.org.jcodec.codecs.h264.encode.MBEncoderHelper.takeSafe(byte[],int,int,int,int,byte[],int,int)",1925.00,1392.00,533.00,27.69,"|"
+"org.jcodec.codecs.h264.encode.IntraPredEstimator.org.jcodec.codecs.h264.encode.IntraPredEstimator.getLumaPred4x4(Picture,EncodingContext,int,int,int)",1390.00,1368.00,22.00,1.58,"|"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)",2849.00,2691.00,158.00,5.55,"|"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeVert(Picture,int,int,int,int,int,int,int)",2824.00,2641.00,183.00,6.48,"| gin.edit.matched.MatchedSwapStatement 'src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java':3072 <-> 'src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java':3072 | gin.edit.statement.MoveStatement 'src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java':3161 -> 'src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java':3161:3161 |"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs4(int,int,byte[],byte[],int,int,int,int,int,int,int,int,boolean)",2822.00,2822.00,0.00,0.00,"|"
+"org.jcodec.codecs.h264.decode.MBlockDecoderUtils.org.jcodec.codecs.h264.decode.MBlockDecoderUtils.mergeResidual(Picture,int[][][],int[][],int[][])",2621.00,2621.00,0.00,0.00,"|"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)",162.00,149.00,13.00,8.02,"|"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)",1248.00,1150.00,98.00,7.85,"|"
+"TOTAL",20508.00,18562.00,1946.00,9.49,""

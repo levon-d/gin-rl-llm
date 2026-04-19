@@ -1,0 +1,12 @@
+MethodName,BaselineRuntime(ms),BestRuntime(ms),RuntimeReduction(ms),ImprovementPercent,BestPatch
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)",2874.00,2874.00,0.00,0.00,"|"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)",1151.00,1122.00,29.00,2.52,"|"
+"org.jcodec.codecs.h264.encode.MBEncoderHelper.org.jcodec.codecs.h264.encode.MBEncoderHelper.takeSafe(byte[],int,int,int,int,byte[],int,int)",1468.00,1468.00,0.00,0.00,"|"
+"org.jcodec.codecs.h264.encode.IntraPredEstimator.org.jcodec.codecs.h264.encode.IntraPredEstimator.getLumaPred4x4(Picture,EncodingContext,int,int,int)",1496.00,1434.00,62.00,4.14,"|"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)",2838.00,2838.00,0.00,0.00,"|"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeVert(Picture,int,int,int,int,int,int,int)",2919.00,2822.00,97.00,3.32,"|"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs4(int,int,byte[],byte[],int,int,int,int,int,int,int,int,boolean)",2854.00,2854.00,0.00,0.00,"|"
+"org.jcodec.codecs.h264.decode.MBlockDecoderUtils.org.jcodec.codecs.h264.decode.MBlockDecoderUtils.mergeResidual(Picture,int[][][],int[][],int[][])",2833.00,2794.00,39.00,1.38,"| gin.edit.statement.MoveStatement 'src/main/java/org/jcodec/codecs/h264/decode/MBlockDecoderUtils.java':628 -> 'src/main/java/org/jcodec/codecs/h264/decode/MBlockDecoderUtils.java':627:627 | gin.edit.statement.MoveStatement 'src/main/java/org/jcodec/codecs/h264/decode/MBlockDecoderUtils.java':628 -> 'src/main/java/org/jcodec/codecs/h264/decode/MBlockDecoderUtils.java':627:628 | gin.edit.statement.MoveStatement 'src/main/java/org/jcodec/codecs/h264/decode/MBlockDecoderUtils.java':628 -> 'src/main/java/org/jcodec/codecs/h264/decode/MBlockDecoderUtils.java':627:640 |"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)",163.00,149.00,14.00,8.59,"|"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)",1173.00,1121.00,52.00,4.43,"|"
+"TOTAL",19769.00,19476.00,293.00,1.48,""

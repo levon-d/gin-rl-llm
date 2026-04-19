@@ -1,0 +1,81 @@
+METRIC B (Bose Metric 1): Best patch runtime as % of original (LOWER IS BETTER)
+Method,Exp1: Random sampling (5 reps),Exp2: UCB + Traditional ops (5 reps),Exp3: UCB + All ops incl. LLM (3 reps),Exp4: LS + Traditional ops (6 reps),Exp5: LS + All ops incl. LLM (3 reps)
+filterBs4,100.00%,98.80%,98.52%,97.18%,90.74%
+filterBs,100.00%,100.49%,78.04%,76.38%,85.58%
+estimateQPix,100.00%,96.74%,88.96%,92.55%,86.20%
+takeSafe,100.00%,98.72%,86.82%,90.65%,93.68%
+getLumaPred4x4,100.00%,96.06%,92.34%,91.99%,91.48%
+filterBlockEdgeHoris,99.45%,98.96%,97.44%,99.93%,96.10%
+filterBlockEdgeVert,99.78%,98.61%,81.74%,93.65%,85.97%
+mergeResidual,100.00%,98.55%,96.99%,98.04%,99.02%
+resample,98.14%,91.41%,93.21%,87.90%,90.42%
+getPlaneWidth,100.00%,97.46%,83.32%,96.29%,95.02%
+MEAN ratio,99.74%,97.58%,89.74%,92.46%,91.42%
+MEAN improvement,0.26%,2.42%,10.26%,7.54%,8.58%
+
+Per-rep ratios:
+Exp1: Random sampling (5 reps)
+Method,rep1,rep2,rep3,rep4,rep5,median
+filterBs4,100.00%,100.00%,100.00%,100.00%,98.88%,100.00%
+filterBs,79.03%,92.18%,100.07%,100.00%,100.00%,100.00%
+estimateQPix,100.00%,98.10%,100.00%,100.00%,100.00%,100.00%
+takeSafe,100.00%,100.00%,99.45%,100.00%,100.00%,100.00%
+getLumaPred4x4,100.00%,99.70%,102.48%,100.69%,100.00%,100.00%
+filterBlockEdgeHoris,99.35%,100.00%,100.00%,99.45%,99.20%,99.45%
+filterBlockEdgeVert,99.17%,94.13%,99.78%,100.00%,100.00%,99.78%
+mergeResidual,100.00%,101.50%,100.00%,100.00%,100.00%,100.00%
+resample,100.00%,98.14%,95.45%,98.09%,100.00%,98.14%
+getPlaneWidth,98.36%,100.00%,103.77%,102.05%,100.00%,100.00%
+
+Exp2: UCB + Traditional ops (5 reps)
+Method,rep1,rep2,rep3,rep4,rep5,median
+filterBs4,99.23%,98.10%,101.51%,98.52%,98.80%,98.80%
+filterBs,99.45%,97.67%,100.49%,102.12%,101.70%,100.49%
+estimateQPix,96.69%,98.50%,97.48%,88.71%,96.74%,96.74%
+takeSafe,99.31%,98.08%,100.07%,98.72%,94.89%,98.72%
+getLumaPred4x4,98.62%,96.06%,95.86%,98.18%,92.47%,96.06%
+filterBlockEdgeHoris,98.24%,98.96%,100.32%,98.71%,99.32%,98.96%
+filterBlockEdgeVert,99.28%,98.61%,96.68%,98.82%,94.28%,98.61%
+mergeResidual,98.55%,97.61%,98.62%,98.65%,96.76%,98.55%
+resample,89.51%,91.77%,91.41%,92.07%,91.36%,91.41%
+getPlaneWidth,98.32%,103.60%,95.57%,97.46%,93.79%,97.46%
+
+Exp3: UCB + All ops incl. LLM (3 reps)
+Method,rep1,rep2,rep3,median
+filterBs4,76.36%,101.28%,98.52%,98.52%
+filterBs,139.38%,76.97%,78.04%,78.04%
+estimateQPix,88.96%,59.66%,90.11%,88.96%
+takeSafe,52.69%,86.82%,89.17%,86.82%
+getLumaPred4x4,89.74%,110.93%,92.34%,92.34%
+filterBlockEdgeHoris,123.45%,97.44%,96.10%,97.44%
+filterBlockEdgeVert,69.03%,81.74%,88.16%,81.74%
+mergeResidual,42.78%,96.99%,98.58%,96.99%
+resample,89.02%,95.15%,93.21%,93.21%
+getPlaneWidth,77.53%,87.51%,83.32%,83.32%
+
+Exp4: LS + Traditional ops (6 reps)
+Method,rep1,rep2,rep3,rep4,rep5,rep6,median
+filterBs4,96.49%,97.87%,100.72%,93.01%,87.37%,99.59%,97.18%
+filterBs,73.02%,71.07%,71.16%,93.33%,91.21%,79.75%,76.38%
+estimateQPix,77.91%,104.28%,90.99%,85.31%,94.10%,99.81%,92.55%
+takeSafe,87.03%,80.35%,82.02%,101.78%,94.27%,98.39%,90.65%
+getLumaPred4x4,91.62%,56.34%,90.38%,92.36%,99.67%,98.30%,91.99%
+filterBlockEdgeHoris,100.00%,83.50%,99.86%,91.41%,112.07%,100.34%,99.93%
+filterBlockEdgeVert,101.90%,89.34%,75.06%,109.95%,86.13%,97.97%,93.65%
+mergeResidual,96.23%,102.85%,90.60%,91.76%,108.10%,99.85%,98.04%
+resample,68.71%,75.69%,88.52%,105.95%,87.28%,91.02%,87.90%
+getPlaneWidth,94.86%,102.43%,94.55%,90.70%,97.73%,98.35%,96.29%
+
+Exp5: LS + All ops incl. LLM (3 reps)
+Method,rep1,rep2,rep3,median
+filterBs4,90.74%,78.35%,99.51%,90.74%
+filterBs,87.15%,83.65%,85.58%,85.58%
+estimateQPix,55.85%,93.41%,86.20%,86.20%
+takeSafe,93.68%,78.09%,99.04%,93.68%
+getLumaPred4x4,93.36%,85.84%,91.48%,91.48%
+filterBlockEdgeHoris,97.69%,96.10%,95.72%,96.10%
+filterBlockEdgeVert,85.85%,98.35%,85.97%,85.97%
+mergeResidual,100.37%,99.02%,93.05%,99.02%
+resample,100.00%,90.42%,87.27%,90.42%
+getPlaneWidth,96.10%,95.02%,91.66%,95.02%
+

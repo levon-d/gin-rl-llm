@@ -1,0 +1,4 @@
+MethodName,BaselineRuntime(ms),BestRuntime(ms),RuntimeReduction(ms),ImprovementPercent,BestPatch
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)",206.00,162.00,44.00,21.36,"|"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)",1988.00,1531.00,457.00,22.99,"|"
+"TOTAL",2194.00,1693.00,501.00,22.84,""

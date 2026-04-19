@@ -1,0 +1,75 @@
+MethodName,BaselineRuntime(ms),BestRuntime(ms),RuntimeReduction(ms),ImprovementPercent,BestPatch
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)",3647.00,2846.00,801.00,21.96,"|"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)",1183.00,1066.00,117.00,9.89,"|"
+"org.jcodec.codecs.h264.encode.MBEncoderHelper.org.jcodec.codecs.h264.encode.MBEncoderHelper.takeSafe(byte[],int,int,int,int,byte[],int,int)",1607.00,1433.00,174.00,10.83,"|"
+"org.jcodec.codecs.h264.encode.IntraPredEstimator.org.jcodec.codecs.h264.encode.IntraPredEstimator.getLumaPred4x4(Picture,EncodingContext,int,int,int)",1567.00,1447.00,120.00,7.66,"|"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)",2894.00,2781.00,113.00,3.90,"|"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeVert(Picture,int,int,int,int,int,int,int)",3193.00,2815.00,378.00,11.84,"|"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs4(int,int,byte[],byte[],int,int,int,int,int,int,int,int,boolean)",2844.00,2802.00,42.00,1.48,"|"
+"org.jcodec.codecs.h264.decode.MBlockDecoderUtils.org.jcodec.codecs.h264.decode.MBlockDecoderUtils.mergeResidual(Picture,int[][][],int[][],int[][])",2743.00,2704.00,39.00,1.42,"|"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)",162.00,151.00,11.00,6.79,"| gin.edit.llm.LLMReplaceStatement 'src/main/java/org/jcodec/scale/BaseResampler.java':632
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    // Horizontal pass
+    for (int y = 0; y < src.getPlaneHeight(p) + taps; y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsXs = getTapsX(x);
+            int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                sum += (getPel(src; p; srcX + i; y - taps / 2 + 1) + 128) * tapsXs[i];
+            }
+            temp[y * toSize.getWidth() + x] = sum;
+        }
+    }
+    // Vertical pass
+    for (int y = 0; y < dst.getPlaneHeight(p); y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsYs = getTapsY(y);
+            int srcY = (int) (scaleFactorY * y);
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+            }
+            dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14; 0; 255) - 128);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces; if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    // Horizontal pass
+    for (int y = 0; y < src.getPlaneHeight(p) + taps; y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsXs = getTapsX(x);
+            int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                int pixelValue = getPel(src; p; srcX + i; y - taps / 2 + 1);
+                sum += (pixelValue + 128) * tapsXs[i];
+            }
+            temp[y * toSize.getWidth() + x] = sum;
+        }
+    }
+
+    // Vertical pass
+    for (int y = 0; y < dst.getPlaneHeight(p); y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsYs = getTapsY(y);
+            int srcY = (int) (scaleFactorY * y);
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                int tempIndex = x + (srcY + i) * toSize.getWidth();
+                sum += temp[tempIndex] * tapsYs[i];
+            }
+            dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14; 0; 255) - 128);
+        }
+    }
+}
+
+!!! | gin.edit.matched.MatchedSwapStatement 'src/main/java/org/jcodec/scale/BaseResampler.java':326 <-> 'src/main/java/org/jcodec/scale/BaseResampler.java':633 |"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)",1385.00,1154.00,231.00,16.68,"|"
+"TOTAL",21225.00,19199.00,2026.00,9.55,""

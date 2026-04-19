@@ -1,0 +1,12 @@
+MethodName,BaselineRuntime(ms),BestRuntime(ms),RuntimeReduction(ms),ImprovementPercent,BestPatch
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)",2989.00,2443.00,546.00,18.27,"|"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()",3863.00,3504.00,359.00,9.29,"|"
+"org.junit.runners.ParentRunner.org.junit.runners.ParentRunner.shouldRun(Filter,T)",3714.00,3372.00,342.00,9.21,"|"
+"org.junit.runner.Description.org.junit.runner.Description.formatDisplayName(String,String)",3360.00,3225.00,135.00,4.02,"|"
+"org.junit.runner.Computer.org.junit.runner.Computer.getSuite(RunnerBuilder,Class<?>[])",3471.00,3267.00,204.00,5.88,"|"
+"org.junit.runner.notification.RunNotifier.org.junit.runner.notification.RunNotifier.wrapIfNotThreadSafe(RunListener)",2541.00,2407.00,134.00,5.27,"|"
+"org.junit.internal.builders.IgnoredBuilder.org.junit.internal.builders.IgnoredBuilder.runnerForClass(Class<?>)",760.00,544.00,216.00,28.42,"|"
+"org.junit.runners.model.TestClass.org.junit.runners.model.TestClass.runsTopToBottom(Class<?extendsAnnotation>)",1132.00,1021.00,111.00,9.81,"|"
+"org.junit.internal.TextListener.org.junit.internal.TextListener.elapsedTimeAsString(long)",58.00,54.00,4.00,6.90,"|"
+"org.junit.internal.builders.JUnit4Builder.org.junit.internal.builders.JUnit4Builder.runnerForClass(Class<?>)",269.00,253.00,16.00,5.95,"| gin.edit.matched.MatchedReplaceStatement 'src/main/java/org/junit/internal/builders/JUnit4Builder.java':39 -> 'src/main/java/org/junit/internal/builders/JUnit4Builder.java':39 |"
+"TOTAL",22157.00,20090.00,2067.00,9.33,""

@@ -1,0 +1,15585 @@
+2026-03-07 23:43:32 gin.util.Sampler.printCommandlineArguments() INFO: Project directory, required: /Users/""/repos/jcodec
+2026-03-07 23:43:32 gin.util.Sampler.printCommandlineArguments() INFO: Method file, required: /Users/""/repos/gin-rl/jcodec_wang_top10.csv
+2026-03-07 23:43:32 gin.util.Sampler.printCommandlineArguments() INFO: Project name, required for maven and gradle projects: jcodec
+2026-03-07 23:43:32 gin.util.Sampler.printCommandlineArguments() INFO: Classpath, required for non-maven and non-gradle projects:
+2026-03-07 23:43:32 gin.util.Sampler.printCommandlineArguments() INFO: Path to maven bin directory, e.g. /usr/local, required for maven projects: /opt/homebrew/Cellar/maven/3.9.13/libexec
+2026-03-07 23:43:32 gin.util.Sampler.printCommandlineArguments() INFO: Output CSV file: /Users/""/repos/gin-rl/experiment_results/exp1_runtime_random_rep2_20260307_234217.csv
+2026-03-07 23:43:32 gin.util.Sampler.printCommandlineArguments() INFO: Output file for storing the execution time: sampler_timing.csv
+2026-03-07 23:43:32 gin.util.Sampler.printCommandlineArguments() INFO: Timeout in milliseconds: 10000
+2026-03-07 23:43:32 gin.util.Sampler.printCommandlineArguments() INFO: Repeat each test r times: 1
+2026-03-07 23:43:32 gin.util.Sampler.printCommandlineArguments() INFO: Number of methods from the method data to sample from. 0 for all.: 0
+2026-03-07 23:43:32 gin.util.Sampler.printCommandlineArguments() INFO: Run tests in a separate jvm: false
+2026-03-07 23:43:32 gin.util.Sampler.printCommandlineArguments() INFO: Run every repetition in a new jvm. Includes option '-j': false
+2026-03-07 23:43:32 gin.util.Sampler.printCommandlineArguments() INFO: Run every test in a new jvm. Includes options '-j' and '-jj': false
+2026-03-07 23:43:32 gin.util.Sampler.printCommandlineArguments() INFO: Fail fast. If set to true, the tests will stop at the first failure and the next patch will be executed. You probably don't want to set this to true for Automatic Program Repair.: false
+2026-03-07 23:43:32 gin.util.Sampler.printCommandlineArguments() INFO: OpenAI API key for LLM edits: demo
+2026-03-07 23:43:32 gin.util.Sampler.printCommandlineArguments() INFO: OpenAI API model name for LLM edits; e.g. gpt-3.5-turbo or gpt-4; full list at https://github.com/langchain4j/langchain4j/blob/main/langchain4j-open-ai/src/main/java/dev/langchain4j/model/openai/OpenAiModelName.java: gpt-3.5-turbo
+2026-03-07 23:43:32 gin.util.Sampler.printCommandlineArguments() INFO: model type; OpenAI  or a name of an ollama model: OpenAI
+2026-03-07 23:43:32 gin.util.Sampler.printCommandlineArguments() INFO: model timeout in seconds: 30
+2026-03-07 23:43:32 gin.util.Sampler.printCommandlineArguments() INFO: Prompt Type for LLM edits: MEDIUM
+2026-03-07 23:43:32 gin.util.Sampler.printCommandlineArguments() INFO: Prompt Template for LLM edits:
+2026-03-07 23:43:32 gin.util.Sampler.setUp() INFO: Calculating classpath..
+[WARN] Maven will be executed in interactive mode, but no input stream has been configured for this MavenInvoker instance.
+2026-03-07 23:43:33 gin.util.Sampler.setUp() INFO: Classpath: /Users/""/repos/jcodec/target/classes:/Users/""/repos/jcodec/target/test-classes:/Users/""/.m2/repository/junit/junit/4.13.1/junit-4.13.1.jar:/Users/""/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+2026-03-07 23:43:33 gin.util.RandomSampler.Setup() INFO: === RandomSampler with Runtime Tracking ===
+2026-03-07 23:43:33 gin.util.RandomSampler.Setup() INFO: Edit types: 8 operators
+2026-03-07 23:43:33 gin.util.RandomSampler.Setup() INFO: LLM edits enabled: false
+2026-03-07 23:43:33 gin.util.RandomSampler.Setup() INFO: ==========================================
+2026-03-07 23:43:33 gin.util.RandomSampler.printAdditionalArguments() INFO: Edit types: [class gin.edit.statement.DeleteStatement, class gin.edit.statement.CopyStatement, class gin.edit.statement.ReplaceStatement, class gin.edit.statement.SwapStatement, class gin.edit.matched.MatchedDeleteStatement, class gin.edit.matched.MatchedCopyStatement, class gin.edit.matched.MatchedReplaceStatement, class gin.edit.matched.MatchedSwapStatement]
+2026-03-07 23:43:33 gin.util.RandomSampler.printAdditionalArguments() INFO: Number of edits per patch: 1
+2026-03-07 23:43:33 gin.util.RandomSampler.printAdditionalArguments() INFO: Number of patches: 100
+2026-03-07 23:43:33 gin.util.RandomSampler.printAdditionalArguments() INFO: Random seed for method selection: 2223
+2026-03-07 23:43:33 gin.util.RandomSampler.printAdditionalArguments() INFO: Random seed for edit type selection: 2123
+2026-03-07 23:43:33 gin.util.RandomSampler.sampleMethodsHook() INFO: Number of methods: 10
+2026-03-07 23:43:33 gin.util.RandomSampler.sampleMethodsHook() INFO: Number of patches to generate: 100
+2026-03-07 23:43:33 gin.util.RandomSampler.sampleMethodsHook() INFO: Getting baseline runtime for all methods...
+2026-03-07 23:43:35 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+[     0]
+[   100]
+[   200]
+2026-03-07 23:43:37 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:43:37 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:43:37 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:43:37 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:43:37 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:43:37 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:43:37 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:43:37 gin.util.RandomSampler.sampleMethodsHook() INFO: Method org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean) (ID=1): baseline = 3212.0 ms
+[     0]
+[   100]
+[   200]
+2026-03-07 23:43:38 gin.util.RandomSampler.sampleMethodsHook() INFO: Method org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int) (ID=2): baseline = 803.0 ms
+[     0]
+[   100]
+[   200]
+2026-03-07 23:43:39 gin.util.RandomSampler.sampleMethodsHook() INFO: Method org.jcodec.codecs.h264.encode.MBEncoderHelper.takeSafe(byte[],int,int,int,int,byte[],int,int) (ID=3): baseline = 1322.0 ms
+2026-03-07 23:43:41 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+[     0]
+[   100]
+[   200]
+2026-03-07 23:43:42 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:43:42 gin.util.RandomSampler.sampleMethodsHook() INFO: Method org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int) (ID=4): baseline = 2687.0 ms
+2026-03-07 23:43:44 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+[     0]
+[   100]
+[   200]
+2026-03-07 23:43:45 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:43:45 gin.util.RandomSampler.sampleMethodsHook() INFO: Method org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeVert(Picture,int,int,int,int,int,int,int) (ID=5): baseline = 2685.0 ms
+2026-03-07 23:43:47 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+[     0]
+[   100]
+[   200]
+2026-03-07 23:43:47 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:43:47 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:43:48 gin.util.RandomSampler.sampleMethodsHook() INFO: Method org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs4(int,int,byte[],byte[],int,int,int,int,int,int,int,int,boolean) (ID=6): baseline = 2786.0 ms
+2026-03-07 23:43:50 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+[     0]
+[   100]
+[   200]
+2026-03-07 23:43:50 gin.util.RandomSampler.sampleMethodsHook() INFO: Method org.jcodec.codecs.h264.decode.MBlockDecoderUtils.mergeResidual(Picture,int[][][],int[][],int[][]) (ID=7): baseline = 2806.0 ms
+randompic_6.png
+122x328_6.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+356x280_6.png
+436x452_6.png
+randompic_10.png
+140x114_10.png
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+202x132_10.png
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+248x160_10.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+randompic_13.png
+382x182_13.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+458x374_13.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+randompic_19.png
+112x462_19.png
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+210x440_19.png
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+362x216_19.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+randompic_21.png
+212x436_21.png
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+308x264_21.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+402x340_21.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+randompic_6.png
+122x328_6.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+356x280_6.png
+436x452_6.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+randompic_10.png
+140x114_10.png
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+202x132_10.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+248x160_10.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+randompic_13.png
+382x182_13.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+458x374_13.png
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+randompic_19.png
+112x462_19.png
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+210x440_19.png
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+362x216_19.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+randompic_21.png
+212x436_21.png
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+308x264_21.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+402x340_21.png
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+2026-03-07 23:43:51 gin.util.RandomSampler.sampleMethodsHook() INFO: Method org.jcodec.scale.BaseResampler.resample(Picture,Picture) (ID=8): baseline = 186.0 ms
+2026-03-07 23:43:51 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:43:51 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:43:51 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+randompic_6.png
+122x328_6.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+356x280_6.png
+436x452_6.png
+randompic_10.png
+140x114_10.png
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+202x132_10.png
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+248x160_10.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+randompic_13.png
+382x182_13.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+458x374_13.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+randompic_19.png
+112x462_19.png
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+210x440_19.png
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+362x216_19.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+randompic_21.png
+212x436_21.png
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+308x264_21.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+402x340_21.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+randompic_6.png
+122x328_6.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+356x280_6.png
+436x452_6.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+randompic_10.png
+140x114_10.png
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+202x132_10.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+248x160_10.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+randompic_13.png
+382x182_13.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+458x374_13.png
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+randompic_19.png
+112x462_19.png
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+210x440_19.png
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+362x216_19.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+randompic_21.png
+212x436_21.png
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+308x264_21.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+402x340_21.png
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+2026-03-07 23:43:52 gin.util.RandomSampler.sampleMethodsHook() INFO: Method org.jcodec.common.model.Picture.getPlaneWidth(int) (ID=9): baseline = 1519.0 ms
+[     0]
+[   100]
+[   200]
+2026-03-07 23:43:54 gin.util.RandomSampler.sampleMethodsHook() INFO: Method org.jcodec.codecs.h264.encode.MBEncoderHelper.takeExtendBorder(byte[],int,int,int,int,byte[],int,int) (ID=10): baseline = 1224.0 ms
+2026-03-07 23:43:54 gin.util.RandomSampler.sampleMethodsHook() INFO: Generating and testing random patches...
+2026-03-07 23:43:54 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-03-07 23:43:56 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+[     0]
+[   100]
+[   200]
+2026-03-07 23:43:56 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:43:56 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-03-07 23:43:56 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-03-07 23:43:56 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-03-07 23:43:56 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-03-07 23:43:56 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-03-07 23:43:56 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-03-07 23:43:57 gin.test.Compiler.compile() ERROR: Did you set the classpath with -cp=?
+2026-03-07 23:43:57 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.ReplaceStatement]
+2026-03-07 23:43:57 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-03-07 23:43:57 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-03-07 23:43:57 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-03-07 23:43:57 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-03-07 23:43:57 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-03-07 23:43:57 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.ReplaceStatement]
+2026-03-07 23:43:57 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-03-07 23:43:57 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-03-07 23:43:57 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-03-07 23:43:57 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.ReplaceStatement]
+2026-03-07 23:43:57 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.ReplaceStatement]
+randompic_6.png
+122x328_6.png
+[WARN]	. (:0):	Avg diff: 114
+randompic_6.png
+122x328_6.png
+[WARN]	. (:0):	Avg diff: 114
+2026-03-07 23:43:57 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-03-07 23:43:57 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-03-07 23:43:57 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-03-07 23:43:57 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+2026-03-07 23:44:00 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+[     0]
+[   100]
+[   200]
+2026-03-07 23:44:00 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:00 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:00 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:00 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:00 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:00 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:00 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:00 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-03-07 23:44:00 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-03-07 23:44:00 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-03-07 23:44:00 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-03-07 23:44:00 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-03-07 23:44:00 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-03-07 23:44:00 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+[     0]
+[   100]
+[   200]
+2026-03-07 23:44:01 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+randompic_6.png
+122x328_6.png
+randompic_6.png
+122x328_6.png
+2026-03-07 23:44:01 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+[     0]
+[   100]
+[   200]
+2026-03-07 23:44:03 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-03-07 23:44:03 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+[     0]
+[   100]
+[   200]
+2026-03-07 23:44:04 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-03-07 23:44:04 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-03-07 23:44:04 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-03-07 23:44:04 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-03-07 23:44:04 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+[WARN]	. (:0):	Avg diff: 1
+2026-03-07 23:44:06 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+[     0]
+[   100]
+[   200]
+2026-03-07 23:44:07 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:07 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:07 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:07 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:07 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:07 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:07 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:07 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-03-07 23:44:07 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-03-07 23:44:07 gin.test.Compiler.compile() ERROR: Did you set the classpath with -cp=?
+2026-03-07 23:44:07 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-03-07 23:44:07 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-03-07 23:44:07 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-03-07 23:44:07 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.ReplaceStatement]
+2026-03-07 23:44:07 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-03-07 23:44:07 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-03-07 23:44:07 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-03-07 23:44:07 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-03-07 23:44:07 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-03-07 23:44:09 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+[     0]
+[   100]
+[   200]
+2026-03-07 23:44:10 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:10 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:10 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-03-07 23:44:10 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:10 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:10 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+randompic_6.png
+122x328_6.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+356x280_6.png
+436x452_6.png
+randompic_10.png
+140x114_10.png
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+202x132_10.png
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+248x160_10.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+randompic_13.png
+382x182_13.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+458x374_13.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+randompic_19.png
+112x462_19.png
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+210x440_19.png
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+362x216_19.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+randompic_21.png
+212x436_21.png
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+308x264_21.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+402x340_21.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+randompic_6.png
+122x328_6.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+356x280_6.png
+436x452_6.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+randompic_10.png
+140x114_10.png
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+202x132_10.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+248x160_10.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+randompic_13.png
+382x182_13.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+458x374_13.png
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+randompic_19.png
+112x462_19.png
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+210x440_19.png
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+362x216_19.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+randompic_21.png
+212x436_21.png
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+308x264_21.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+402x340_21.png
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+2026-03-07 23:44:12 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-03-07 23:44:12 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-03-07 23:44:12 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-03-07 23:44:12 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.ReplaceStatement]
+2026-03-07 23:44:12 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-03-07 23:44:12 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.ReplaceStatement]
+2026-03-07 23:44:12 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.ReplaceStatement]
+2026-03-07 23:44:12 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-03-07 23:44:12 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-03-07 23:44:12 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+2026-03-07 23:44:14 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+[     0]
+[   100]
+[   200]
+2026-03-07 23:44:14 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:14 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+[     0]
+[   100]
+[   200]
+2026-03-07 23:44:15 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-03-07 23:44:15 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-03-07 23:44:15 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-03-07 23:44:15 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-03-07 23:44:15 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-03-07 23:44:15 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-03-07 23:44:15 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+2026-03-07 23:44:17 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+[     0]
+[   100]
+[   200]
+2026-03-07 23:44:18 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-03-07 23:44:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-03-07 23:44:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 10
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 12
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 13
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 14
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 15
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 17
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 19
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 21
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 22
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 24
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 24
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 25
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 25
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 26
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 10
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 12
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 14
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 15
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 15
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 16
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 17
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 18
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 19
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 19
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 20
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 20
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 20
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 21
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 10
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 10
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 11
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 11
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 12
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 12
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 13
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 13
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 15
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 16
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 10
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 10
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 11
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 11
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 12
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 13
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 14
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 15
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 15
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 15
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 16
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 16
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 17
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 10
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 10
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 10
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 11
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 11
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 12
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 12
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 13
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 14
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 14
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 15
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 15
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 15
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 10
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 10
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 11
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 11
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 12
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 13
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 11
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 14
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 18
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 17
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 17
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 17
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 17
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 17
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 17
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 11
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 11
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 11
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 12
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 13
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 13
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 13
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 14
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 14
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 14
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+2026-03-07 23:44:20 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+[     0]
+[   100]
+[   200]
+2026-03-07 23:44:21 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-03-07 23:44:21 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 10
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 12
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 13
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 14
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 15
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 17
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 19
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 21
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 22
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 24
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 24
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 25
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 25
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 26
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 10
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 12
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 14
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 15
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 15
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 16
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 17
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 18
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 19
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 19
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 20
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 20
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 20
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 21
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 10
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 10
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 11
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 11
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 12
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 12
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 13
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 13
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 15
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 16
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 10
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 10
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 11
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 11
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 12
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 13
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 14
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 15
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 15
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 15
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 16
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 16
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 17
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 10
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 10
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 10
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 11
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 11
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 12
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 12
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 13
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 14
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 14
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 15
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 15
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 15
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 10
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 10
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 11
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 11
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 12
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 13
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 7
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 11
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 14
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 18
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 17
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 17
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 17
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 17
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 17
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 17
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 6
+[WARN]	. (:0):	Avg diff: 8
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 9
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 11
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 11
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 11
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 12
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 13
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 13
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 13
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 14
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 14
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 14
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+2026-03-07 23:44:23 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+[     0]
+[   100]
+[   200]
+2026-03-07 23:44:23 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-03-07 23:44:23 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.ReplaceStatement]
+randompic_6.png
+122x328_6.png
+[WARN]	. (:0):	Avg diff: 114
+randompic_6.png
+122x328_6.png
+[WARN]	. (:0):	Avg diff: 114
+2026-03-07 23:44:23 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-03-07 23:44:23 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-03-07 23:44:23 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-03-07 23:44:25 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+[     0]
+[   100]
+[   200]
+2026-03-07 23:44:26 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:26 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-03-07 23:44:26 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-03-07 23:44:26 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:26 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:26 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+randompic_6.png
+122x328_6.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+356x280_6.png
+436x452_6.png
+randompic_10.png
+140x114_10.png
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+202x132_10.png
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+248x160_10.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+randompic_13.png
+382x182_13.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+458x374_13.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+randompic_19.png
+112x462_19.png
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+210x440_19.png
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+362x216_19.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+randompic_21.png
+212x436_21.png
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+308x264_21.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+402x340_21.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+randompic_6.png
+122x328_6.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+356x280_6.png
+436x452_6.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+randompic_10.png
+140x114_10.png
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+202x132_10.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+248x160_10.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+randompic_13.png
+382x182_13.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+458x374_13.png
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+randompic_19.png
+112x462_19.png
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+[WARN]	. (:0):	Avg diff: 5
+210x440_19.png
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+362x216_19.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+randompic_21.png
+212x436_21.png
+[WARN]	. (:0):	Avg diff: 4
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 3
+308x264_21.png
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+[WARN]	. (:0):	Avg diff: 1
+402x340_21.png
+[WARN]	. (:0):	Avg diff: 3
+[WARN]	. (:0):	Avg diff: 2
+[WARN]	. (:0):	Avg diff: 2
+2026-03-07 23:44:28 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-03-07 23:44:28 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-03-07 23:44:28 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-03-07 23:44:28 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-03-07 23:44:28 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-03-07 23:44:28 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-03-07 23:44:28 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-03-07 23:44:28 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+[     0]
+[   100]
+[   200]
+2026-03-07 23:44:29 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-03-07 23:44:29 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-03-07 23:44:29 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-03-07 23:44:29 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-03-07 23:44:29 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-03-07 23:44:29 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-03-07 23:44:29 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-03-07 23:44:29 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-03-07 23:44:29 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-03-07 23:44:29 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-03-07 23:44:31 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+[     0]
+[   100]
+[   200]
+2026-03-07 23:44:32 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:32 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:32 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:32 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:32 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:32 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:32 gin.test.InternalTestRunner.runSingleTest() WARNING: Possible hanging threads remain after test
+2026-03-07 23:44:32 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-03-07 23:44:32 gin.util.RandomSampler.sampleMethodsHook() INFO: Progress: 100/100 patches tested
+2026-03-07 23:44:32 gin.util.RandomSampler.sampleMethodsHook() INFO: Results saved to: /Users/""/repos/gin-rl/experiment_results/exp1_runtime_random_rep2_20260307_234217.csv
+2026-03-07 23:44:32 gin.util.RandomSampler.printSummary() INFO: ============================================================
+2026-03-07 23:44:32 gin.util.RandomSampler.printSummary() INFO: RANDOM SAMPLING SUMMARY
+2026-03-07 23:44:32 gin.util.RandomSampler.printSummary() INFO: ============================================================
+2026-03-07 23:44:32 gin.util.RandomSampler.printSummary() INFO: Total patches tested: 100
+2026-03-07 23:44:32 gin.util.RandomSampler.printSummary() INFO: Compiling patches: 20 (20.0%)
+2026-03-07 23:44:32 gin.util.RandomSampler.printSummary() INFO: Test-passing patches: 6 (6.0%)
+2026-03-07 23:44:32 gin.util.RandomSampler.printSummary() INFO: Runtime-improving patches: 2 (2.0%)
+2026-03-07 23:44:32 gin.util.RandomSampler.printSummary() INFO:
+2026-03-07 23:44:32 gin.util.RandomSampler.printSummary() INFO: OPERATOR SUCCESS RATES (single-edit patches):
+2026-03-07 23:44:32 gin.util.RandomSampler.printSummary() INFO:   MatchedDeleteStatement: 16 attempts, 6.3% pass, 6.3% improve
+2026-03-07 23:44:32 gin.util.RandomSampler.printSummary() INFO:   CopyStatement: 18 attempts, 11.1% pass, 5.6% improve
+2026-03-07 23:44:32 gin.util.RandomSampler.printSummary() INFO:   MatchedReplaceStatement: 10 attempts, 0.0% pass, 0.0% improve
+2026-03-07 23:44:32 gin.util.RandomSampler.printSummary() INFO:   ReplaceStatement: 9 attempts, 0.0% pass, 0.0% improve
+2026-03-07 23:44:32 gin.util.RandomSampler.printSummary() INFO:   MatchedSwapStatement: 11 attempts, 0.0% pass, 0.0% improve
+2026-03-07 23:44:32 gin.util.RandomSampler.printSummary() INFO:   MatchedCopyStatement: 11 attempts, 9.1% pass, 0.0% improve
+2026-03-07 23:44:32 gin.util.RandomSampler.printSummary() INFO:   DeleteStatement: 15 attempts, 0.0% pass, 0.0% improve
+2026-03-07 23:44:32 gin.util.RandomSampler.printSummary() INFO:   SwapStatement: 10 attempts, 20.0% pass, 0.0% improve
+2026-03-07 23:44:32 gin.util.RandomSampler.printSummary() INFO: ============================================================
+2026-03-07 23:44:32 gin.util.RandomSampler.writeSummaryCSV() INFO: Summary saved to: /Users/""/repos/gin-rl/experiment_results/exp1_runtime_random_rep2_20260307_234217_summary.csv

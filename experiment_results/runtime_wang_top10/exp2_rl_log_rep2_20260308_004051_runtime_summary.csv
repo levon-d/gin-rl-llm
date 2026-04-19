@@ -1,0 +1,12 @@
+MethodName,BaselineRuntime(ms),BestRuntime(ms),RuntimeReduction(ms),ImprovementPercent,BestPatch
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)",3066.00,2738.00,328.00,10.70,"|"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)",1163.00,1141.00,22.00,1.89,"| gin.edit.modifynode.UnaryOperatorReplacement  'src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java':1061 MINUS -> BITWISE_COMPLEMENT |"
+"org.jcodec.codecs.h264.encode.MBEncoderHelper.org.jcodec.codecs.h264.encode.MBEncoderHelper.takeSafe(byte[],int,int,int,int,byte[],int,int)",1575.00,1455.00,120.00,7.62,"|"
+"org.jcodec.codecs.h264.encode.IntraPredEstimator.org.jcodec.codecs.h264.encode.IntraPredEstimator.getLumaPred4x4(Picture,EncodingContext,int,int,int)",1457.00,1448.00,9.00,0.62,"|"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)",2767.00,2743.00,24.00,0.87,"|"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeVert(Picture,int,int,int,int,int,int,int)",2761.00,2742.00,19.00,0.69,"|"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs4(int,int,byte[],byte[],int,int,int,int,int,int,int,int,boolean)",2780.00,2735.00,45.00,1.62,"|"
+"org.jcodec.codecs.h264.decode.MBlockDecoderUtils.org.jcodec.codecs.h264.decode.MBlockDecoderUtils.mergeResidual(Picture,int[][][],int[][],int[][])",2739.00,2685.00,54.00,1.97,"|"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)",163.00,147.00,16.00,9.82,"|"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)",1122.00,1116.00,6.00,0.53,"|"
+"TOTAL",19593.00,18950.00,643.00,3.28,""

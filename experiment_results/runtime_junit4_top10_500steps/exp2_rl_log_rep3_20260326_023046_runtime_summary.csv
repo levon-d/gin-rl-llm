@@ -1,0 +1,12 @@
+MethodName,BaselineRuntime(ms),BestRuntime(ms),RuntimeReduction(ms),ImprovementPercent,BestPatch
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)",2602.00,2446.00,156.00,6.00,"|"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()",4011.00,3516.00,495.00,12.34,"|"
+"org.junit.runners.ParentRunner.org.junit.runners.ParentRunner.shouldRun(Filter,T)",3702.00,3404.00,298.00,8.05,"| gin.edit.statement.MoveStatement 'src/main/java/org/junit/runners/ParentRunner.java':1783 -> 'src/main/java/org/junit/runners/ParentRunner.java':1782:1782 | gin.edit.statement.MoveStatement 'src/main/java/org/junit/runners/ParentRunner.java':1783 -> 'src/main/java/org/junit/runners/ParentRunner.java':1782:1783 |"
+"org.junit.runner.Description.org.junit.runner.Description.formatDisplayName(String,String)",3569.00,3237.00,332.00,9.30,"|"
+"org.junit.runner.Computer.org.junit.runner.Computer.getSuite(RunnerBuilder,Class<?>[])",3671.00,3292.00,379.00,10.32,"|"
+"org.junit.runner.notification.RunNotifier.org.junit.runner.notification.RunNotifier.wrapIfNotThreadSafe(RunListener)",2512.00,2373.00,139.00,5.53,"|"
+"org.junit.internal.builders.IgnoredBuilder.org.junit.internal.builders.IgnoredBuilder.runnerForClass(Class<?>)",609.00,556.00,53.00,8.70,"| gin.edit.matched.MatchedReplaceStatement 'src/main/java/org/junit/internal/builders/IgnoredBuilder.java':47 -> 'src/main/java/org/junit/internal/builders/IgnoredBuilder.java':47 |"
+"org.junit.runners.model.TestClass.org.junit.runners.model.TestClass.runsTopToBottom(Class<?extendsAnnotation>)",1161.00,1001.00,160.00,13.78,"|"
+"org.junit.internal.TextListener.org.junit.internal.TextListener.elapsedTimeAsString(long)",73.00,53.00,20.00,27.40,"|"
+"org.junit.internal.builders.JUnit4Builder.org.junit.internal.builders.JUnit4Builder.runnerForClass(Class<?>)",325.00,250.00,75.00,23.08,"| gin.edit.matched.MatchedSwapStatement 'src/main/java/org/junit/internal/builders/JUnit4Builder.java':39 <-> 'src/main/java/org/junit/internal/builders/JUnit4Builder.java':39 | gin.edit.statement.MoveStatement 'src/main/java/org/junit/internal/builders/JUnit4Builder.java':39 -> 'src/main/java/org/junit/internal/builders/JUnit4Builder.java':38:38 |"
+"TOTAL",22235.00,20128.00,2107.00,9.48,""

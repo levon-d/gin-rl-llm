@@ -1,0 +1,12 @@
+MethodName,BaselineRuntime(ms),BestRuntime(ms),RuntimeReduction(ms),ImprovementPercent,BestPatch
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)",2743.00,2728.00,15.00,0.55,"| gin.edit.statement.SwapStatement 'src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java':3598 <-> 'src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java':3838 |"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)",1148.00,1110.00,38.00,3.31,"|"
+"org.jcodec.codecs.h264.encode.MBEncoderHelper.org.jcodec.codecs.h264.encode.MBEncoderHelper.takeSafe(byte[],int,int,int,int,byte[],int,int)",1442.00,1432.00,10.00,0.69,"|"
+"org.jcodec.codecs.h264.encode.IntraPredEstimator.org.jcodec.codecs.h264.encode.IntraPredEstimator.getLumaPred4x4(Picture,EncodingContext,int,int,int)",1448.00,1428.00,20.00,1.38,"| gin.edit.modifynode.UnaryOperatorReplacement  'src/main/java/org/jcodec/codecs/h264/encode/IntraPredEstimator.java':694 POSTFIX_INCREMENT -> PREFIX_INCREMENT |"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)",2781.00,2732.00,49.00,1.76,"|"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeVert(Picture,int,int,int,int,int,int,int)",2763.00,2743.00,20.00,0.72,"| gin.edit.matched.MatchedReplaceStatement 'src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java':3156 -> 'src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java':3156 |"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs4(int,int,byte[],byte[],int,int,int,int,int,int,int,int,boolean)",2869.00,2847.00,22.00,0.77,"|"
+"org.jcodec.codecs.h264.decode.MBlockDecoderUtils.org.jcodec.codecs.h264.decode.MBlockDecoderUtils.mergeResidual(Picture,int[][][],int[][],int[][])",2822.00,2781.00,41.00,1.45,"|"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)",162.00,145.00,17.00,10.49,"|"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)",1133.00,1114.00,19.00,1.68,"|"
+"TOTAL",19311.00,19060.00,251.00,1.30,""

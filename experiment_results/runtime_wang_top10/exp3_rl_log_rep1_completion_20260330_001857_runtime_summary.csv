@@ -1,0 +1,18 @@
+MethodName,BaselineRuntime(ms),BestRuntime(ms),RuntimeReduction(ms),ImprovementPercent,BestPatch
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)",164.00,146.00,18.00,10.98,"| gin.edit.llm.LLMReplaceStatement 'src/main/java/org/jcodec/scale/BaseResampler.java':856
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces; if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+
+!!! |"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)",1460.00,1132.00,328.00,22.47,"|"
+"TOTAL",1624.00,1278.00,346.00,21.31,""

@@ -1,0 +1,6 @@
+Experiment,Label,Reps,MetricA(%),MetricB_mean(%),MetricB_SD,MetricB_reps
+exp1,Random sampling,3,13.44,93.27,3.823,93.87;88.31;97.62
+exp2,UCB + Traditional,3,19.24,89.49,0.909,90.03;88.21;90.23
+exp3,UCB + All (LLM),5,27.93,87.97,3.869,94.62;87.71;86.55;82.64;88.31
+exp4,LS + Traditional,3,20.69,88.68,7.387,93.87;93.94;78.23
+exp5,LS + All (LLM),5,32.67,84.16,3.370,83.97;84.84;78.46;89.03;84.52

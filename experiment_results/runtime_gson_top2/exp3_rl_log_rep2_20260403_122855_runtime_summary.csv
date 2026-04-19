@@ -1,0 +1,22 @@
+MethodName,BaselineRuntime(ms),BestRuntime(ms),RuntimeReduction(ms),ImprovementPercent,BestPatch
+"com.google.gson.internal.bind.DefaultDateTypeAdapter.com.google.gson.internal.bind.DefaultDateTypeAdapter.deserializeToDate(JsonReader)",71.00,60.00,11.00,15.49,"|"
+"com.google.gson.internal.bind.util.ISO8601Utils.com.google.gson.internal.bind.util.ISO8601Utils.parse(String,ParsePosition)",11.00,10.00,1.00,9.09,"| gin.edit.llm.LLMMaskedStatement 'src/main/java/com/google/gson/internal/bind/util/ISO8601Utils.java':1201
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    // <<PLACEHOLDER>>
+    ;
+}
+```
+This code belongs to project gson. Wrap all code in curly braces; if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    StringBuilder sb = new StringBuilder();
+    sb.append('{\'name\':\'John\'; \'age\':30; \'city\':\'New York\'}');
+    String jsonString = sb.toString();
+    ;
+}
+
+!!! |"
+"TOTAL",82.00,70.00,12.00,14.63,""

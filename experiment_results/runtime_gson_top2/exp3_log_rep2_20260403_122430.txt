@@ -1,0 +1,35 @@
+cannot instanciate any int object using 180 value
+Usage: gin.util.RLLocalSearchRuntime
+  -rlAlgorithm (-rl) [String] RL algorithm: uniform or ucb (default: ucb) (ucb)
+  -ucbC (-ucbc) [Double] Exploration constant for UCB (default: sqrt(2))
+  -operatorSet (-ops) [String] Operator set: traditional, llm, all (default: traditional) (all)
+  -rlLogFile (-rllog) [String] RL-specific log file (/Users/""/repos/gin-rl/experiment_results/runtime_gson_top2/exp3_rl_log_rep2_20260403_122430.csv)
+  -stepTimeoutSeconds (-st) [int] Per-step timeout in seconds (default: 180) (0)
+  -editType (-et) [String] Edit type: this can be a member of the EditType enum (LINE,STATEMENT,MATCHED_STATEMENT,MODIFY_STATEMENT); the fully qualified name of a class that extends gin.edit.Edit, or a comma separated list of both
+  -genNumber (-gn) [Integer] Number of generations
+  -indNumber (-in) [Integer] Number of individuals
+  -methodNumber (-mn) [Integer] Only search over first n hot methods
+  -mutationSeed (-ms) [Integer] Random seed for mutation operator selection
+  -individualSeed (-is) [Integer] Random seed for individual selection
+  -combinedProbablity (-pb) [Double] Probability of combined
+  -projectDirectory (-d) [File] Project directory, required
+  -methodFile (-m) [File] Method file, required
+  -projectName (-p) [String] Project name, required for maven and gradle projects
+  -classPath (-c) [String] Classpath, required for non-maven and non-gradle projects
+  -mavenHome (-h) [File] Path to maven bin directory, e.g. /usr/local, required for maven projects
+  -outputFile (-o) [File] Output CSV file (sampler_results.csv)
+  -timingOutputFile (-to) [File] Output file for storing the execution time (sampler_timing.csv)
+  -timeoutMS (-x) [Long] Timeout in milliseconds (10000)
+  -reps (-r) [Integer] Repeat each test r times (1)
+  -numberOfMethodsToSample (-nm) [Integer] Number of methods from the method data to sample from. 0 for all. (0)
+  -inSubprocess (-j) [flag] Run tests in a separate jvm
+  -eachRepetitionInNewSubprocess (-jj) [flag] Run every repetition in a new jvm. Includes option '-j'
+  -eachTestInNewSubprocess (-J) [flag] Run every test in a new jvm. Includes options '-j' and '-jj'
+  -failFast (-ff) [flag] Fail fast. If set to true, the tests will stop at the first failure and the next patch will be executed. You probably don't want to set this to true for Automatic Program Repair.
+  -openAIKey (-oaik) [String] OpenAI API key for LLM edits (demo)
+  -openAIName (-oain) [String] OpenAI API model name for LLM edits; e.g. gpt-3.5-turbo or gpt-4; full list at https://github.com/langchain4j/langchain4j/blob/main/langchain4j-open-ai/src/main/java/dev/langchain4j/model/openai/OpenAiModelName.java (gpt-3.5-turbo)
+  -modelType (-mt) [String] model type; OpenAI  or a name of an ollama model (OpenAI)
+  -modelTimeout (-mo) [Integer] model timeout in seconds (30)
+  -llmPromptType (-pt) [LLMConfig$PromptType] Prompt Type for LLM edits (MEDIUM)
+    Possible values are: SIMPLE, MEDIUM, DETAILED, MASKED
+  -llmPromptTemplate (-ptt) [String] Prompt Template for LLM edits ()

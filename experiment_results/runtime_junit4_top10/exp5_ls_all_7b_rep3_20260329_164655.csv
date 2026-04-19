@@ -1,0 +1,6 @@
+"MethodName","Iteration","EvaluationNumber","Patch","Compiled","AllTestsPassed","TotalExecutionTime(ms)","Fitness","FitnessImprovement"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","-1","0","|","true","false","2443.0122","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","1","1","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/junit/runner/Description.java"":536 -> ""src/main/java/org/junit/runner/Description.java"":855:868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","2","2","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/junit/runner/Description.java"":633 -> ""src/main/java/org/junit/runner/Description.java"":868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","3","3","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/junit/runner/Description.java"":497 -> ""src/main/java/org/junit/runner/Description.java"":856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"o

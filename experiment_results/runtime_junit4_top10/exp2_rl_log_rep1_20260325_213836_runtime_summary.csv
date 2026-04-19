@@ -1,0 +1,12 @@
+MethodName,BaselineRuntime(ms),BestRuntime(ms),RuntimeReduction(ms),ImprovementPercent,BestPatch
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)",3797.00,2750.00,1047.00,27.57,"|"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()",3910.00,3562.00,348.00,8.90,"|"
+"org.junit.runners.ParentRunner.org.junit.runners.ParentRunner.shouldRun(Filter,T)",4098.00,3416.00,682.00,16.64,"|"
+"org.junit.runner.Description.org.junit.runner.Description.formatDisplayName(String,String)",3287.00,3287.00,0.00,0.00,"|"
+"org.junit.runner.Computer.org.junit.runner.Computer.getSuite(RunnerBuilder,Class<?>[])",3559.00,3281.00,278.00,7.81,"|"
+"org.junit.runner.notification.RunNotifier.org.junit.runner.notification.RunNotifier.wrapIfNotThreadSafe(RunListener)",3009.00,2575.00,434.00,14.42,"|"
+"org.junit.internal.builders.IgnoredBuilder.org.junit.internal.builders.IgnoredBuilder.runnerForClass(Class<?>)",899.00,558.00,341.00,37.93,"|"
+"org.junit.runners.model.TestClass.org.junit.runners.model.TestClass.runsTopToBottom(Class<?extendsAnnotation>)",1141.00,1016.00,125.00,10.96,"| gin.edit.modifynode.BinaryOperatorReplacement  'src/main/java/org/junit/runners/model/TestClass.java':875 OR -> BINARY_AND | gin.edit.statement.MoveStatement 'src/main/java/org/junit/runners/model/TestClass.java':874 -> 'src/main/java/org/junit/runners/model/TestClass.java':873:873 |"
+"org.junit.internal.TextListener.org.junit.internal.TextListener.elapsedTimeAsString(long)",89.00,59.00,30.00,33.71,"|"
+"org.junit.internal.builders.JUnit4Builder.org.junit.internal.builders.JUnit4Builder.runnerForClass(Class<?>)",439.00,258.00,181.00,41.23,"| gin.edit.matched.MatchedReplaceStatement 'src/main/java/org/junit/internal/builders/JUnit4Builder.java':38 -> 'src/main/java/org/junit/internal/builders/JUnit4Builder.java':38 |"
+"TOTAL",24228.00,20762.00,3466.00,14.31,""

@@ -1,0 +1,27 @@
+==============================================
+GIN-RL Experiment Runner
+==============================================
+Timestamp: 20260302_231830
+Repetitions: 3
+Steps per method: 100
+Results directory: /Users/""/repos/gin-rl/experiment_results
+LLM Model: qwen2.5-coder (via Ollama)
+
+Select experiment to run:
+
+  Traditional Operators Only:
+    1) Experiment 1:  Random Sampling (baseline)
+    2) Experiment 2:  Local Search with UCB
+    3) Experiment 2B: Local Search with Uniform (baseline)
+
+  Including LLM Operators:
+    4) Experiment 3:  Local Search with UCB (all operators)
+    5) Experiment 3B: Local Search with Uniform (all operators)
+
+  Batch Runs:
+    t) All Traditional experiments (1, 2, 2B)
+    l) All LLM experiments (3, 3B)
+    a) ALL experiments
+
+  Info:
+    i) Show experiment information

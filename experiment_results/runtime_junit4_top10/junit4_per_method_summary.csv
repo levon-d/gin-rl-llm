@@ -1,0 +1,10 @@
+Method,Exp1_med%,Exp2_med%,Exp3_med%,Exp4_med%,Exp5_med%
+elapsedTimeAsString,25.00,11.67,5.00,128.33,5.00
+formatDisplayName,3.36,5.61,0.96,5.70,1.41
+getAnnotations,5.01,9.41,0.69,12.64,0.82
+getSuite,4.81,5.71,1.97,4.14,0.93
+methodAndClassNamePatternGroupOrDefault,5.37,29.75,3.44,27.74,1.56
+runnerForClass,125.19,34.21,6.02,26.69,6.02
+runsTopToBottom,11.62,3.94,3.37,3.00,3.56
+shouldRun,4.42,12.02,1.96,4.42,1.15
+wrapIfNotThreadSafe,6.89,11.76,3.62,7.73,1.18

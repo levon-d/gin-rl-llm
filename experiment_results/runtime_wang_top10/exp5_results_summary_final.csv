@@ -1,0 +1,13 @@
+EXPERIMENT 5: Standard Local Search (Traditional + LLM Operators) — Rep 1
+Method,Baseline_R1(ms),Best_R1(ms),Reduction_R1(ms),Impr_R1(%)
+filterBs,3612.0,3199.0,413.0,11.43
+estimateQPix,1912.0,1138.0,774.0,40.48
+takeSafe,1699.0,1550.0,149.0,8.77
+getLumaPred4x4,1393.0,1382.0,11.0,0.79
+filterBlockEdgeHoris,2861.0,2834.0,27.0,0.94
+filterBlockEdgeVert,2871.0,2811.0,60.0,2.09
+filterBs4,3480.0,3052.0,428.0,12.3
+mergeResidual,3059.0,2708.0,351.0,11.47
+resample,167.0,144.0,23.0,13.77
+getPlaneWidth,1434.0,1300.0,134.0,9.34
+TOTAL,22488.0,20118.0,2370.0,10.54

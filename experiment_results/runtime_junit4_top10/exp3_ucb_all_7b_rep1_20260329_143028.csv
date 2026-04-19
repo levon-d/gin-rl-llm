@@ -1,0 +1,399 @@
+"MethodName","Iteration","EvaluationNumber","Patch","Compiled","AllTestsPassed","TotalExecutionTime(ms)","Runtime(ms)","RuntimeImprovement(ms)"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","-1","0","|","true","true","2435.617","2435.0","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","1","1","| gin.edit.statement.SwapStatement ""src/main/java/org/junit/runner/Description.java"":855 <-> ""src/main/java/org/junit/runner/Description.java"":868 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","2","2","|","true","true","2432.07","2432.0","3.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","3","3","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/junit/runner/Description.java"":202 -> ""src/main/java/org/junit/runner/Description.java"":868 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","4","4","| gin.edit.statement.CopyStatement ""src/main/java/org/junit/runner/Description.java"":568 -> ""src/main/java/org/junit/runner/Description.java"":855:868 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","5","5","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runner/Description.java"":868 -> ""src/main/java/org/junit/runner/Description.java"":855:856 |","true","true","2467.3745","2467.0","-32.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","6","6","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","7","7","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/junit/runner/Description.java"":855
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    Matcher matcher = METHOD_AND_CLASS_NAME_PATTERN.matcher(toString());
+    return matcher.matches() ? matcher.group(group) : defaultString;
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    Matcher matcher = Pattern.compile(""METHOD_AND_CLASS_NAME_PATTERN"").matcher(toString());
+    return matcher.matches() ? matcher.group(group) : defaultString;
+}
+
+!!! |","true","false","3004.9045","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","8","8","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/junit/runner/Description.java"":855
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    Matcher matcher = METHOD_AND_CLASS_NAME_PATTERN.matcher(toString());
+    return matcher.matches() ? matcher.group(group) : defaultString;
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    Matcher matcher = METHOD_AND_CLASS_NAME_PATTERN.matcher(toString());
+    if (matcher.matches()) {
+        return matcher.group(group);
+    } else {
+        return defaultString;
+    }
+}
+
+!!! |","true","true","2440.1362","2440.0","-5.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","9","9","| gin.edit.statement.DeleteStatement ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","10","10","| gin.edit.statement.ReplaceStatement ""src/main/java/org/junit/runner/Description.java"":757 -> ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","11","11","|","true","true","2402.0835","2402.0","33.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","12","12","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/junit/runner/Description.java"":607 <-> ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","13","13","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/junit/runner/Description.java"":471 -> ""src/main/java/org/junit/runner/Description.java"":855:855 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","14","14","|","true","true","2359.8787","2359.0","76.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","15","15","|","true","true","2376.758","2376.0","59.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","16","16","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/junit/runner/Description.java"":855
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    Matcher matcher = METHOD_AND_CLASS_NAME_PATTERN.matcher(toString());
+    // <<PLACEHOLDER>>
+    ;
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    Matcher matcher = METHOD_AND_CLASS_NAME_PATTERN.matcher(toString());
+    while (matcher.find()) {
+        System.out.println(""Found: "" + matcher.group());
+    }
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","17","17","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runner/Description.java"":868 -> ""src/main/java/org/junit/runner/Description.java"":855:868 |","true","true","2382.3235","2382.0","53.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","18","18","|","true","true","2373.3103","2373.0","62.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","19","19","|","true","true","2372.0244","2372.0","63.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","20","20","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runner/Description.java"":855 -> ""src/main/java/org/junit/runner/Description.java"":855:856 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","21","21","| gin.edit.statement.DeleteStatement ""src/main/java/org/junit/runner/Description.java"":868 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","22","22","| gin.edit.statement.CopyStatement ""src/main/java/org/junit/runner/Description.java"":800 -> ""src/main/java/org/junit/runner/Description.java"":855:856 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","23","23","| gin.edit.statement.ReplaceStatement ""src/main/java/org/junit/runner/Description.java"":781 -> ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","24","24","| gin.edit.statement.SwapStatement ""src/main/java/org/junit/runner/Description.java"":868 <-> ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","25","25","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/junit/runner/Description.java"":856 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","26","26","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/junit/runner/Description.java"":573 -> ""src/main/java/org/junit/runner/Description.java"":855:868 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","27","27","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/junit/runner/Description.java"":589 -> ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","28","28","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/junit/runner/Description.java"":716 <-> ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","29","29","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/junit/runner/Description.java"":855
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    Matcher matcher = METHOD_AND_CLASS_NAME_PATTERN.matcher(toString());
+    return matcher.matches() ? matcher.group(group) : defaultString;
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    Pattern pattern = Pattern.compile(METHOD_AND_CLASS_NAME_PATTERN);
+    Matcher matcher = pattern.matcher(toString());
+    return matcher.matches() ? matcher.group(group) : defaultString;
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","30","30","|","true","true","2399.2236","2399.0","36.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","31","31","|","true","true","2375.754","2375.0","60.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","32","32","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/junit/runner/Description.java"":855
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    // <<PLACEHOLDER>>
+    ;
+    return matcher.matches() ? matcher.group(group) : defaultString;
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    String result = matcher.matches() ? matcher.group(group) : defaultString;
+    return result;
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","33","33","|","true","true","2435.5234","2435.0","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","34","34","|","true","true","2362.302","2362.0","73.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","35","35","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runner/Description.java"":868 -> ""src/main/java/org/junit/runner/Description.java"":855:868 |","true","true","2374.784","2374.0","61.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","36","36","|","true","true","2373.596","2373.0","62.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","37","37","|","true","true","2376.2153","2376.0","59.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","38","38","|","true","true","2376.4678","2376.0","59.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","39","39","|","true","true","2383.38","2383.0","52.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","40","40","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runner/Description.java"":856 -> ""src/main/java/org/junit/runner/Description.java"":855:856 |","true","true","2376.0105","2376.0","59.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","41","41","|","true","true","2381.6084","2381.0","54.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","42","42","|","true","true","2359.2466","2359.0","76.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","43","43","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runner/Description.java"":856 -> ""src/main/java/org/junit/runner/Description.java"":855:868 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","44","44","|","true","true","2383.2188","2383.0","52.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","45","45","|","true","true","2351.5923","2351.0","84.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","46","46","| gin.edit.statement.DeleteStatement ""src/main/java/org/junit/runner/Description.java"":856 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","47","47","| gin.edit.statement.CopyStatement ""src/main/java/org/junit/runner/Description.java"":78 -> ""src/main/java/org/junit/runner/Description.java"":855:868 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","48","48","| gin.edit.statement.ReplaceStatement ""src/main/java/org/junit/runner/Description.java"":727 -> ""src/main/java/org/junit/runner/Description.java"":856 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","49","49","| gin.edit.statement.SwapStatement ""src/main/java/org/junit/runner/Description.java"":855 <-> ""src/main/java/org/junit/runner/Description.java"":855 |","true","true","2369.8992","2369.0","66.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","50","50","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","51","51","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/junit/runner/Description.java"":497 -> ""src/main/java/org/junit/runner/Description.java"":855:855 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","52","52","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/junit/runner/Description.java"":809 -> ""src/main/java/org/junit/runner/Description.java"":868 |","true","false","2901.2666","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","53","53","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/junit/runner/Description.java"":607 <-> ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","54","54","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/junit/runner/Description.java"":855
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    Matcher matcher = METHOD_AND_CLASS_NAME_PATTERN.matcher(toString());
+    return matcher.matches() ? matcher.group(group) : defaultString;
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    Pattern pattern = Pattern.compile(METHOD_AND_CLASS_NAME_PATTERN);
+    Matcher matcher = pattern.matcher(toString());
+    return matcher.matches() ? matcher.group(group) : defaultString;
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","55","55","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/junit/runner/Description.java"":855
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    Matcher matcher = METHOD_AND_CLASS_NAME_PATTERN.matcher(toString());
+    return matcher.matches() ? matcher.group(group) : defaultString;
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","56","56","| gin.edit.statement.SwapStatement ""src/main/java/org/junit/runner/Description.java"":856 <-> ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","57","57","|","true","true","2421.407","2421.0","14.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","58","58","|","true","true","2345.9758","2345.0","90.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","59","59","|","true","true","2379.0278","2379.0","56.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","60","60","|","true","true","2366.3237","2366.0","69.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","61","61","|","true","true","2372.3105","2372.0","63.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","62","62","|","true","true","2378.4084","2378.0","57.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","63","63","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runner/Description.java"":856 -> ""src/main/java/org/junit/runner/Description.java"":855:856 |","true","true","2359.9663","2359.0","76.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","64","64","|","true","true","2374.8984","2374.0","61.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","65","65","|","true","true","2350.2097","2350.0","85.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","66","66","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runner/Description.java"":868 -> ""src/main/java/org/junit/runner/Description.java"":855:868 |","true","true","2347.2417","2347.0","88.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","67","67","|","true","true","2363.6313","2363.0","72.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","68","68","|","true","true","2349.5818","2349.0","86.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","69","69","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runner/Description.java"":855 -> ""src/main/java/org/junit/runner/Description.java"":855:856 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","70","70","|","true","true","2368.5332","2368.0","67.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","71","71","|","true","true","2350.458","2350.0","85.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","72","72","|","true","true","2361.8264","2361.0","74.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","73","73","|","true","true","2360.7354","2360.0","75.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","74","74","|","true","true","2368.586","2368.0","67.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","75","75","|","true","true","2368.2427","2368.0","67.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","76","76","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/junit/runner/Description.java"":855
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    // <<PLACEHOLDER>>
+    ;
+    return matcher.matches() ? matcher.group(group) : defaultString;
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    String result = matcher.matches() ? matcher.group(group) : defaultString;
+    return result;
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","77","77","| gin.edit.statement.SwapStatement ""src/main/java/org/junit/runner/Description.java"":856 <-> ""src/main/java/org/junit/runner/Description.java"":868 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","78","78","|","true","true","2467.5723","2467.0","-32.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","79","79","|","true","true","2419.5398","2419.0","16.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","80","80","| gin.edit.statement.DeleteStatement ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","81","81","| gin.edit.statement.CopyStatement ""src/main/java/org/junit/runner/Description.java"":816 -> ""src/main/java/org/junit/runner/Description.java"":855:856 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","82","82","| gin.edit.statement.ReplaceStatement ""src/main/java/org/junit/runner/Description.java"":716 -> ""src/main/java/org/junit/runner/Description.java"":856 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","83","83","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","84","84","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/junit/runner/Description.java"":136 -> ""src/main/java/org/junit/runner/Description.java"":855:856 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","85","85","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/junit/runner/Description.java"":764 -> ""src/main/java/org/junit/runner/Description.java"":868 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","86","86","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/junit/runner/Description.java"":635 <-> ""src/main/java/org/junit/runner/Description.java"":856 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","87","87","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/junit/runner/Description.java"":855
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    Matcher matcher = METHOD_AND_CLASS_NAME_PATTERN.matcher(toString());
+    return matcher.matches() ? matcher.group(group) : defaultString;
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    Pattern pattern = Pattern.compile(""^(.*?\\.\\w+)$"");
+    Matcher matcher = pattern.matcher(toString());
+    return matcher.matches() ? matcher.group(group) : defaultString;
+}
+
+!!! |","true","false","3042.166","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","88","88","|","true","true","2428.299","2428.0","7.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","89","89","|","true","true","2419.9197","2419.0","16.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","90","90","|","true","true","2399.8481","2399.0","36.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","91","91","|","true","true","2455.9187","2455.0","-20.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","92","92","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runner/Description.java"":856 -> ""src/main/java/org/junit/runner/Description.java"":855:855 |","true","true","2440.2065","2440.0","-5.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","93","93","|","true","true","2425.6597","2425.0","10.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","94","94","|","true","true","2418.4397","2418.0","17.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","95","95","|","true","true","2451.1038","2451.0","-16.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","96","96","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runner/Description.java"":868 -> ""src/main/java/org/junit/runner/Description.java"":855:868 |","true","true","2435.3298","2435.0","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","97","97","|","true","true","2419.828","2419.0","16.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","98","98","|","true","true","2433.1594","2433.0","2.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","99","99","|","true","true","2432.113","2432.0","3.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","-1","0","|","true","true","3445.8225","3445.0","0.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","1","1","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":96 <-> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","2","2","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    return method.getAnnotations();
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    return Arrays.asList(method.getAnnotations());
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","3","3","| gin.edit.statement.CopyStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":89 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:572 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","4","4","| gin.edit.statement.ReplaceStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":59 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571 |","true","false","110084.016","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","5","5","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":77 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","6","6","|","true","true","3523.55","3523.0","-78.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","7","7","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","8","8","| gin.edit.statement.DeleteStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","9","9","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:572 |","true","true","3469.7368","3469.0","-24.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","10","10","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    // <<PLACEHOLDER>>
+    ;
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    // Implementation using a simple loop
+    for (int i = 0; i < 5; i++) {
+        System.out.println(""Loop iteration: "" + i);
+    }
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","11","11","| gin.edit.statement.SwapStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 <-> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","12","12","|","true","true","3508.678","3508.0","-63.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","13","13","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":486 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:572 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","14","14","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:571 |","true","true","3429.7017","3429.0","16.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","15","15","|","true","true","3444.7046","3444.0","1.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","16","16","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:571 |","true","true","3464.0435","3464.0","-19.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","17","17","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:571 | gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:572 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","18","18","|","true","true","3411.0037","3411.0","34.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","19","19","|","true","true","3442.9158","3442.0","3.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","20","20","| gin.edit.statement.DeleteStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","21","21","| gin.edit.statement.CopyStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":450 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:571 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","22","22","| gin.edit.statement.ReplaceStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":75 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","23","23","| gin.edit.statement.SwapStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 <-> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","24","24","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","25","25","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":507 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:571 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","26","26","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":508 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","27","27","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":337 <-> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","28","28","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    return method.getAnnotations();
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    return method.getAnnotations();
+}
+
+!!! |","true","true","3462.0574","3462.0","-17.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","29","29","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    return method.getAnnotations();
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    return method.getDeclaredAnnotations();
+}
+
+!!! |","true","true","3493.8591","3493.0","-48.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","30","30","|","true","true","3425.81","3425.0","20.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","31","31","|","true","true","3411.205","3411.0","34.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","32","32","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    return method.getAnnotations();
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    return Arrays.copyOf(method.getAnnotations(), method.getAnnotations().length);
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","33","33","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    return method.getAnnotations();
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","34","34","|","true","true","3474.3108","3474.0","-29.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","35","35","|","true","true","3429.3218","3429.0","16.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","36","36","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:572 |","true","true","3373.4033","3373.0","72.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","37","37","|","true","true","3376.1218","3376.0","69.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","38","38","|","true","true","3388.5818","3388.0","57.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","39","39","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:572 | gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:571 |","true","true","3382.0198","3382.0","63.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","40","40","|","true","true","3373.013","3373.0","72.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","41","41","|","true","true","3374.557","3374.0","71.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","42","42","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:572 |","true","true","3363.8289","3363.0","82.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","43","43","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:572 |","true","true","3369.3503","3369.0","76.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","44","44","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:572 | gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:572 |","true","true","3389.6306","3389.0","56.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","45","45","|","true","true","3382.1895","3382.0","63.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","46","46","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:572 |","true","true","3398.7092","3398.0","47.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","47","47","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:572 | gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:571 |","true","true","3356.2085","3356.0","89.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","48","48","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:571 |","true","true","3369.363","3369.0","76.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","49","49","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:571 |","true","true","3382.295","3382.0","63.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","50","50","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:571 |","true","true","3376.6592","3376.0","69.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","51","51","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:571 |","true","true","3380.5176","3380.0","65.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","52","52","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:572 |","true","true","3464.3225","3464.0","-19.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","53","53","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:572 | gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:571 | gin.edit.matched.MatchedCopyStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:571 |","true","true","3358.4739","3358.0","87.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","54","54","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:571 |","true","true","3382.3918","3382.0","63.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","55","55","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:572 |","true","true","3368.2131","3368.0","77.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","56","56","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:572 | gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:571 | gin.edit.matched.MatchedCopyStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":607 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:572 |","true","true","3385.3428","3385.0","60.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","57","57","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:572 |","true","true","3370.9768","3370.0","75.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","58","58","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:572 | gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:571 | gin.edit.statement.DeleteStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 |","true","true","3372.4285","3372.0","73.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","59","59","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:572 | gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:571 | gin.edit.statement.ReplaceStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571 |","true","true","3414.4285","3414.0","31.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","60","60","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:572 | gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:571 | gin.edit.statement.SwapStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571 <-> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571 |","true","true","3381.3616","3381.0","64.0"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","61","61","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:572 | gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:571 | gin.edit.statement.CopyStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":216 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:571 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()","62","62","| gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:572 | gin.edit.statement.MoveStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":571:571 | gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":450 -> ""src/main/java/org/junit/runners/model/FrameworkMethod.java"":572 |","true","true","3342.5554","3342.0","103.0"

@@ -1,0 +1,29 @@
+METRIC A: Sum of median % improvements (reference = pooled Exp2+Exp3+Exp4 baseline median)
+Method,Exp1: Random sampling (5 reps),Exp2: UCB + Traditional ops (5 reps),Exp3: UCB + All ops incl. LLM (3 reps),Exp4: LS + Traditional ops (6 reps),Exp5: LS + All ops incl. LLM (3 reps)
+filterBs4,0.00%,1.21%,1.45%,3.75%,10.05%
+filterBs,0.00%,0.00%,23.78%,28.64%,14.43%
+estimateQPix,0.00%,3.10%,12.79%,7.74%,13.93%
+takeSafe,0.00%,1.21%,13.54%,10.25%,6.45%
+getLumaPred4x4,0.00%,3.78%,7.82%,9.45%,8.79%
+filterBlockEdgeHoris,0.52%,1.04%,2.53%,0.09%,3.84%
+filterBlockEdgeVert,0.19%,1.24%,18.86%,7.62%,14.49%
+mergeResidual,0.00%,1.43%,3.03%,2.49%,0.91%
+resample,1.82%,8.51%,6.69%,13.07%,9.73%
+getPlaneWidth,0.00%,2.51%,19.36%,4.15%,5.78%
+SUM (median %),2.53%,24.02%,109.83%,87.25%,88.40%
+SUM (max %),39.16%,54.88%,473.41%,314.08%,207.27%
+
+METRIC B: Bose Metric 1 — best patch runtime as % of original (lower is better)
+Method,Exp1: Random sampling (5 reps),Exp2: UCB + Traditional ops (5 reps),Exp3: UCB + All ops incl. LLM (3 reps),Exp4: LS + Traditional ops (6 reps),Exp5: LS + All ops incl. LLM (3 reps)
+filterBs4,100.00%,98.80%,98.52%,97.18%,90.74%
+filterBs,100.00%,100.49%,78.04%,76.38%,85.58%
+estimateQPix,100.00%,96.74%,88.96%,92.55%,86.20%
+takeSafe,100.00%,98.72%,86.82%,90.65%,93.68%
+getLumaPred4x4,100.00%,96.06%,92.34%,91.99%,91.48%
+filterBlockEdgeHoris,99.45%,98.96%,97.44%,99.93%,96.10%
+filterBlockEdgeVert,99.78%,98.61%,81.74%,93.65%,85.97%
+mergeResidual,100.00%,98.55%,96.99%,98.04%,99.02%
+resample,98.14%,91.41%,93.21%,87.90%,90.42%
+getPlaneWidth,100.00%,97.46%,83.32%,96.29%,95.02%
+MEAN ratio,99.74%,97.58%,89.74%,92.46%,91.42%
+MEAN improvement,0.26%,2.42%,10.26%,7.54%,8.58%

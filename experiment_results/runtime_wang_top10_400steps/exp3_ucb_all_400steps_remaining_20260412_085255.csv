@@ -1,0 +1,1395 @@
+"MethodName","Iteration","EvaluationNumber","Patch","Compiled","AllTestsPassed","TotalExecutionTime(ms)","Runtime(ms)","RuntimeImprovement(ms)"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","-1","0","|","true","true","176.91574","176.0","0.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","1","1","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":414 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":684 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","2","2","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":563 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":632:775 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","3","3","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":725 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":574 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","4","4","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":632
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    // Horizontal pass
+    for (int y = 0; y < src.getPlaneHeight(p) + taps; y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsXs = getTapsX(x);
+            int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+            }
+            temp[y * toSize.getWidth() + x] = sum;
+        }
+    }
+    // Vertical pass
+    for (int y = 0; y < dst.getPlaneHeight(p); y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsYs = getTapsY(y);
+            int srcY = (int) (scaleFactorY * y);
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                // <<PLACEHOLDER>>
+                ;
+            }
+            dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    // Horizontal pass
+    for (int y = 0; y < src.getPlaneHeight(p) + taps; y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsXs = getTapsX(x);
+            int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+            }
+            temp[y * toSize.getWidth() + x] = sum;
+        }
+    }
+    // Vertical pass
+    for (int y = 0; y < dst.getPlaneHeight(p); y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsYs = getTapsY(y);
+            int srcY = (int) (scaleFactorY * y);
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                sum += temp[(y - taps / 2 + 1 + i) * toSize.getWidth() + x] * tapsYs[i];
+            }
+            dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128);
+        }
+    }
+}
+
+!!! |","true","false","42.43525","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","5","5","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":758 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":684 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","6","6","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":639 LESS -> EQUALS |","true","false","51.705917","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","7","7","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":704 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","8","8","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":168 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":563:614 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","9","9","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":823 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":704 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","10","10","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":654
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsXs = getTapsX(x);
+        int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+        }
+        temp[y * toSize.getWidth() + x] = sum;
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsXs = getTapsX(x);
+        int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            int pelValue = getPel(src, p, srcX + i, y - taps / 2 + 1);
+            if (pelValue < 0) {
+                pelValue += 256;
+            }
+            sum += (pelValue + 128) * tapsXs[i];
+        }
+        temp[y * toSize.getWidth() + x] = sum;
+    }
+}
+
+!!! |","true","false","75.907455","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","11","11","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":163 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":812:823 |","true","false","20000.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","12","12","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":651 POSTFIX_INCREMENT -> POSTFIX_DECREMENT |","true","false","24.421831","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","13","13","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":812 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","14","14","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":632 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","15","15","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":317 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":673:758 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","16","16","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":563 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":614 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","17","17","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":586 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":836 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","18","18","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":704 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":563:574 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","19","19","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":633 |","true","false","44.36096","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","20","20","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":632 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":793:794 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","21","21","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":428 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":775 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","22","22","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":632 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":793 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","23","23","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":781 LESS -> EQUALS |","true","false","39.405415","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","24","24","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":629 POSTFIX_INCREMENT -> PREFIX_DECREMENT |","true","false","40.246414","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","25","25","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":586
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    // <<PLACEHOLDER>>
+    ;
+    tempBuffers.set(temp);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    // Implementation using a local variable
+    byte[] temp = new byte[1024]; // Example initialization, adjust as needed
+    ByteBuffer buffer = ByteBuffer.wrap(temp);
+    // Perform operations on buffer...
+    tempBuffers.set(buffer);
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","26","26","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":654
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsXs = getTapsX(x);
+        int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+        }
+        temp[y * toSize.getWidth() + x] = sum;
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsXs = getTapsX(x);
+        int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            sum += getPel(src, p, srcX + i, y - taps / 2 + 1);
+            sum *= tapsXs[i];
+        }
+        temp[y * toSize.getWidth() + x] = sum;
+    }
+}
+
+!!! |","true","false","61.877625","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","27","27","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","28","28","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":812 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":856:856 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","29","29","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":543 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":842 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","30","30","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":794 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":813 |","true","false","39.74929","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","31","31","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":655 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":856:856 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","32","32","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":655 |","true","false","41.724","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","33","33","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":518 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":563:614 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","34","34","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":823 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":813 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","35","35","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 |","true","true","167.83636","167.0","9.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","36","36","|","true","true","180.42442","180.0","-4.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","37","37","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 | gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":689 PLUS -> REMAINDER |","true","true","178.24413","178.0","-2.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","38","38","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 | gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":629 POSTFIX_INCREMENT -> POSTFIX_DECREMENT |","true","false","40.63046","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","39","39","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 | gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":632
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    // Horizontal pass
+    for (int y = 0; y < src.getPlaneHeight(p) + taps; y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsXs = getTapsX(x);
+            int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+            }
+            temp[y * toSize.getWidth() + x] = sum;
+        }
+    }
+    // Vertical pass
+    for (int y = 0; y < dst.getPlaneHeight(p); y++) // <<PLACEHOLDER>>
+    ;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    // Horizontal pass
+    for (int y = 0; y < src.getPlaneHeight(p) + taps; y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsXs = getTapsX(x);
+            int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+            }
+            temp[y * toSize.getWidth() + x] = (short) ((sum + (taps / 2)) >> taps);
+        }
+    }
+
+    // Vertical pass
+    for (int y = 0; y < dst.getPlaneHeight(p); y++) {
+        int srcY = (int) (scaleFactorY * y) - taps / 2 + 1;
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            sum += temp[srcY + i] * tapsYs[i];
+        }
+        dst.setPixel(p, x, y, (short) ((sum + (taps / 2)) >> taps));
+    }
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","40","40","|","true","true","257.01575","257.0","-81.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","41","41","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 | gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":694 MULTIPLY -> LEFT_SHIFT |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","42","42","|","true","true","175.616","175.0","1.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","43","43","|","true","true","191.39229","191.0","-15.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","45","45","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 | gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":842 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":614 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","46","46","|","true","true","243.53055","243.0","-67.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","47","47","|","true","true","172.682","172.0","4.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","48","48","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 | gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":812 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","49","49","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 | gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":222 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":793:793 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","50","50","|","true","true","177.40746","177.0","-1.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","51","51","|","true","true","169.39392","169.0","7.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","52","52","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 | gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":564 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":581 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","53","53","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 | gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":674 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":710 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","54","54","|","true","true","188.21133","188.0","-12.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","55","55","|","true","true","170.37883","170.0","6.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","56","56","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 | gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":725 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":632:633 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","57","57","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 | gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":724 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","58","58","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 | gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":836 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":724:724 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","59","59","|","true","true","168.932","168.0","8.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","60","60","|","true","true","174.50363","174.0","2.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","61","61","|","true","true","181.17258","181.0","-5.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","62","62","|","true","true","192.97592","192.0","-16.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","63","63","|","true","true","187.8992","187.0","-11.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","64","64","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 | gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":724
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    // <<PLACEHOLDER>>
+    ;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    // Increment a variable by 1
+    int count = 0;
+    count++;
+}
+
+!!! |","true","false","65.34004","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","65","65","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 | gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":629 POSTFIX_INCREMENT -> PREFIX_DECREMENT |","true","false","40.634083","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","66","66","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 | gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":482 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":574 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","67","67","|","true","true","167.9237","167.0","9.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","68","68","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 | gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":214 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","69","69","|","true","true","170.8927","170.0","6.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","70","70","|","true","true","164.58691","164.0","12.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","71","71","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":586
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    temp = new int[toSize.getWidth() * (fromSize.getHeight() + taps)];
+    tempBuffers.set(temp);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int tempSize = toSize.getWidth() * (fromSize.getHeight() + taps);
+    temp = new int[tempSize];
+    tempBuffers.set(temp);
+}
+
+!!! |","true","true","239.6593","239.0","-63.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","72","72","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":764 MULTIPLY -> MINUS |","true","false","24.608376","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","73","73","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    for (int i = 0; i < tapsYs.length; i++) {
+        sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+    }
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","74","74","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":812 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":563 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","75","75","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":502 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":794 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","76","76","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":326 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":710 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","77","77","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":857 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":632:775 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","78","78","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":775 |","true","false","58.710545","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","79","79","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":654
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsXs = getTapsX(x);
+        int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            // <<PLACEHOLDER>>
+            ;
+        }
+        temp[y * toSize.getWidth() + x] = sum;
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsXs = getTapsX(x);
+        int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            int index = srcX + i;
+            if (index >= 0 && index < dst.getPlaneWidth(p)) {
+                sum += tapsXs[i] * dst.getData(p)[y * dst.getPlaneStride(p) + index];
+            }
+        }
+        temp[y * toSize.getWidth() + x] = (short) (sum >> shift);
+    }
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","80","80","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":908 MINUS -> DIVIDE |","true","false","67.58196","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","81","81","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":853 POSTFIX_INCREMENT -> PREFIX_INCREMENT |","true","true","184.81483","184.0","-8.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","82","82","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":853 POSTFIX_INCREMENT -> POSTFIX_DECREMENT |","true","false","31.580084","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","83","83","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":502 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":724:725 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","84","84","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":836 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":813 |","true","true","180.64732","180.0","-4.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","85","85","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":884 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":674 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","86","86","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":632 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","87","87","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":724 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":586:607 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","88","88","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":632
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    // Horizontal pass
+    for (int y = 0; y < src.getPlaneHeight(p) + taps; y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsXs = getTapsX(x);
+            int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+            }
+            temp[y * toSize.getWidth() + x] = sum;
+        }
+    }
+    // Vertical pass
+    for (int y = 0; y < dst.getPlaneHeight(p); y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsYs = getTapsY(y);
+            int srcY = (int) (scaleFactorY * y);
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+            }
+            dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    // Horizontal pass
+    for (int y = 0; y < src.getPlaneHeight(p) + taps; y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsXs = getTapsX(x);
+            int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+            }
+            temp[y * toSize.getWidth() + x] = (short) Math.min(Math.max(sum, 0), 65535);
+        }
+    }
+    // Vertical pass
+    for (int y = 0; y < dst.getPlaneHeight(p); y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsYs = getTapsY(y);
+            int srcY = (int) (scaleFactorY * y);
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+            }
+            dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) ((sum + 8192) >> 14);
+        }
+    }
+}
+
+!!! |","true","false","73.11317","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","89","89","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":147 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":724 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","90","90","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":326 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":655 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","91","91","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":153 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":793 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","92","92","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":731 PLUS -> DIVIDE |","true","false","48.539417","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","93","93","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":704 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":856:856 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","94","94","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":674 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","95","95","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":670 POSTFIX_INCREMENT -> PREFIX_INCREMENT |","true","true","176.67216","176.0","0.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","96","96","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":651 POSTFIX_INCREMENT -> POSTFIX_DECREMENT |","true","false","25.0375","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","97","97","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":813 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":587 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","98","98","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":632
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    // <<PLACEHOLDER>>
+    ;
+    // Vertical pass
+    for (int y = 0; y < dst.getPlaneHeight(p); y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsYs = getTapsY(y);
+            int srcY = (int) (scaleFactorY * y);
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+            }
+            dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    // Vertical pass
+    for (int y = 0; y < dst.getPlaneHeight(p); y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsYs = getTapsY(y);
+            int srcY = (int) (scaleFactorY * y);
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+            }
+            dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128);
+        }
+    }
+}
+
+!!! |","true","false","62.087418","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","99","99","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":704 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":632:633 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","100","100","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":684 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","101","101","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":884 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":856:857 |","true","true","218.08836","218.0","-42.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","102","102","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":674 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":793:794 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","103","103","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":725 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":674 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","104","104","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+
+!!! |","true","true","247.98483","247.0","-71.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","105","105","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":586 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","106","106","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":586
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    temp = new int[toSize.getWidth() * (fromSize.getHeight() + taps)];
+    tempBuffers.set(temp);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    temp = new int[toSize.getWidth() * (fromSize.getHeight() + taps)];
+    tempBuffers.set(temp);
+}
+
+!!! |","true","true","234.36267","234.0","-58.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","107","107","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":908 MINUS -> SIGNED_RIGHT_SHIFT |","true","false","46.6155","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","108","108","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":564 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":793 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","109","109","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+
+!!! |","true","true","244.48695","244.0","-68.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","110","110","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":809 POSTFIX_INCREMENT -> POSTFIX_DECREMENT |","true","false","32.33917","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","111","111","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":632:632 |","true","true","175.08508","175.0","1.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","112","112","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":587 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":812:813 |","true","false","24.418667","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","113","113","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":586
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    temp = new int[toSize.getWidth() * (fromSize.getHeight() + taps)];
+    tempBuffers.set(temp);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int width = toSize.getWidth();
+    int height = fromSize.getHeight() + taps;
+    temp = new int[width * height];
+    tempBuffers.set(temp);
+}
+
+!!! |","true","true","236.56758","236.0","-60.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","114","114","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":574 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","115","115","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":724
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+}
+
+!!! |","true","true","243.44083","243.0","-67.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","116","116","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":793 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":684 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","117","117","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":586
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    temp = new int[toSize.getWidth() * (fromSize.getHeight() + taps)];
+    // <<PLACEHOLDER>>
+    ;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    temp = new int[toSize.getWidth() * (fromSize.getHeight() + taps)];
+    for (int i = 0; i < temp.length; i++) {
+        temp[i] = 0; // Initialize each element to zero
+    }
+}
+
+!!! |","true","true","282.21823","282.0","-106.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","118","118","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":444 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":856 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","119","119","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":654
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsXs = getTapsX(x);
+        int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+        }
+        temp[y * toSize.getWidth() + x] = sum;
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsXs = getTapsX(x);
+        int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+        }
+        temp[y * toSize.getWidth() + x] = sum;
+    }
+}
+
+!!! |","true","true","233.46793","233.0","-57.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","120","120","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":586
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    temp = new int[toSize.getWidth() * (fromSize.getHeight() + taps)];
+    tempBuffers.set(temp);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int tempSize = toSize.getWidth() * (fromSize.getHeight() + taps);
+    temp = new int[tempSize];
+    tempBuffers.set(temp);
+}
+
+!!! |","true","true","242.37912","242.0","-66.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","122","122","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":408 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":654:655 |","true","true","247.35216","247.0","-71.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","123","123","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":823 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":724:725 |","true","true","176.93875","176.0","0.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","124","124","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":823 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":654:654 |","true","true","170.23662","170.0","6.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","125","125","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":195 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":724:724 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","126","126","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":673
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    short[] tapsXs = getTapsX(x);
+    int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+    int sum = 0;
+    for (int i = 0; i < taps; i++) {
+        sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+    }
+    temp[y * toSize.getWidth() + x] = sum;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    short[] tapsXs = getTapsX(x);
+    int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+    int sum = 0;
+    for (int i = 0; i < taps; i++) {
+        sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+    }
+    temp[y * toSize.getWidth() + x] = sum;
+}
+
+!!! |","true","true","235.58492","235.0","-59.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","127","127","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":531 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":581 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","128","128","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":279 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":724:725 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","129","129","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":724 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","130","130","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int index = x + (srcY + i) * toSize.getWidth();
+    sum += temp[index] * tapsYs[i];
+}
+
+!!! |","true","true","229.59538","229.0","-53.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","131","131","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":594 MULTIPLY -> UNSIGNED_RIGHT_SHIFT |","true","false","22.39496","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","132","132","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":654:655 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","133","133","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":724
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    // <<PLACEHOLDER>>
+    ;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    // First implementation: Print a message
+    System.out.println(""Hello from first implementation."");
+}
+
+!!! |","true","false","1150.4764","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","134","134","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":670 POSTFIX_INCREMENT -> PREFIX_DECREMENT |","true","false","22.497915","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","135","135","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":363 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":564 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","136","136","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":222 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":673:684 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","137","137","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":793 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","138","138","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":725 |","true","false","43.20579","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","139","139","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":724
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+   {
+       sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+   }
+   
+!!! |","true","true","243.05241","243.0","-67.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","140","140","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":564 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":857 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","141","141","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":793
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsYs = getTapsY(y);
+        int srcY = (int) (scaleFactorY * y);
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+        }
+        dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128);
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsYs = getTapsY(y);
+        int srcY = (int) (scaleFactorY * y);
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+        }
+        dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) MathUtil.clip((sum + 8192) >> 14, 0, 255);
+    }
+}
+
+!!! |","true","false","69.30375","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","142","142","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":763 PLUS -> MINUS |","true","false","22.801958","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","143","143","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":842 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":710 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","144","144","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":654
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsXs = getTapsX(x);
+        int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+        int sum = 0;
+        // <<PLACEHOLDER>>
+        ;
+        temp[y * toSize.getWidth() + x] = sum;
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsXs = getTapsX(x);
+        int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            int srcY = (int) (scaleFactorY * y) - taps / 2 + i;
+            if (srcX >= 0 && srcX < dst.getPlaneWidth(p) && srcY >= 0 && srcY < dst.getPlaneHeight(p)) {
+                sum += tapsXs[i] * getPixel(src, p, srcX, srcY);
+            }
+        }
+        temp[y * toSize.getWidth() + x] = sum;
+    }
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","145","145","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":574 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":724:724 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","146","146","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":721 POSTFIX_INCREMENT -> PREFIX_DECREMENT |","true","false","32.667416","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","147","147","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":794 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":632:632 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","148","148","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":836 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","149","149","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":704 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":632 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","150","150","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":408 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":812:836 |","true","true","178.86192","178.0","-2.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","151","151","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":158 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":812:823 |","true","true","168.3365","168.0","8.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","152","152","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":83 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":586:587 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","153","153","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":564 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":884 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","154","154","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":632
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    // Horizontal pass
+    for (int y = 0; y < src.getPlaneHeight(p) + taps; y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsXs = getTapsX(x);
+            int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+            }
+            temp[y * toSize.getWidth() + x] = sum;
+        }
+    }
+    // Vertical pass
+    for (int y = 0; y < dst.getPlaneHeight(p); y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsYs = getTapsY(y);
+            int srcY = (int) (scaleFactorY * y);
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+            }
+            dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    ByteBuffer srcBuffer = src.getPlaneData(p);
+    ByteBuffer dstBuffer = dst.getPlaneData(p);
+
+    // Horizontal pass
+    for (int y = 0; y < src.getPlaneHeight(p) + taps; y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsXs = getTapsX(x);
+            int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                sum += (srcBuffer.getShort((srcX + i) * 2 + y * src.getRowSize(p)) + 128) * tapsXs[i];
+            }
+            temp[y * toSize.getWidth() + x] = sum;
+        }
+    }
+
+    // Vertical pass
+    for (int y = 0; y < dst.getPlaneHeight(p); y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsYs = getTapsY(y);
+            int srcY = (int) (scaleFactorY * y);
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+            }
+            dstBuffer.put((byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128));
+        }
+    }
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","155","155","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":120 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":724:724 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","156","156","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":704 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","157","157","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":793 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":654 |","true","false","55.173878","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","158","158","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":620 LESS -> LESS_EQUALS |","true","false","47.975834","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","159","159","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":493 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":684 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","160","160","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":654
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        // <<PLACEHOLDER>>
+        ;
+        int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+        }
+        temp[y * toSize.getWidth() + x] = sum;
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int tempSrcX;
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        tempSrcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            sum += (getPel(src, p, tempSrcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+        }
+        temp[y * toSize.getWidth() + x] = sum;
+    }
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","161","161","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":813 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":632:632 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","162","162","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":790 POSTFIX_INCREMENT -> PREFIX_DECREMENT |","true","false","48.52396","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","163","163","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":206 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":581 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","164","164","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":531 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":674 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","165","165","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":793
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsYs = getTapsY(y);
+        int srcY = (int) (scaleFactorY * y);
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+        }
+        dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128);
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsYs = getTapsY(y);
+        int srcY = (int) (scaleFactorY * y);
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+        }
+        dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) ((sum >> 14 & 0xFF) - 128);
+    }
+}
+
+!!! |","true","true","230.0787","230.0","-54.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","167","167","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":563 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":724:725 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","168","168","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":614 |","true","false","40.97817","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","169","169","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":384 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":793:793 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","170","170","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":620 LESS -> LESS_EQUALS |","true","false","47.299168","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","171","171","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":563
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    int[] temp = tempBuffers.get();
+    int taps = nTaps();
+    if (temp == null) {
+        temp = new int[toSize.getWidth() * (fromSize.getHeight() + taps)];
+        tempBuffers.set(temp);
+    }
+    for (int p = 0; p < src.getColor().nComp; p++) {
+        // Horizontal pass
+        for (int y = 0; y < src.getPlaneHeight(p) + taps; y++) {
+            for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+                short[] tapsXs = getTapsX(x);
+                int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+                int sum = 0;
+                for (int i = 0; i < taps; i++) {
+                    sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+                }
+                temp[y * toSize.getWidth() + x] = sum;
+            }
+        }
+        // Vertical pass
+        for (int y = 0; y < dst.getPlaneHeight(p); y++) {
+            for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+                short[] tapsYs = getTapsY(y);
+                int srcY = (int) (scaleFactorY * y);
+                int sum = 0;
+                for (int i = 0; i < taps; i++) {
+                    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+                }
+                // <<PLACEHOLDER>>
+                ;
+            }
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int[] temp = tempBuffers.get();
+    int taps = nTaps();
+    if (temp == null) {
+        temp = new int[toSize.getWidth() * (fromSize.getHeight() + taps)];
+        tempBuffers.set(temp);
+    }
+    for (int p = 0; p < src.getColor().nComp; p++) {
+        // Horizontal pass
+        for (int y = 0; y < src.getPlaneHeight(p) + taps; y++) {
+            for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+                short[] tapsXs = getTapsX(x);
+                int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+                int sum = 0;
+                for (int i = 0; i < taps; i++) {
+                    sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+                }
+                temp[y * toSize.getWidth() + x] = sum;
+            }
+        }
+        // Vertical pass
+        for (int y = 0; y < dst.getPlaneHeight(p); y++) {
+            for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+                short[] tapsYs = getTapsY(y);
+                int srcY = (int) (scaleFactorY * y);
+                int sum = 0;
+                for (int i = 0; i < taps; i++) {
+                    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+                }
+                dst.setPel(p, x, y, clip(sum));
+            }
+        }
+    }
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","172","172","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":725 |","true","false","64.13462","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","173","173","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":285 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":794 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","174","174","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":793 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":724:725 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","175","175","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":564 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":812 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","176","176","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":724 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":586 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","177","177","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":629 POSTFIX_INCREMENT -> PREFIX_DECREMENT |","true","false","44.288544","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","178","178","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":586
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    temp = new int[toSize.getWidth() * (fromSize.getHeight() + taps)];
+    tempBuffers.set(temp);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int tempSize = toSize.getWidth() * (fromSize.getHeight() + taps);
+    int[] tempArray = new int[tempSize];
+    tempBuffers.set(tempArray);
+}
+
+!!! |","true","false","31.145292","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","179","179","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":384 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":654 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","180","180","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":543 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":856:857 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","181","181","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":531 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":563:581 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","182","182","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":587 |","true","false","22.86004","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","183","183","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":600 PLUS -> SIGNED_RIGHT_SHIFT |","true","false","23.304085","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","184","184","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":563
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    int[] temp = tempBuffers.get();
+    int taps = nTaps();
+    if (temp == null) {
+        temp = new int[toSize.getWidth() * (fromSize.getHeight() + taps)];
+        tempBuffers.set(temp);
+    }
+    for (int p = 0; p < src.getColor().nComp; p++) {
+        // Horizontal pass
+        for (int y = 0; y < src.getPlaneHeight(p) + taps; y++) {
+            for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+                short[] tapsXs = getTapsX(x);
+                int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+                int sum = 0;
+                for (int i = 0; i < taps; i++) {
+                    sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+                }
+                temp[y * toSize.getWidth() + x] = sum;
+            }
+        }
+        // Vertical pass
+        for (int y = 0; y < dst.getPlaneHeight(p); y++) {
+            for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+                short[] tapsYs = getTapsY(y);
+                int srcY = (int) (scaleFactorY * y);
+                int sum = 0;
+                for (int i = 0; i < taps; i++) {
+                    // <<PLACEHOLDER>>
+                    ;
+                }
+                dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128);
+            }
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int[] temp = tempBuffers.get();
+    int taps = nTaps();
+    if (temp == null) {
+        temp = new int[toSize.getWidth() * (fromSize.getHeight() + taps)];
+        tempBuffers.set(temp);
+    }
+    for (int p = 0; p < src.getColor().nComp; p++) {
+        // Horizontal pass
+        for (int y = 0; y < src.getPlaneHeight(p) + taps; y++) {
+            for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+                short[] tapsXs = getTapsX(x);
+                int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+                int sum = 0;
+                for (int i = 0; i < taps; i++) {
+                    sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+                }
+                temp[y * toSize.getWidth() + x] = sum;
+            }
+        }
+        // Vertical pass
+        for (int y = 0; y < dst.getPlaneHeight(p); y++) {
+            for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+                short[] tapsYs = getTapsY(y);
+                int srcY = (int) (scaleFactorY * y);
+                int sum = 0;
+                for (int i = 0; i < taps; i++) {
+                    sum += temp[(y + taps / 2 - i) * toSize.getWidth() + x] * tapsYs[i];
+                }
+                dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128);
+            }
+        }
+    }
+}
+
+!!! |","true","false","44.555332","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","185","185","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":428 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":614 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","186","186","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":168 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":884 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","187","187","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":673
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    short[] tapsXs = getTapsX(x);
+    int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+    int sum = 0;
+    for (int i = 0; i < taps; i++) {
+        sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+    }
+    temp[y * toSize.getWidth() + x] = sum;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    short[] tapsXs = getTapsX(x);
+    int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+    int sum = 0;
+    for(int i=0; i<taps; i++){
+        sum += (getPel(src, p, srcX+i, y-taps/2+1) + 128) * tapsXs[i];
+    }
+    temp[y*toSize.getWidth() + x] = sum;
+}
+
+!!! |","true","true","238.88371","238.0","-62.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","188","188","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":614 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":632:633 |","true","false","26.84946","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","189","189","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":673
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    short[] tapsXs = getTapsX(x);
+    int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+    int sum = 0;
+    for (int i = 0; i < taps; i++) {
+        sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+    }
+    temp[y * toSize.getWidth() + x] = sum;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    short[] tapsXs = getTapsX(x);
+    int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+    int sum = 0;
+    for (int i = 0; i < taps; i++) {
+        sum += ((getPel(src, p, srcX + i, y - taps / 2 + 1) & 0xFF) + 128) * tapsXs[i];
+    }
+    temp[y * toSize.getWidth() + x] = (byte)(sum >>> 8);
+}
+
+!!! |","true","false","68.59604","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","190","190","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 |","true","true","172.61884","172.0","4.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","191","191","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":884 |","true","false","49.687416","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","192","192","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":574 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":775 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","193","193","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":651 POSTFIX_INCREMENT -> POSTFIX_DECREMENT |","true","false","22.693834","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","194","194","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":317 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":856:856 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","195","195","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":421 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":884 |","true","false","48.008167","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","196","196","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":632 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","197","197","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":870 PLUS -> REMAINDER |","true","false","31.74625","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","198","198","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":586
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    temp = new int[toSize.getWidth() * (fromSize.getHeight() + taps)];
+    // <<PLACEHOLDER>>
+    ;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    temp = new int[toSize.getWidth() * (fromSize.getHeight() + taps)];
+    for (int i = 0; i < temp.length; i++) {
+        temp[i] = 0; // Initialize each element to zero or any other default value
+    }
+}
+
+!!! |","true","true","225.58026","225.0","-49.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","199","199","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":793
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsYs = getTapsY(y);
+        int srcY = (int) (scaleFactorY * y);
+        int sum = 0;
+        // <<PLACEHOLDER>>
+        ;
+        dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128);
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsYs = getTapsY(y);
+        int srcY = (int) (scaleFactorY * y);
+        int sum = 0;
+        for (short tap : tapsYs) {
+            sum += tap * src[srcY][x];
+        }
+        dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128);
+    }
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","200","200","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":793
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsYs = getTapsY(y);
+        int srcY = (int) (scaleFactorY * y);
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+        }
+        dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128);
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int[] dstData = dst.getPlaneData(p);
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsYs = getTapsY(y);
+        int srcY = (int) (scaleFactorY * y);
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+        }
+        dstData[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128);
+    }
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","201","201","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":654 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":632 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","202","202","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":342 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":793 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","203","203","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":428 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":724:724 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","204","204","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":563 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","205","205","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":674 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":563:614 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","206","206","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":279 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":654:655 |","true","true","234.18964","234.0","-58.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","207","207","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":147 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":632:775 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","208","208","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":721 POSTFIX_INCREMENT -> PREFIX_DECREMENT |","true","false","22.909876","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","209","209","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":758 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":704 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","210","210","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":813 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":823 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","211","211","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":587 |","true","false","22.483208","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","212","212","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":586
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    temp = new int[toSize.getWidth() * (fromSize.getHeight() + taps)];
+    tempBuffers.set(temp);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int width = toSize.getWidth();
+    int height = fromSize.getHeight();
+    int totalLength = width * (height + taps);
+    
+    temp = Arrays.copyOf(temp, totalLength);
+    tempBuffers.set(temp);
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","213","213","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    for (int i = 0; i < tapsYs.length; i++) {
+        sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+    }
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","214","214","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":582 EQUALS -> NOT_EQUALS |","true","false","36.059624","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","215","215","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":842 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":710 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","216","216","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":710 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":655 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","217","217","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":574 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":586:587 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","218","218","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":812 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":654:654 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","219","219","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":812 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":654:654 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","220","220","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":586 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","221","221","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":629 POSTFIX_INCREMENT -> POSTFIX_DECREMENT |","true","false","39.938248","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","222","222","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":586
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    temp = new int[toSize.getWidth() * (fromSize.getHeight() + taps)];
+    tempBuffers.set(temp);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","223","223","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":674 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","224","224","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":812
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    short[] tapsYs = getTapsY(y);
+    // <<PLACEHOLDER>>
+    ;
+    int sum = 0;
+    for (int i = 0; i < taps; i++) {
+        sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+    }
+    dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    short[] tapsYs = getTapsY(y);
+    int sum = 0;
+    for (int i = 0; i < taps; i++) {
+        sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+    }
+    dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128);
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","225","225","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":581 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":684 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","226","226","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":673 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","227","227","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":731 PLUS -> REMAINDER |","true","false","66.50867","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","228","228","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":285 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":614 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","229","229","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":195 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":632:775 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","230","230","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":105 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":704 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","231","231","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":564 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":724:725 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","232","232","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":586
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    temp = new int[toSize.getWidth() * (fromSize.getHeight() + taps)];
+    tempBuffers.set(temp);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","233","233","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":721 POSTFIX_INCREMENT -> PREFIX_INCRE

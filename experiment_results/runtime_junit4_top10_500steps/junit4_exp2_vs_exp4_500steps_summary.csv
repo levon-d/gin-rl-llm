@@ -1,0 +1,14 @@
+JUnit4: Exp 2 (UCB+Traditional) vs Exp 4 (Standard LS+Traditional) — 500 steps, 5 reps
+
+Method,Impr_E2_mean(%),Impr_E2_std(%),Impr_E4_mean(%),Impr_E4_std(%),Winner
+JUnit4Builder.runnerForClass,21.49,9.74,20.62,11.51,UCB
+elapsedTimeAsString,21.34,13.68,12.55,17.74,UCB
+methodAndClassNamePatternGroupOrDefault,11.73,5.38,12.98,3.51,LS
+getAnnotations,9.86,2.88,4.81,2.93,UCB
+IgnoredBuilder.runnerForClass,9.53,9.73,28.38,8.34,LS
+runsTopToBottom,8.76,3.05,11.12,6.75,LS
+shouldRun,7.77,0.92,4.50,1.91,UCB
+getSuite,5.36,2.67,5.45,2.15,LS
+formatDisplayName,5.11,2.69,5.64,2.52,LS
+wrapIfNotThreadSafe,4.86,1.39,8.94,3.06,LS
+TOTAL,10.58,5.82,11.50,7.37,LS

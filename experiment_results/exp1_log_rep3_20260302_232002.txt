@@ -1,0 +1,165 @@
+2026-03-02 23:20:14 gin.util.Sampler.printCommandlineArguments() INFO: Project directory, required: /Users/""/repos/jcodec
+2026-03-02 23:20:14 gin.util.Sampler.printCommandlineArguments() INFO: Method file, required: /Users/""/repos/gin-rl/jcodec_method_file.csv
+2026-03-02 23:20:14 gin.util.Sampler.printCommandlineArguments() INFO: Project name, required for maven and gradle projects: jcodec
+2026-03-02 23:20:14 gin.util.Sampler.printCommandlineArguments() INFO: Classpath, required for non-maven and non-gradle projects:
+2026-03-02 23:20:14 gin.util.Sampler.printCommandlineArguments() INFO: Path to maven bin directory, e.g. /usr/local, required for maven projects: /opt/homebrew/Cellar/maven/3.9.9/libexec
+2026-03-02 23:20:14 gin.util.Sampler.printCommandlineArguments() INFO: Output CSV file: /Users/""/repos/gin-rl/experiment_results/exp1_random_rep3_20260302_232002.csv
+2026-03-02 23:20:14 gin.util.Sampler.printCommandlineArguments() INFO: Output file for storing the execution time: sampler_timing.csv
+2026-03-02 23:20:14 gin.util.Sampler.printCommandlineArguments() INFO: Timeout in milliseconds: 10000
+2026-03-02 23:20:14 gin.util.Sampler.printCommandlineArguments() INFO: Repeat each test r times: 1
+2026-03-02 23:20:14 gin.util.Sampler.printCommandlineArguments() INFO: Number of methods from the method data to sample from. 0 for all.: 0
+2026-03-02 23:20:14 gin.util.Sampler.printCommandlineArguments() INFO: Run tests in a separate jvm: false
+2026-03-02 23:20:14 gin.util.Sampler.printCommandlineArguments() INFO: Run every repetition in a new jvm. Includes option '-j': false
+2026-03-02 23:20:14 gin.util.Sampler.printCommandlineArguments() INFO: Run every test in a new jvm. Includes options '-j' and '-jj': false
+2026-03-02 23:20:14 gin.util.Sampler.printCommandlineArguments() INFO: Fail fast. If set to true, the tests will stop at the first failure and the next patch will be executed. You probably don't want to set this to true for Automatic Program Repair.: false
+2026-03-02 23:20:14 gin.util.Sampler.printCommandlineArguments() INFO: OpenAI API key for LLM edits: demo
+2026-03-02 23:20:14 gin.util.Sampler.printCommandlineArguments() INFO: OpenAI API model name for LLM edits; e.g. gpt-3.5-turbo or gpt-4; full list at https://github.com/langchain4j/langchain4j/blob/main/langchain4j-open-ai/src/main/java/dev/langchain4j/model/openai/OpenAiModelName.java: gpt-3.5-turbo
+2026-03-02 23:20:14 gin.util.Sampler.printCommandlineArguments() INFO: model type; OpenAI  or a name of an ollama model: OpenAI
+2026-03-02 23:20:14 gin.util.Sampler.printCommandlineArguments() INFO: model timeout in seconds: 30
+2026-03-02 23:20:14 gin.util.Sampler.printCommandlineArguments() INFO: Prompt Type for LLM edits: MEDIUM
+2026-03-02 23:20:14 gin.util.Sampler.printCommandlineArguments() INFO: Prompt Template for LLM edits:
+2026-03-02 23:20:14 gin.util.Sampler.setUp() INFO: Calculating classpath..
+[WARN] Maven will be executed in interactive mode, but no input stream has been configured for this MavenInvoker instance.
+2026-03-02 23:20:15 gin.util.Sampler.setUp() INFO: Classpath: /Users/""/repos/jcodec/target/classes:/Users/""/repos/jcodec/target/test-classes:/Users/""/.m2/repository/junit/junit/4.13.1/junit-4.13.1.jar:/Users/""/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+2026-03-02 23:20:15 gin.util.RandomSampler.Setup() INFO: === RandomSampler with Memory Tracking ===
+2026-03-02 23:20:15 gin.util.RandomSampler.Setup() INFO: Edit types: 10 operators
+2026-03-02 23:20:15 gin.util.RandomSampler.Setup() INFO: LLM edits enabled: false
+2026-03-02 23:20:15 gin.util.RandomSampler.Setup() INFO: ==========================================
+2026-03-02 23:20:15 gin.util.RandomSampler.printAdditionalArguments() INFO: Edit types: [class gin.edit.statement.DeleteStatement, class gin.edit.statement.CopyStatement, class gin.edit.statement.ReplaceStatement, class gin.edit.statement.SwapStatement, class gin.edit.matched.MatchedDeleteStatement, class gin.edit.matched.MatchedCopyStatement, class gin.edit.matched.MatchedReplaceStatement, class gin.edit.matched.MatchedSwapStatement, class gin.edit.modifynode.BinaryOperatorReplacement, class gin.edit.modifynode.UnaryOperatorReplacement]
+2026-03-02 23:20:15 gin.util.RandomSampler.printAdditionalArguments() INFO: Number of edits per patch: 1
+2026-03-02 23:20:15 gin.util.RandomSampler.printAdditionalArguments() INFO: Number of patches: 100
+2026-03-02 23:20:15 gin.util.RandomSampler.printAdditionalArguments() INFO: Random seed for method selection: 3223
+2026-03-02 23:20:15 gin.util.RandomSampler.printAdditionalArguments() INFO: Random seed for edit type selection: 3123
+2026-03-02 23:20:15 gin.util.RandomSampler.sampleMethodsHook() INFO: Number of methods: 6
+2026-03-02 23:20:15 gin.util.RandomSampler.sampleMethodsHook() INFO: Number of patches to generate: 100
+2026-03-02 23:20:15 gin.util.RandomSampler.sampleMethodsHook() INFO: Getting baseline memory for all methods...
+2026-03-02 23:20:16 gin.util.RandomSampler.sampleMethodsHook() INFO: Method org.jcodec.codecs.h264.decode.CoeffTransformer.idct4x4(int[]) (ID=1): baseline = 220 KB
+2026-03-02 23:20:16 gin.util.RandomSampler.sampleMethodsHook() INFO: Method org.jcodec.codecs.h264.decode.CoeffTransformer.fdct4x4(int[]) (ID=2): baseline = 7 KB
+2026-03-02 23:20:16 gin.util.RandomSampler.sampleMethodsHook() INFO: Method org.jcodec.codecs.h264.decode.CoeffTransformer.dequantizeAC(int[],int,int[]) (ID=3): baseline = 7 KB
+2026-03-02 23:20:16 gin.util.RandomSampler.sampleMethodsHook() INFO: Method org.jcodec.codecs.h264.decode.CoeffTransformer.quantizeAC(int[],int) (ID=4): baseline = 7 KB
+2026-03-02 23:20:16 gin.util.RandomSampler.sampleMethodsHook() INFO: Method org.jcodec.codecs.h264.decode.CoeffTransformer.invDC4x4(int[]) (ID=5): baseline = 7 KB
+2026-03-02 23:20:16 gin.util.RandomSampler.sampleMethodsHook() INFO: Method org.jcodec.codecs.h264.decode.CoeffTransformer.fvdDC4x4(int[]) (ID=6): baseline = 7 KB
+2026-03-02 23:20:16 gin.util.RandomSampler.sampleMethodsHook() INFO: Generating and testing random patches...
+2026-03-02 23:20:16 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.modifynode.BinaryOperatorReplacement]
+2026-03-02 23:20:16 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-03-02 23:20:16 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-03-02 23:20:16 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.modifynode.UnaryOperatorReplacement]
+2026-03-02 23:20:17 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-03-02 23:20:17 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-03-02 23:20:17 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-03-02 23:20:17 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.modifynode.UnaryOperatorReplacement]
+2026-03-02 23:20:17 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-03-02 23:20:17 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-03-02 23:20:17 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-03-02 23:20:17 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-03-02 23:20:17 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-03-02 23:20:17 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.modifynode.UnaryOperatorReplacement]
+2026-03-02 23:20:17 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.ReplaceStatement]
+2026-03-02 23:20:17 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-03-02 23:20:17 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.modifynode.BinaryOperatorReplacement]
+2026-03-02 23:20:17 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-03-02 23:20:17 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.modifynode.UnaryOperatorReplacement]
+2026-03-02 23:20:17 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-03-02 23:20:17 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-03-02 23:20:17 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.modifynode.UnaryOperatorReplacement]
+2026-03-02 23:20:17 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-03-02 23:20:17 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-03-02 23:20:17 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.modifynode.BinaryOperatorReplacement]
+2026-03-02 23:20:17 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-03-02 23:20:17 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.ReplaceStatement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.ReplaceStatement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.modifynode.BinaryOperatorReplacement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.modifynode.BinaryOperatorReplacement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.modifynode.UnaryOperatorReplacement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.ReplaceStatement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.modifynode.BinaryOperatorReplacement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.ReplaceStatement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.ReplaceStatement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.modifynode.BinaryOperatorReplacement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-03-02 23:20:18 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.modifynode.BinaryOperatorReplacement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.modifynode.UnaryOperatorReplacement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.ReplaceStatement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.modifynode.UnaryOperatorReplacement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.modifynode.UnaryOperatorReplacement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.modifynode.UnaryOperatorReplacement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.modifynode.BinaryOperatorReplacement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.modifynode.UnaryOperatorReplacement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedReplaceStatement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.DeleteStatement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-03-02 23:20:19 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-03-02 23:20:20 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-03-02 23:20:20 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.CopyStatement]
+2026-03-02 23:20:20 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-03-02 23:20:20 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.modifynode.BinaryOperatorReplacement]
+2026-03-02 23:20:20 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-03-02 23:20:20 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.modifynode.BinaryOperatorReplacement]
+2026-03-02 23:20:20 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-03-02 23:20:20 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.modifynode.BinaryOperatorReplacement]
+2026-03-02 23:20:20 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedCopyStatement]
+2026-03-02 23:20:20 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-03-02 23:20:20 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedSwapStatement]
+2026-03-02 23:20:20 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.modifynode.BinaryOperatorReplacement]
+2026-03-02 23:20:20 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.statement.SwapStatement]
+2026-03-02 23:20:20 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.matched.MatchedDeleteStatement]
+2026-03-02 23:20:20 gin.Patch.randomEdit() INFO: Choosing an edit type from: [class gin.edit.modifynode.UnaryOperatorReplacement]
+2026-03-02 23:20:20 gin.util.RandomSampler.sampleMethodsHook() INFO: Progress: 100/100 patches tested
+2026-03-02 23:20:20 gin.util.RandomSampler.sampleMethodsHook() INFO: Results saved to: /Users/""/repos/gin-rl/experiment_results/exp1_random_rep3_20260302_232002.csv
+2026-03-02 23:20:20 gin.util.RandomSampler.printSummary() INFO: ============================================================
+2026-03-02 23:20:20 gin.util.RandomSampler.printSummary() INFO: RANDOM SAMPLING SUMMARY
+2026-03-02 23:20:20 gin.util.RandomSampler.printSummary() INFO: ============================================================
+2026-03-02 23:20:20 gin.util.RandomSampler.printSummary() INFO: Total patches tested: 100
+2026-03-02 23:20:20 gin.util.RandomSampler.printSummary() INFO: Compiling patches: 44 (44.0%)
+2026-03-02 23:20:20 gin.util.RandomSampler.printSummary() INFO: Test-passing patches: 42 (42.0%)
+2026-03-02 23:20:20 gin.util.RandomSampler.printSummary() INFO: Memory-improving patches: 9 (9.0%)
+2026-03-02 23:20:20 gin.util.RandomSampler.printSummary() INFO:
+2026-03-02 23:20:20 gin.util.RandomSampler.printSummary() INFO: OPERATOR SUCCESS RATES (single-edit patches):
+2026-03-02 23:20:20 gin.util.RandomSampler.printSummary() INFO:   MatchedDeleteStatement: 9 attempts, 44.4% pass, 0.0% improve
+2026-03-02 23:20:20 gin.util.RandomSampler.printSummary() INFO:   CopyStatement: 10 attempts, 10.0% pass, 0.0% improve
+2026-03-02 23:20:20 gin.util.RandomSampler.printSummary() INFO:   MatchedReplaceStatement: 8 attempts, 0.0% pass, 0.0% improve
+2026-03-02 23:20:20 gin.util.RandomSampler.printSummary() INFO:   ReplaceStatement: 7 attempts, 0.0% pass, 0.0% improve
+2026-03-02 23:20:20 gin.util.RandomSampler.printSummary() INFO:   MatchedSwapStatement: 10 attempts, 30.0% pass, 10.0% improve
+2026-03-02 23:20:20 gin.util.RandomSampler.printSummary() INFO:   MatchedCopyStatement: 10 attempts, 0.0% pass, 0.0% improve
+2026-03-02 23:20:20 gin.util.RandomSampler.printSummary() INFO:   BinaryOperatorReplacement: 13 attempts, 100.0% pass, 23.1% improve
+2026-03-02 23:20:20 gin.util.RandomSampler.printSummary() INFO:   UnaryOperatorReplacement: 12 attempts, 100.0% pass, 33.3% improve
+2026-03-02 23:20:20 gin.util.RandomSampler.printSummary() INFO:   DeleteStatement: 7 attempts, 71.4% pass, 0.0% improve
+2026-03-02 23:20:20 gin.util.RandomSampler.printSummary() INFO:   SwapStatement: 14 attempts, 28.6% pass, 7.1% improve
+2026-03-02 23:20:20 gin.util.RandomSampler.printSummary() INFO: ============================================================
+2026-03-02 23:20:20 gin.util.RandomSampler.writeSummaryCSV() INFO: Summary saved to: /Users/""/repos/gin-rl/experiment_results/exp1_random_rep3_20260302_232002_summary.csv

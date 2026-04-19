@@ -1,0 +1,73 @@
+MethodName,BaselineRuntime(ms),BestRuntime(ms),RuntimeReduction(ms),ImprovementPercent,BestPatch
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)",3265.00,2774.00,491.00,15.04,"|"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)",1115.00,1115.00,0.00,0.00,"|"
+"org.jcodec.codecs.h264.encode.MBEncoderHelper.org.jcodec.codecs.h264.encode.MBEncoderHelper.takeSafe(byte[],int,int,int,int,byte[],int,int)",1669.00,1393.00,276.00,16.54,"| gin.edit.modifynode.UnaryOperatorReplacement  'src/main/java/org/jcodec/codecs/h264/encode/MBEncoderHelper.java':483 PREFIX_INCREMENT -> POSTFIX_INCREMENT | gin.edit.modifynode.UnaryOperatorReplacement  'src/main/java/org/jcodec/codecs/h264/encode/MBEncoderHelper.java':458 POSTFIX_INCREMENT -> PREFIX_INCREMENT |"
+"org.jcodec.codecs.h264.encode.IntraPredEstimator.org.jcodec.codecs.h264.encode.IntraPredEstimator.getLumaPred4x4(Picture,EncodingContext,int,int,int)",1427.00,1369.00,58.00,4.06,"|"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)",3095.00,2744.00,351.00,11.34,"|"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeVert(Picture,int,int,int,int,int,int,int)",2799.00,2799.00,0.00,0.00,"|"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs4(int,int,byte[],byte[],int,int,int,int,int,int,int,int,boolean)",2762.00,2762.00,0.00,0.00,"|"
+"org.jcodec.codecs.h264.decode.MBlockDecoderUtils.org.jcodec.codecs.h264.decode.MBlockDecoderUtils.mergeResidual(Picture,int[][][],int[][],int[][])",2783.00,2664.00,119.00,4.28,"|"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)",159.00,151.00,8.00,5.03,"| gin.edit.llm.LLMReplaceStatement 'src/main/java/org/jcodec/scale/BaseResampler.java':632
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    // Horizontal pass
+    for (int y = 0; y < src.getPlaneHeight(p) + taps; y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsXs = getTapsX(x);
+            int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                sum += (getPel(src; p; srcX + i; y - taps / 2 + 1) + 128) * tapsXs[i];
+            }
+            temp[y * toSize.getWidth() + x] = sum;
+        }
+    }
+    // Vertical pass
+    for (int y = 0; y < dst.getPlaneHeight(p); y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsYs = getTapsY(y);
+            int srcY = (int) (scaleFactorY * y);
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+            }
+            dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14; 0; 255) - 128);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces; if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    // Horizontal pass
+    for (int y = 0; y < src.getPlaneHeight(p) + taps; y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsXs = getTapsX(x);
+            int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                sum += (getPel(src; p; srcX + i; y - taps / 2 + 1) + 128) * tapsXs[i];
+            }
+            temp[y * toSize.getWidth() + x] = sum;
+        }
+    }
+
+    // Vertical pass
+    for (int y = 0; y < dst.getPlaneHeight(p); y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsYs = getTapsY(y);
+            int srcY = (int) (scaleFactorY * y);
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+            }
+            dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14; 0; 255) - 128);
+        }
+    }
+}
+
+!!! | gin.edit.statement.ReplaceStatement 'src/main/java/org/jcodec/scale/BaseResampler.java':587 -> 'src/main/java/org/jcodec/scale/BaseResampler.java':674 | gin.edit.statement.CopyStatement 'src/main/java/org/jcodec/scale/BaseResampler.java':421 -> 'src/main/java/org/jcodec/scale/BaseResampler.java':654:654 | gin.edit.statement.DeleteStatement 'src/main/java/org/jcodec/scale/BaseResampler.java':724 |"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)",1350.00,1149.00,201.00,14.89,"| gin.edit.statement.MoveStatement 'src/main/java/org/jcodec/common/model/Picture.java':996 -> 'src/main/java/org/jcodec/common/model/Picture.java':995:996 |"
+"TOTAL",20424.00,18920.00,1504.00,7.36,""

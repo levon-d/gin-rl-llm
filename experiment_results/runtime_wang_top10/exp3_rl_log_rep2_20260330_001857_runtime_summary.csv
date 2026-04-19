@@ -1,0 +1,22 @@
+MethodName,BaselineRuntime(ms),BestRuntime(ms),RuntimeReduction(ms),ImprovementPercent,BestPatch
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)",3604.00,2774.00,830.00,23.03,"|"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)",1755.00,1047.00,708.00,40.34,"|"
+"org.jcodec.codecs.h264.encode.MBEncoderHelper.org.jcodec.codecs.h264.encode.MBEncoderHelper.takeSafe(byte[],int,int,int,int,byte[],int,int)",1608.00,1396.00,212.00,13.18,"| gin.edit.statement.SwapStatement 'src/main/java/org/jcodec/codecs/h264/encode/MBEncoderHelper.java':493 <-> 'src/main/java/org/jcodec/codecs/h264/encode/MBEncoderHelper.java':492 |"
+"org.jcodec.codecs.h264.encode.IntraPredEstimator.org.jcodec.codecs.h264.encode.IntraPredEstimator.getLumaPred4x4(Picture,EncodingContext,int,int,int)",1418.00,1418.00,0.00,0.00,"|"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)",2850.00,2777.00,73.00,2.56,"|"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeVert(Picture,int,int,int,int,int,int,int)",3335.00,2726.00,609.00,18.26,"|"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs4(int,int,byte[],byte[],int,int,int,int,int,int,int,int,boolean)",2811.00,2811.00,0.00,0.00,"|"
+"org.jcodec.codecs.h264.decode.MBlockDecoderUtils.org.jcodec.codecs.h264.decode.MBlockDecoderUtils.mergeResidual(Picture,int[][][],int[][],int[][])",2888.00,2801.00,87.00,3.01,"|"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)",165.00,157.00,8.00,4.85,"| gin.edit.llm.LLMReplaceStatement 'src/main/java/org/jcodec/scale/BaseResampler.java':724
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += (getPel(src; p; srcX + i; y - taps / 2 + 1) + 128) * tapsXs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces; if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)",1313.00,1149.00,164.00,12.49,"|"
+"TOTAL",21747.00,19056.00,2691.00,12.37,""

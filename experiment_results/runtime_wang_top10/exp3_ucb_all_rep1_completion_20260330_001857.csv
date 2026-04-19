@@ -1,0 +1,1268 @@
+"MethodName","Iteration","EvaluationNumber","Patch","Compiled","AllTestsPassed","TotalExecutionTime(ms)","Runtime(ms)","RuntimeImprovement(ms)"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","-1","0","|","true","true","164.51562","164.0","0.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","1","1","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":414 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":684 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","2","2","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":563 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":632:775 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","3","3","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":725 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":574 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","4","4","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":632
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    // Horizontal pass
+    for (int y = 0; y < src.getPlaneHeight(p) + taps; y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsXs = getTapsX(x);
+            int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+            }
+            temp[y * toSize.getWidth() + x] = sum;
+        }
+    }
+    // Vertical pass
+    for (int y = 0; y < dst.getPlaneHeight(p); y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsYs = getTapsY(y);
+            int srcY = (int) (scaleFactorY * y);
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                // <<PLACEHOLDER>>
+                ;
+            }
+            dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    // Horizontal pass
+    for (int y = 0; y < src.getPlaneHeight(p) + taps; y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsXs = getTapsX(x);
+            int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+            }
+            temp[y * toSize.getWidth() + x] = sum;
+        }
+    }
+    // Vertical pass
+    for (int y = 0; y < dst.getPlaneHeight(p); y++) {
+        for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+            short[] tapsYs = getTapsY(y);
+            int srcY = (int) (scaleFactorY * y);
+            int sum = 0;
+            for (int i = 0; i < taps; i++) {
+                sum += temp[(y + i - taps / 2 + 1) * toSize.getWidth() + x] * tapsYs[i];
+            }
+            dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128);
+        }
+    }
+}
+
+!!! |","true","false","34.940914","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","5","5","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":758 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":684 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","6","6","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":639 LESS -> EQUALS |","true","false","39.691456","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","7","7","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":704 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","8","8","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":168 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":563:614 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","9","9","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":823 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":704 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","10","10","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":654
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsXs = getTapsX(x);
+        int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+        }
+        temp[y * toSize.getWidth() + x] = sum;
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsXs = getTapsX(x);
+        int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            sum += ((getPel(src, p, srcX + i, y - taps / 2 + 1) & 0xFF) + 128) * tapsXs[i];
+        }
+        temp[y * toSize.getWidth() + x] = (short) ((sum >> 8) & 0xFFFF);
+    }
+}
+
+!!! |","true","false","45.100708","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","11","11","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":163 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":812:823 |","true","false","20000.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","12","12","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":651 POSTFIX_INCREMENT -> POSTFIX_DECREMENT |","true","false","22.28396","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","13","13","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":812 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","14","14","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":632 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","15","15","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":317 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":673:758 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","16","16","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":563 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":614 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","17","17","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":586 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":836 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","18","18","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":704 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":563:574 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","19","19","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":633 |","true","false","39.142834","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","20","20","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":632 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":793:794 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","21","21","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":428 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":775 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","22","22","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":632 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":793 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","23","23","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":781 LESS -> EQUALS |","true","false","37.666584","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","24","24","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":629 POSTFIX_INCREMENT -> PREFIX_DECREMENT |","true","false","39.01704","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","25","25","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":586
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    // <<PLACEHOLDER>>
+    ;
+    tempBuffers.set(temp);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    // First implementation
+    tempBuffers.set(temp);
+}
+
+!!! |","true","false","22.638208","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","26","26","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":654
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsXs = getTapsX(x);
+        int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+        }
+        temp[y * toSize.getWidth() + x] = sum;
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsXs = getTapsX(x);
+        int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+        }
+        temp[y * toSize.getWidth() + x] = sum;
+    }
+}
+
+!!! |","true","true","184.17525","184.0","-20.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","27","27","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":673
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    short[] tapsXs = getTapsX(x);
+    int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+    int sum = 0;
+    for (int i = 0; i < taps; i++) {
+        sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+    }
+    temp[y * toSize.getWidth() + x] = sum;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    short[] tapsXs = getTapsX(x);
+    int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+    int sum = 0;
+    for (int i = 0; i < taps; i++) {
+        sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+    }
+    temp[y * toSize.getWidth() + x] = sum;
+}
+
+!!! |","true","true","199.43283","199.0","-35.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","28","28","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":673
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    short[] tapsXs = getTapsX(x);
+    int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+    int sum = 0;
+    for (int i = 0; i < taps; i++) {
+        sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+    }
+    temp[y * toSize.getWidth() + x] = sum;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    short[] tapsXs = getTapsX(x);
+    int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+    int sum = 0;
+    for (int i = 0; i < taps; i++) {
+        int pelValue = getPel(src, p, srcX + i, y - taps / 2 + 1);
+        if (pelValue >= 0) {
+            sum += (pelValue + 128) * tapsXs[i];
+        }
+    }
+    temp[y * toSize.getWidth() + x] = sum;
+}
+
+!!! |","true","false","53.047707","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","29","29","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":587 |","true","false","22.237083","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","30","30","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":543 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":812:823 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","31","31","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":343 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":724 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","32","32","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":793 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":710 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","33","33","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":655 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":586:587 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","34","34","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 |","true","true","167.90897","167.0","-3.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","35","35","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":399 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":632:632 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","36","36","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":311 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":857 |","true","false","42.501877","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","37","37","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":884 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","38","38","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":764 MULTIPLY -> DIVIDE |","true","false","43.75579","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","39","39","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":629 POSTFIX_INCREMENT -> POSTFIX_DECREMENT |","true","false","39.166668","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","40","40","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":793
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsYs = getTapsY(y);
+        // <<PLACEHOLDER>>
+        ;
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+        }
+        dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128);
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsYs = getTapsY(y);
+        short[] temp = new short[taps];
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            temp[i] = src.getPlaneData(p)[(srcY + i) * toSize.getWidth() + x];
+            sum += temp[i] * tapsYs[i];
+        }
+        dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128);
+    }
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","41","41","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":710 |","true","false","44.753082","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","42","42","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":724
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int temp = getPel(src, p, srcX + i, y - taps / 2 + 1);
+    sum += (temp + 128) * tapsXs[i];
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","43","43","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":857 |","true","false","44.98883","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","44","44","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":684 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","45","45","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":420 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":812:884 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","46","46","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":476 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":724 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","47","47","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":614 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":674 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","48","48","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":793:793 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","49","49","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":278 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":586:607 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","50","50","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":543 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":574 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","51","51","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":195 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":813 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","52","52","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":908 MINUS -> LEFT_SHIFT |","true","false","44.246662","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","53","53","| gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":721 POSTFIX_INCREMENT -> POSTFIX_DECREMENT |","true","false","22.120085","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","54","54","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":724
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    // <<PLACEHOLDER>>
+    ;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    // This implementation logs a message indicating that the method has been called.
+    System.out.println(""Method called"");
+}
+
+!!! |","true","false","781.9564","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","55","55","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":793
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsYs = getTapsY(y);
+        int srcY = (int) (scaleFactorY * y);
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+        }
+        dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128);
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsYs = getTapsY(y);
+        int srcY = (int) (scaleFactorY * y);
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+        }
+        dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128);
+    }
+}
+
+!!! |","true","true","180.04668","180.0","-16.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","56","56","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":654
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsXs = getTapsX(x);
+        int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+        }
+        temp[y * toSize.getWidth() + x] = sum;
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsXs = getTapsX(x);
+        int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+        }
+        temp[y * toSize.getWidth() + x] = sum;
+    }
+}
+
+!!! |","true","true","189.27126","189.0","-25.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","57","57","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":654
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsXs = getTapsX(x);
+        int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+        }
+        temp[y * toSize.getWidth() + x] = sum;
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsXs = getTapsX(x);
+        int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+        }
+        temp[y * toSize.getWidth() + x] = sum;
+    }
+}
+
+!!! |","true","true","161.99985","161.0","3.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","58","58","|","true","true","156.04395","156.0","8.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","59","59","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+
+!!! |","true","true","146.91663","146.0","18.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","60","60","|","true","true","160.63892","160.0","4.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","61","61","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int idx = x + (srcY + i) * toSize.getWidth();
+    sum += temp[idx] * tapsYs[i];
+}
+
+!!! | gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":724
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","62","62","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    for (int i = 0; i < tapsYs.length; i++) {
+        sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+    }
+}
+
+!!! | gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":794 |","true","false","37.375458","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","63","63","|","true","true","157.54875","157.0","7.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","64","64","|","true","true","166.03296","166.0","-2.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","65","65","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! | gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":794 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","66","66","|","true","true","150.5375","150.0","14.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","67","67","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    for (int i = 0; i < tapsYs.length; i++) {
+        sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+    }
+}
+
+!!! | gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":90 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":673:674 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","68","68","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    for (int i = 0; i < tapsYs.length; i++) {
+        sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+    }
+}
+
+!!! | gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":90 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":794 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","69","69","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! | gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":574 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":673 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","70","70","|","true","true","172.41405","172.0","-8.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","71","71","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    for (int i = 0; i < tapsYs.length; i++) {
+        sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+    }
+}
+
+!!! | gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":607 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":812:823 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","72","72","|","true","true","153.75226","153.0","11.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","73","73","|","true","true","162.66795","162.0","2.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","74","74","|","true","true","146.8107","146.0","18.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","75","75","|","true","true","172.6805","172.0","-8.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","76","76","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    for (int i = 0; i < tapsYs.length; i++) {
+        sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+    }
+}
+
+!!! | gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":384 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":563:581 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","77","77","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    for (int i = 0; i < tapsYs.length; i++) {
+        sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+    }
+}
+
+!!! | gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":428 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":794 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","78","78","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! | gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":301 <-> ""src/main/java/org/jcodec/scale/BaseResampler.java"":632 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","79","79","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+    {
+        sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+    }
+    
+!!! | gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":699 DIVIDE -> DIVIDE |","true","true","159.79172","159.0","5.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","80","80","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+
+!!! | gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":870 PLUS -> MINUS |","true","true","170.57446","170.0","-6.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","81","81","|","true","true","154.12033","154.0","10.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","82","82","|","true","true","168.31503","168.0","-4.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","83","83","|","true","true","165.81792","165.0","-1.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","84","84","|","true","true","169.30675","169.0","-5.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","85","85","|","true","true","173.66774","173.0","-9.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","86","86","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int index = x + (srcY + i) * toSize.getWidth();
+    sum += temp[index] * tapsYs[i];
+}
+
+!!! | gin.edit.modifynode.UnaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":721 POSTFIX_INCREMENT -> POSTFIX_DECREMENT |","true","false","21.99325","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","87","87","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! | gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":793
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsYs = getTapsY(y);
+        int srcY = (int) (scaleFactorY * y);
+        int sum = 0;
+        // <<PLACEHOLDER>>
+        ;
+        dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128);
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsYs = getTapsY(y);
+        int srcY = (int) (scaleFactorY * y);
+        int sum = 0;
+        for (short tap : tapsYs) {
+            int srcX = (int) (x * scaleFactorX + ((tap & 127) << 3));
+            if (srcX >= 0 && srcX < src.getPlaneWidth(p)) {
+                sum += src.getPlaneData(p)[(srcY * src.getPlaneWidth(p) + srcX)];
+            }
+        }
+        dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128);
+    }
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","88","88","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! | gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/scale/BaseResampler.java"":865 PLUS -> MINUS |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","89","89","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int index = x + (srcY + i) * toSize.getWidth();
+    sum += temp[index] * tapsYs[i];
+}
+
+!!! | gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":563
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int[] temp = tempBuffers.get();
+    int taps = nTaps();
+    if (temp == null) {
+        temp = new int[toSize.getWidth() * (fromSize.getHeight() + taps)];
+        tempBuffers.set(temp);
+    }
+    for (int p = 0; p < src.getColor().nComp; p++) {
+        // Horizontal pass
+        for (int y = 0; y < src.getPlaneHeight(p) + taps; y++) {
+            for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+                short[] tapsXs = getTapsX(x);
+                int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+                int sum = 0;
+                for (int i = 0; i < taps; i++) {
+                    sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+                }
+                temp[y * toSize.getWidth() + x] = sum;
+            }
+        }
+        // Vertical pass
+        for (int y = 0; y < dst.getPlaneHeight(p); y++) {
+            for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+                short[] tapsYs = getTapsY(y);
+                int srcY = (int) (scaleFactorY * y);
+                int sum = 0;
+                for (int i = 0; i < taps; i++) {
+                    int index = x + (srcY + i) * toSize.getWidth();
+                    sum += temp[index] * tapsYs[i];
+                }
+                dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128);
+            }
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int[] temp = tempBuffers.get();
+    int taps = nTaps();
+    if (temp == null) {
+        temp = new int[toSize.getWidth() * (fromSize.getHeight() + taps)];
+        tempBuffers.set(temp);
+    }
+    for (int p = 0; p < src.getColor().nComp; p++) {
+        // Horizontal pass
+        for (int y = 0; y < src.getPlaneHeight(p) + taps; y++) {
+            for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+                short[] tapsXs = getTapsX(x);
+                int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+                int sum = 0;
+                for (int i = 0; i < taps; i++) {
+                    sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+                }
+                temp[y * toSize.getWidth() + x] = sum;
+            }
+        }
+        // Vertical pass
+        for (int y = 0; y < dst.getPlaneHeight(p); y++) {
+            for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+                short[] tapsYs = getTapsY(y);
+                int srcY = (int) (scaleFactorY * y);
+                int sum = 0;
+                for (int i = 0; i < taps; i++) {
+                    int index = x + (srcY + i) * toSize.getWidth();
+                    sum += temp[index] * tapsYs[i];
+                }
+                dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128);
+            }
+        }
+    }
+}
+
+!!! |","true","true","156.39467","156.0","8.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","90","90","|","true","true","177.86943","177.0","-13.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","91","91","|","true","true","161.22408","161.0","3.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","92","92","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+
+!!! | gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":654
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsXs = getTapsX(x);
+        int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+        }
+        temp[y * toSize.getWidth() + x] = sum;
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    for (int x = 0; x < dst.getPlaneWidth(p); x++) {
+        short[] tapsXs = getTapsX(x);
+        int srcX = (int) (scaleFactorX * x) - taps / 2 + 1;
+        int sum = 0;
+        for (int i = 0; i < taps; i++) {
+            sum += (getPel(src, p, srcX + i, y - taps / 2 + 1) + 128) * tapsXs[i];
+        }
+        temp[y * toSize.getWidth() + x] = sum;
+    }
+}
+
+!!! |","true","true","165.40062","165.0","-1.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","93","93","|","true","true","160.25584","160.0","4.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","94","94","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! | gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":812
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    short[] tapsYs = getTapsY(y);
+    int srcY = (int) (scaleFactorY * y);
+    int sum = 0;
+    for (int i = 0; i < taps; i++) {
+        sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+    }
+    dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) (MathUtil.clip((sum + 8192) >> 14, 0, 255) - 128);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    short[] tapsYs = getTapsY(y);
+    int srcY = (int) (scaleFactorY * y);
+    int sum = 0;
+    for (int i = 0; i < taps; i++) {
+        sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+    }
+    dst.getPlaneData(p)[y * dst.getPlaneWidth(p) + x] = (byte) MathUtil.clip((sum + 8192) >> 14, 0, 255);
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","95","95","|","true","true","185.00414","185.0","-21.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","96","96","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+
+!!! | gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":444 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":856:856 |","true","true","164.1342","164.0","0.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","97","97","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+
+!!! | gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":489 -> ""src/main/java/org/jcodec/scale/BaseResampler.java"":586:586 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","98","98","|","true","true","179.70488","179.0","-15.0"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)","99","99","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":856
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    sum += temp[x + (srcY + i) * toSize.getWidth()] * tapsYs[i];
+}
+
+!!! | gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/scale/BaseResampler.java"":684 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","-1","0","|","true","true","1460.2296","1460.0","0.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","1","1","|","true","true","1297.0007","1297.0","163.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","2","2","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","3","3","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    // <<PLACEHOLDER>>
+    ;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    // Method to print a message
+    System.out.println(""Hello, JCodec!"");
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","4","4","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    return width >> color.compWidth[plane];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+    {
+        return width >> color.compWidth[plane];
+    }
+    
+!!! |","true","true","1322.6433","1322.0","138.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","5","5","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/common/model/Picture.java"":996 <-> ""src/main/java/org/jcodec/common/model/Picture.java"":995 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","6","6","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/common/model/Picture.java"":593 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995:996 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","7","7","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/common/model/Picture.java"":997 SIGNED_RIGHT_SHIFT -> UNSIGNED_RIGHT_SHIFT |","true","true","1252.4496","1252.0","208.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","8","8","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/common/model/Picture.java"":997 SIGNED_RIGHT_SHIFT -> UNSIGNED_RIGHT_SHIFT | gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/common/model/Picture.java"":781 <-> ""src/main/java/org/jcodec/common/model/Picture.java"":996 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","9","9","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/common/model/Picture.java"":997 SIGNED_RIGHT_SHIFT -> UNSIGNED_RIGHT_SHIFT | gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/common/model/Picture.java"":951 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","10","10","|","true","true","1277.4","1277.0","183.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","11","11","|","true","true","1274.0347","1274.0","186.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","12","12","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/common/model/Picture.java"":997 SIGNED_RIGHT_SHIFT -> UNSIGNED_RIGHT_SHIFT | gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995:995 |","true","true","1286.4408","1286.0","174.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","13","13","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/common/model/Picture.java"":997 SIGNED_RIGHT_SHIFT -> UNSIGNED_RIGHT_SHIFT | gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","14","14","|","true","true","1160.7904","1160.0","300.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","15","15","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/common/model/Picture.java"":997 SIGNED_RIGHT_SHIFT -> MULTIPLY |","true","false","94.22783","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","16","16","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/common/model/Picture.java"":2767 -> ""src/main/java/org/jcodec/common/model/Picture.java"":996 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","17","17","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    return width >> color.compWidth[plane];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    return width >> color.compWidth[plane];
+}
+
+!!! |","true","true","1347.7395","1347.0","113.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","18","18","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/common/model/Picture.java"":268 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995:995 |","true","true","1439.6956","1439.0","21.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","19","19","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995:995 |","true","true","1179.5295","1179.0","281.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","20","20","|","true","true","1194.4904","1194.0","266.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","21","21","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995:995 |","true","true","1194.8535","1194.0","266.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","22","22","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    return width >> color.compWidth[plane];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","23","23","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/common/model/Picture.java"":1034 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995:996 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","24","24","|","true","true","1283.6743","1283.0","177.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","25","25","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/common/model/Picture.java"":996 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","26","26","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/common/model/Picture.java"":996 <-> ""src/main/java/org/jcodec/common/model/Picture.java"":996 |","true","true","1293.9473","1293.0","167.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","27","27","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","28","28","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/common/model/Picture.java"":2639 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995:996 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","29","29","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/common/model/Picture.java"":2026 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","30","30","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/common/model/Picture.java"":1034 <-> ""src/main/java/org/jcodec/common/model/Picture.java"":995 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","31","31","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    return width >> color.compWidth[plane];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    return width >>> color.compWidth[plane];
+}
+
+!!! |","true","true","1329.8527","1329.0","131.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","32","32","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995:996 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","33","33","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/common/model/Picture.java"":997 SIGNED_RIGHT_SHIFT -> MULTIPLY |","true","false","95.15842","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","34","34","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/common/model/Picture.java"":2728 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","35","35","|","true","true","1238.2574","1238.0","222.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","36","36","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995 <-> ""src/main/java/org/jcodec/common/model/Picture.java"":996 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","37","37","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    // <<PLACEHOLDER>>
+    ;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    // Log a message indicating the start of processing
+    System.out.println(""Processing started"");
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","38","38","|","true","true","1302.3297","1302.0","158.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","39","39","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    return width >> color.compWidth[plane];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    return width >>> color.compWidth[plane];
+}
+
+!!! |","true","true","1424.4701","1424.0","36.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","40","40","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/common/model/Picture.java"":1014 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995:996 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","41","41","|","true","true","1265.4366","1265.0","195.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","42","42","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/common/model/Picture.java"":996 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995:996 |","true","true","1200.6211","1200.0","260.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","43","43","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    return width >> color.compWidth[plane];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    return width >>> color.compWidth[plane];
+}
+
+!!! |","true","true","1461.3009","1461.0","-1.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","44","44","|","true","true","1305.5021","1305.0","155.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","45","45","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995:995 |","true","true","1294.965","1294.0","166.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","46","46","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/common/model/Picture.java"":996 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","47","47","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/common/model/Picture.java"":996 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","48","48","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/common/model/Picture.java"":1687 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995:996 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","49","49","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/common/model/Picture.java"":1945 -> ""src/main/java/org/jcodec/common/model/Picture.java"":996 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","50","50","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/common/model/Picture.java"":1607 <-> ""src/main/java/org/jcodec/common/model/Picture.java"":995 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","51","51","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/common/model/Picture.java"":997 SIGNED_RIGHT_SHIFT -> MULTIPLY |","true","false","95.066505","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","52","52","|","true","true","1291.4459","1291.0","169.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","53","53","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/common/model/Picture.java"":760 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","54","54","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    return width >> color.compWidth[plane];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    return width >>> (8 - color.compWidth[plane]);
+}
+
+!!! |","true","false","115.372","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","55","55","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/common/model/Picture.java"":996 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995:996 |","true","true","1304.8529","1304.0","156.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","56","56","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/common/model/Picture.java"":996 <-> ""src/main/java/org/jcodec/common/model/Picture.java"":996 |","true","true","1209.7794","1209.0","251.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","57","57","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    return width >> color.compWidth[plane];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    return width >> color.compWidth[plane];
+}
+
+!!! |","true","true","1424.7422","1424.0","36.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","58","58","|","true","true","1160.4757","1160.0","300.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","59","59","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995 <-> ""src/main/java/org/jcodec/common/model/Picture.java"":995 |","true","true","1175.2158","1175.0","285.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","60","60","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/common/model/Picture.java"":996 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995:995 |","true","true","1173.1653","1173.0","287.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","61","61","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/common/model/Picture.java"":2102 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995:996 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","62","62","|","true","true","1132.6272","1132.0","328.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","63","63","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    // <<PLACEHOLDER>>
+    ;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    // Implementation 1
+    System.out.println(""Implementation 1"");
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","64","64","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995 <-> ""src/main/java/org/jcodec/common/model/Picture.java"":996 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","65","65","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995:995 |","true","true","1247.2013","1247.0","213.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","66","66","|","true","true","1168.1737","1168.0","292.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","67","67","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/common/model/Picture.java"":996 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995:996 |","true","true","1190.0695","1190.0","270.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","68","68","|","true","true","1183.4147","1183.0","277.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","69","69","|","true","true","1184.7826","1184.0","276.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","70","70","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995:996 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","71","71","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    return width >> color.compWidth[plane];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+   {
+       return width >>> color.compWidth[plane];
+   }
+   
+!!! |","true","true","1334.6805","1334.0","126.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","72","72","|","true","true","1178.3844","1178.0","282.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","73","73","| gin.edit.modifynode.BinaryOperatorReplacement  ""src/main/java/org/jcodec/common/model/Picture.java"":997 SIGNED_RIGHT_SHIFT -> MULTIPLY |","true","false","93.72771","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","74","74","|","true","true","1188.1659","1188.0","272.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","75","75","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    return width >> color.compWidth[plane];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int result = width;
+    for (int i = 0; i < color.compWidth[plane]; i++) {
+        result >>= 1;
+    }
+    return result;
+}
+
+!!! |","true","true","1352.7191","1352.0","108.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","76","76","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/common/model/Picture.java"":804 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","77","77","|","true","true","1189.5078","1189.0","271.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","78","78","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/common/model/Picture.java"":996 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","79","79","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","80","80","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/common/model/Picture.java"":939 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995:996 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","81","81","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/common/model/Picture.java"":2484 -> ""src/main/java/org/jcodec/common/model/Picture.java"":996 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","82","82","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/common/model/Picture.java"":868 <-> ""src/main/java/org/jcodec/common/model/Picture.java"":996 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","83","83","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    return width >> color.compWidth[plane];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    return width >> color.compWidth[plane];
+}
+
+!!! |","true","true","1307.6346","1307.0","153.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","84","84","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/common/model/Picture.java"":996 <-> ""src/main/java/org/jcodec/common/model/Picture.java"":996 |","true","true","1163.2522","1163.0","297.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","85","85","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/common/model/Picture.java"":2026 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995:995 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","86","86","|","true","true","1178.2155","1178.0","282.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","87","87","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995:995 |","true","true","1186.6584","1186.0","274.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","88","88","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/common/model/Picture.java"":996 <-> ""src/main/java/org/jcodec/common/model/Picture.java"":996 |","true","true","1156.8201","1156.0","304.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","89","89","| gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    // <<PLACEHOLDER>>
+    ;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    // Placeholder implementation 1
+    System.out.println(""Executing placeholder 1"");
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","90","90","|","true","true","1549.272","1549.0","-89.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","91","91","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    return width >> color.compWidth[plane];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    return width >>> (color.compWidth[plane]);
+}
+
+!!! |","true","true","1345.691","1345.0","115.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","92","92","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995 <-> ""src/main/java/org/jcodec/common/model/Picture.java"":995 |","true","true","1332.0338","1332.0","128.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","93","93","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/common/model/Picture.java"":996 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995:995 |","true","true","1285.1577","1285.0","175.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","94","94","|","true","true","1304.5994","1304.0","156.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","95","95","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    return width >> color.compWidth[plane];
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    return width / (1 << color.compWidth[plane]);
+}
+
+!!! |","true","true","1386.4126","1386.0","74.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","96","96","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/common/model/Picture.java"":996 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995:996 |","true","true","1275.9581","1275.0","185.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","97","97","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/common/model/Picture.java"":996 <-> ""src/main/java/org/jcodec/common/model/Picture.java"":995 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","98","98","|","true","true","1306.7876","1306.0","154.0"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)","99","99","| gin.edit.statement.MoveStatement ""src/main/java/org/jcodec/common/model/Picture.java"":995 -> ""src/main/java/org/jcodec/common/model/Picture.java"":995:995 |","true","true","1280.7731","1280.0","180.0"

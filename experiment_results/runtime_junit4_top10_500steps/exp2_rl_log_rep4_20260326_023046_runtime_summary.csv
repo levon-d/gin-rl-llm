@@ -1,0 +1,12 @@
+MethodName,BaselineRuntime(ms),BestRuntime(ms),RuntimeReduction(ms),ImprovementPercent,BestPatch
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)",2583.00,2435.00,148.00,5.73,"|"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()",3779.00,3459.00,320.00,8.47,"|"
+"org.junit.runners.ParentRunner.org.junit.runners.ParentRunner.shouldRun(Filter,T)",3585.00,3305.00,280.00,7.81,"|"
+"org.junit.runner.Description.org.junit.runner.Description.formatDisplayName(String,String)",3180.00,3148.00,32.00,1.01,"|"
+"org.junit.runner.Computer.org.junit.runner.Computer.getSuite(RunnerBuilder,Class<?>[])",3299.00,3190.00,109.00,3.30,"|"
+"org.junit.runner.notification.RunNotifier.org.junit.runner.notification.RunNotifier.wrapIfNotThreadSafe(RunListener)",2441.00,2290.00,151.00,6.19,"|"
+"org.junit.internal.builders.IgnoredBuilder.org.junit.internal.builders.IgnoredBuilder.runnerForClass(Class<?>)",554.00,546.00,8.00,1.44,"| gin.edit.matched.MatchedSwapStatement 'src/main/java/org/junit/internal/builders/IgnoredBuilder.java':47 <-> 'src/main/java/org/junit/internal/builders/IgnoredBuilder.java':47 |"
+"org.junit.runners.model.TestClass.org.junit.runners.model.TestClass.runsTopToBottom(Class<?extendsAnnotation>)",1108.00,1008.00,100.00,9.03,"|"
+"org.junit.internal.TextListener.org.junit.internal.TextListener.elapsedTimeAsString(long)",59.00,53.00,6.00,10.17,"|"
+"org.junit.internal.builders.JUnit4Builder.org.junit.internal.builders.JUnit4Builder.runnerForClass(Class<?>)",297.00,248.00,49.00,16.50,"|"
+"TOTAL",20885.00,19682.00,1203.00,5.76,""

@@ -1,0 +1,12 @@
+MethodName,BaselineRuntime(ms),BestRuntime(ms),RuntimeReduction(ms),ImprovementPercent,BestPatch
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)",4037.00,2673.00,1364.00,33.79,"|"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()",3928.00,3560.00,368.00,9.37,"|"
+"org.junit.runners.ParentRunner.org.junit.runners.ParentRunner.shouldRun(Filter,T)",3949.00,3489.00,460.00,11.65,"|"
+"org.junit.runner.Description.org.junit.runner.Description.formatDisplayName(String,String)",3606.00,3244.00,362.00,10.04,"|"
+"org.junit.runner.Computer.org.junit.runner.Computer.getSuite(RunnerBuilder,Class<?>[])",3568.00,3365.00,203.00,5.69,"|"
+"org.junit.runner.notification.RunNotifier.org.junit.runner.notification.RunNotifier.wrapIfNotThreadSafe(RunListener)",2874.00,2536.00,338.00,11.76,"| gin.edit.statement.MoveStatement 'src/main/java/org/junit/runner/notification/RunNotifier.java':124 -> 'src/main/java/org/junit/runner/notification/RunNotifier.java':123:124 |"
+"org.junit.internal.builders.IgnoredBuilder.org.junit.internal.builders.IgnoredBuilder.runnerForClass(Class<?>)",892.00,576.00,316.00,35.43,"|"
+"org.junit.runners.model.TestClass.org.junit.runners.model.TestClass.runsTopToBottom(Class<?extendsAnnotation>)",1067.00,1038.00,29.00,2.72,"| gin.edit.modifynode.BinaryOperatorReplacement  'src/main/java/org/junit/runners/model/TestClass.java':875 OR -> BINARY_AND | gin.edit.statement.SwapStatement 'src/main/java/org/junit/runners/model/TestClass.java':874 <-> 'src/main/java/org/junit/runners/model/TestClass.java':874 | gin.edit.statement.MoveStatement 'src/main/java/org/junit/runners/model/TestClass.java':874 -> 'src/main/java/org/junit/runners/model/TestClass.java':873:874 |"
+"org.junit.internal.TextListener.org.junit.internal.TextListener.elapsedTimeAsString(long)",88.00,54.00,34.00,38.64,"| gin.edit.statement.MoveStatement 'src/main/java/org/junit/internal/TextListener.java':408 -> 'src/main/java/org/junit/internal/TextListener.java':407:408 |"
+"org.junit.internal.builders.JUnit4Builder.org.junit.internal.builders.JUnit4Builder.runnerForClass(Class<?>)",424.00,254.00,170.00,40.09,"| gin.edit.matched.MatchedSwapStatement 'src/main/java/org/junit/internal/builders/JUnit4Builder.java':39 <-> 'src/main/java/org/junit/internal/builders/JUnit4Builder.java':39 |"
+"TOTAL",24433.00,20789.00,3644.00,14.91,""

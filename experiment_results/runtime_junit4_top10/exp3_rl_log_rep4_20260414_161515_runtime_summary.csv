@@ -1,0 +1,12 @@
+MethodName,BaselineRuntime(ms),BestRuntime(ms),RuntimeReduction(ms),ImprovementPercent,BestPatch
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)",2965.00,2576.00,389.00,13.12,"|"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()",3523.00,3438.00,85.00,2.41,"|"
+"org.junit.runners.ParentRunner.org.junit.runners.ParentRunner.shouldRun(Filter,T)",3488.00,3363.00,125.00,3.58,"| gin.edit.statement.MoveStatement 'src/main/java/org/junit/runners/ParentRunner.java':1782 -> 'src/main/java/org/junit/runners/ParentRunner.java':1782:1782 |"
+"org.junit.runner.Description.org.junit.runner.Description.formatDisplayName(String,String)",3215.00,3186.00,29.00,0.90,"|"
+"org.junit.runner.Computer.org.junit.runner.Computer.getSuite(RunnerBuilder,Class<?>[])",3368.00,3235.00,133.00,3.95,"|"
+"org.junit.runner.notification.RunNotifier.org.junit.runner.notification.RunNotifier.wrapIfNotThreadSafe(RunListener)",2412.00,2308.00,104.00,4.31,"| gin.edit.matched.MatchedSwapStatement 'src/main/java/org/junit/runner/notification/RunNotifier.java':124 <-> 'src/main/java/org/junit/runner/notification/RunNotifier.java':124 |"
+"org.junit.internal.builders.IgnoredBuilder.org.junit.internal.builders.IgnoredBuilder.runnerForClass(Class<?>)",572.00,537.00,35.00,6.12,"| gin.edit.matched.MatchedReplaceStatement 'src/main/java/org/junit/internal/builders/IgnoredBuilder.java':35 -> 'src/main/java/org/junit/internal/builders/IgnoredBuilder.java':46 |"
+"org.junit.runners.model.TestClass.org.junit.runners.model.TestClass.runsTopToBottom(Class<?extendsAnnotation>)",1055.00,1009.00,46.00,4.36,"| gin.edit.statement.SwapStatement 'src/main/java/org/junit/runners/model/TestClass.java':873 <-> 'src/main/java/org/junit/runners/model/TestClass.java':873 |"
+"org.junit.internal.TextListener.org.junit.internal.TextListener.elapsedTimeAsString(long)",52.00,50.00,2.00,3.85,"|"
+"org.junit.internal.builders.JUnit4Builder.org.junit.internal.builders.JUnit4Builder.runnerForClass(Class<?>)",240.00,221.00,19.00,7.92,"|"
+"TOTAL",20890.00,19923.00,967.00,4.63,""

@@ -1,0 +1,9 @@
+[Sat  7 Mar 2026 22:08:56 GMT] Starting Experiment 1 (Random Sampling)
+[Sat  7 Mar 2026 22:08:56 GMT] Exp1 rep 1/3 started
+[Sat  7 Mar 2026 22:09:14 GMT] Exp1 rep 1/3 done -> /Users/""/repos/gin-rl/experiment_results/exp1_runtime_random_rep1_20260307_220856.csv
+[Sat  7 Mar 2026 22:09:14 GMT] Exp1 rep 2/3 started
+[Sat  7 Mar 2026 22:09:29 GMT] Exp1 rep 2/3 done -> /Users/""/repos/gin-rl/experiment_results/exp1_runtime_random_rep2_20260307_220856.csv
+[Sat  7 Mar 2026 22:09:29 GMT] Exp1 rep 3/3 started
+[Sat  7 Mar 2026 22:09:43 GMT] Exp1 rep 3/3 done -> /Users/""/repos/gin-rl/experiment_results/exp1_runtime_random_rep3_20260307_220856.csv
+[Sat  7 Mar 2026 22:09:43 GMT] Starting Experiment 2 (UCB Traditional)
+[Sat  7 Mar 2026 22:09:43 GMT] Exp2 rep 1/3 started

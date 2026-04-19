@@ -1,0 +1,12 @@
+MethodName,BaselineRuntime(ms),BestRuntime(ms),RuntimeReduction(ms),ImprovementPercent,BestPatch
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)",2793.00,2750.00,43.00,1.54,"|"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)",1158.00,1139.00,19.00,1.64,"| gin.edit.modifynode.UnaryOperatorReplacement  'src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java':801 POSTFIX_INCREMENT -> PREFIX_INCREMENT |"
+"org.jcodec.codecs.h264.encode.MBEncoderHelper.org.jcodec.codecs.h264.encode.MBEncoderHelper.takeSafe(byte[],int,int,int,int,byte[],int,int)",1495.00,1446.00,49.00,3.28,"| gin.edit.statement.SwapStatement 'src/main/java/org/jcodec/codecs/h264/encode/MBEncoderHelper.java':466 <-> 'src/main/java/org/jcodec/codecs/h264/encode/MBEncoderHelper.java':467 |"
+"org.jcodec.codecs.h264.encode.IntraPredEstimator.org.jcodec.codecs.h264.encode.IntraPredEstimator.getLumaPred4x4(Picture,EncodingContext,int,int,int)",1500.00,1454.00,46.00,3.07,"|"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)",2774.00,2730.00,44.00,1.59,"|"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeVert(Picture,int,int,int,int,int,int,int)",2756.00,2746.00,10.00,0.36,"|"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs4(int,int,byte[],byte[],int,int,int,int,int,int,int,int,boolean)",2760.00,2760.00,0.00,0.00,"|"
+"org.jcodec.codecs.h264.decode.MBlockDecoderUtils.org.jcodec.codecs.h264.decode.MBlockDecoderUtils.mergeResidual(Picture,int[][][],int[][],int[][])",2695.00,2684.00,11.00,0.41,"| gin.edit.modifynode.UnaryOperatorReplacement  'src/main/java/org/jcodec/codecs/h264/decode/MBlockDecoderUtils.java':624 POSTFIX_INCREMENT -> PREFIX_INCREMENT |"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)",155.00,152.00,3.00,1.94,"|"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)",1180.00,1123.00,57.00,4.83,"|"
+"TOTAL",19266.00,18984.00,282.00,1.46,""

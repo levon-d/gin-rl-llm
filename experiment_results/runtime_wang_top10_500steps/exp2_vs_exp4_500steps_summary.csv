@@ -1,0 +1,15 @@
+Exp 2: UCB Local Search (Traditional Operators, 500 steps) — 5 reps
+Exp 4: Standard Local Search (Traditional Operators, 500 steps) — 5 reps
+
+Method,Impr_E2_mean(%),Impr_E2_std(%),Impr_E4_mean(%),Impr_E4_std(%),Winner
+filterBs,15.38,7.33,5.94,11.50,UCB
+estimateQPix,40.75,3.74,23.83,16.50,UCB
+takeSafe,49.59,12.74,30.15,11.27,UCB
+getLumaPred4x4,46.43,10.30,32.11,8.20,UCB
+filterBlockEdgeHoris,28.46,10.66,18.72,7.36,UCB
+filterBlockEdgeVert,20.78,5.16,9.54,10.16,UCB
+filterBs4,19.16,6.43,7.65,5.81,UCB
+mergeResidual,18.06,9.98,41.88,23.12,LS
+resample,25.53,19.31,21.22,15.98,UCB
+getPlaneWidth,13.34,19.11,30.95,6.15,LS
+TOTAL,28.43,2.80,23.03,6.07,UCB

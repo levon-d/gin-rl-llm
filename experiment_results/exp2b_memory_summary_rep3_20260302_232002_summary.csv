@@ -1,0 +1,8 @@
+MethodName,BaselineMemory(KB),BestMemory(KB),MemoryReduction(KB),ImprovementPercent,BestPatch
+"org.jcodec.codecs.h264.decode.CoeffTransformer.org.jcodec.codecs.h264.decode.CoeffTransformer.idct4x4(int[])",220,7,213,96.82,"| gin.edit.statement.MoveStatement '../jcodec/src/main/java/org/jcodec/codecs/h264/decode/CoeffTransformer.java':876 -> '../jcodec/src/main/java/org/jcodec/codecs/h264/decode/CoeffTransformer.java':876:876 |"
+"org.jcodec.codecs.h264.decode.CoeffTransformer.org.jcodec.codecs.h264.decode.CoeffTransformer.fdct4x4(int[])",7,7,0,0.00,"|"
+"org.jcodec.codecs.h264.decode.CoeffTransformer.org.jcodec.codecs.h264.decode.CoeffTransformer.dequantizeAC(int[],int,int[])",7,7,0,0.00,"|"
+"org.jcodec.codecs.h264.decode.CoeffTransformer.org.jcodec.codecs.h264.decode.CoeffTransformer.quantizeAC(int[],int)",7,7,0,0.00,"|"
+"org.jcodec.codecs.h264.decode.CoeffTransformer.org.jcodec.codecs.h264.decode.CoeffTransformer.invDC4x4(int[])",7,7,0,0.00,"|"
+"org.jcodec.codecs.h264.decode.CoeffTransformer.org.jcodec.codecs.h264.decode.CoeffTransformer.fvdDC4x4(int[])",7,7,0,0.00,"|"
+"TOTAL",255,42,213,83.53,""

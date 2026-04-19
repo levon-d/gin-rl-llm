@@ -1,0 +1,61 @@
+MethodName,BaselineRuntime(ms),BestRuntime(ms),RuntimeReduction(ms),ImprovementPercent,BestPatch
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)",2450.00,2329.00,121.00,4.94,"|"
+"org.junit.runners.model.FrameworkMethod.org.junit.runners.model.FrameworkMethod.getAnnotations()",3324.00,3322.00,2.00,0.06,"| gin.edit.llm.LLMMaskedStatement 'src/main/java/org/junit/runners/model/FrameworkMethod.java':571
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    // <<PLACEHOLDER>>
+    ;
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces; if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    // <<PLACEHOLDER>>
+}
+
+!!! |"
+"org.junit.runners.ParentRunner.org.junit.runners.ParentRunner.shouldRun(Filter,T)",3337.00,3278.00,59.00,1.77,"| gin.edit.statement.MoveStatement 'src/main/java/org/junit/runners/ParentRunner.java':1782 -> 'src/main/java/org/junit/runners/ParentRunner.java':1782:1782 | gin.edit.statement.MoveStatement 'src/main/java/org/junit/runners/ParentRunner.java':1783 -> 'src/main/java/org/junit/runners/ParentRunner.java':1782:1783 |"
+"org.junit.runner.Description.org.junit.runner.Description.formatDisplayName(String,String)",3151.00,3102.00,49.00,1.56,"|"
+"org.junit.runner.Computer.org.junit.runner.Computer.getSuite(RunnerBuilder,Class<?>[])",3191.00,3163.00,28.00,0.88,"|"
+"org.junit.runner.notification.RunNotifier.org.junit.runner.notification.RunNotifier.wrapIfNotThreadSafe(RunListener)",2395.00,2269.00,126.00,5.26,"| gin.edit.llm.LLMReplaceStatement 'src/main/java/org/junit/runner/notification/RunNotifier.java':123
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    return listener.getClass().isAnnotationPresent(RunListener.ThreadSafe.class) ? listener : new SynchronizedRunListener(listener; this);
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces; if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    return listener.getClass().isAnnotationPresent(RunListener.ThreadSafe.class) ? listener : new SynchronizedRunListener(listener; this);
+}
+
+!!! | gin.edit.statement.MoveStatement 'src/main/java/org/junit/runner/notification/RunNotifier.java':123 -> 'src/main/java/org/junit/runner/notification/RunNotifier.java':123:123 | gin.edit.matched.MatchedSwapStatement 'src/main/java/org/junit/runner/notification/RunNotifier.java':439 <-> 'src/main/java/org/junit/runner/notification/RunNotifier.java':123 |"
+"org.junit.internal.builders.IgnoredBuilder.org.junit.internal.builders.IgnoredBuilder.runnerForClass(Class<?>)",571.00,530.00,41.00,7.18,"| gin.edit.llm.LLMReplaceStatement 'src/main/java/org/junit/internal/builders/IgnoredBuilder.java':35
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    if (testClass.getAnnotation(Ignore.class) != null) {
+        return new IgnoredClassRunner(testClass);
+    }
+    return null;
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces; if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    if (testClass.getAnnotation(Ignore.class) != null) {
+        return new IgnoredClassRunner(testClass);
+    }
+    return null;
+}
+
+!!! |"
+"org.junit.runners.model.TestClass.org.junit.runners.model.TestClass.runsTopToBottom(Class<?extendsAnnotation>)",1038.00,986.00,52.00,5.01,"| gin.edit.statement.MoveStatement 'src/main/java/org/junit/runners/model/TestClass.java':874 -> 'src/main/java/org/junit/runners/model/TestClass.java':873:873 | gin.edit.matched.MatchedCopyStatement 'src/main/java/org/junit/runners/model/TestClass.java':975 -> 'src/main/java/org/junit/runners/model/TestClass.java':873:874 |"
+"org.junit.internal.TextListener.org.junit.internal.TextListener.elapsedTimeAsString(long)",53.00,50.00,3.00,5.66,"| gin.edit.statement.MoveStatement 'src/main/java/org/junit/internal/TextListener.java':408 -> 'src/main/java/org/junit/internal/TextListener.java':407:407 |"
+"org.junit.internal.builders.JUnit4Builder.org.junit.internal.builders.JUnit4Builder.runnerForClass(Class<?>)",236.00,220.00,16.00,6.78,"| gin.edit.statement.MoveStatement 'src/main/java/org/junit/internal/builders/JUnit4Builder.java':38 -> 'src/main/java/org/junit/internal/builders/JUnit4Builder.java':38:38 |"
+"TOTAL",19746.00,19249.00,497.00,2.52,""

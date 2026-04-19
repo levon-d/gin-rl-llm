@@ -1,0 +1,3 @@
+MethodName,BaselineRuntime(ms),BestRuntime(ms),RuntimeReduction(ms),ImprovementPercent,BestPatch
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs4(int,int,byte[],byte[],int,int,int,int,int,int,int,int,boolean)",3822.00,3082.00,740.00,19.36,"| gin.edit.matched.MatchedCopyStatement 'src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java':4124 -> 'src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java':4016:4016 |"
+"TOTAL",3822.00,3082.00,740.00,19.36,""

@@ -1,0 +1,1960 @@
+"MethodName","Iteration","EvaluationNumber","Patch","Compiled","AllTestsPassed","TotalExecutionTime(ms)","Fitness","FitnessImprovement"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","-1","0","|","true","true","4323.328","4323.0","0.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","1","1","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2434 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3224:3224 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","2","2","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":4453 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","3","3","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":4229 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2934 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","4","4","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":1540 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","5","5","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2988 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2934 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","6","6","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3732 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","7","7","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3224
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    for (int i = 0; i < bs.length; i++) {
+        filterBs(bs[i], indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx[i], p1Idx[i], p0Idx[i], q0Idx[i], q1Idx[i], q2Idx[i], comp != 0);
+    }
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","8","8","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2918
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int p3Idx = offset - 4 * stride + pixOff;
+    int q3Idx = offset + 3 * stride + pixOff;
+    filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int p3Idx = offset - 4 * stride + pixOff;
+    int q3Idx = offset + 3 * stride + pixOff;
+    if (comp != 0) {
+        filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, true);
+    } else {
+        filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, false);
+    }
+}
+
+!!! |","true","true","4876.728","4876.0","-553.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","9","9","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":1849 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2831:2875 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","10","10","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2722 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2862 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","11","11","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2208 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2831:2862 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","12","12","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":1946 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","13","13","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2918
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int p3Idx = offset - 4 * stride + pixOff;
+    int q3Idx = offset + 3 * stride + pixOff;
+    filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","14","14","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2918
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int p3Idx = offset - 4 * stride + pixOff;
+    int q3Idx = offset + 3 * stride + pixOff;
+    filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","15","15","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2669 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2918 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","16","16","| gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2919 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2898 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","17","17","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":4134 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2949 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","18","18","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2875 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","19","19","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":1110 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","20","20","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2993 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","21","21","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":1212 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2988 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","22","22","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2918 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","23","23","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":1687 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","24","24","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2051 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2898 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","25","25","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":4043 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2847 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","26","26","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2875 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","27","27","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2831 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","28","28","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2918
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int p3Idx = offset - 4 * stride + pixOff;
+    int q3Idx = offset + 3 * stride + pixOff;
+    filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int p3Idx = offset - 4 * stride + pixOff;
+    int q3Idx = offset + 3 * stride + pixOff;
+    filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+}
+
+!!! |","true","true","5730.234","5730.0","-1407.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","29","29","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":4185 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2862 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","30","30","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":1147 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2832 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","31","31","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3636 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3224:3225 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","32","32","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2376 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792:2817 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","33","33","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2994 |","true","false","3430.3926","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","34","34","| gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":867 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2993:2994 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","35","35","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3440 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","36","36","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2919 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2993 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","37","37","| gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":4164 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2913 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","38","38","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":1690 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2831:2885 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","39","39","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":1737 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792:2793 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","40","40","| gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2831 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","41","41","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":4016 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2918 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","42","42","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! |","true","true","4303.767","4303.0","20.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","43","43","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2918
+Prompt: !!!
+NOT YET APPLIED
+!!! --> !!!
+NOT YET APPLIED
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","44","44","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+NOT YET APPLIED
+!!! --> !!!
+NOT YET APPLIED
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","45","45","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 2 * stride + pixOff;
+        int p1Idx = offset - stride + pixOff;
+        int p0Idx = offset + pixOff;
+        int q0Idx = offset + stride + pixOff;
+        int q1Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 3 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","46","46","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2993
+Prompt: !!!
+NOT YET APPLIED
+!!! --> !!!
+NOT YET APPLIED
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","47","47","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.statement.CopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3963 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792:2793 |","true","true","4378.0864","4378.0","-55.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","48","48","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    byte[] planeData = pic.getPlaneData(comp);
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, planeData, planeData, p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, planeData, planeData, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3650 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2918 |","true","true","4342.3755","4342.0","-19.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","49","49","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 2 * stride + pixOff;
+        int p1Idx = offset - stride + pixOff;
+        int p0Idx = offset + pixOff;
+        int q0Idx = offset + stride + pixOff;
+        int q1Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 3 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.statement.DeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2918 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","50","50","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3440 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2804 |","true","true","8909.215","8909.0","-4586.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","53","53","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 2 * stride + pixOff;
+        int p1Idx = offset - stride + pixOff;
+        int p0Idx = offset + pixOff;
+        int q0Idx = offset + stride + pixOff;
+        int q1Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 3 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":1983 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2898 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","54","54","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int[] planeData = pic.getPlaneData(comp);
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, planeData, planeData, p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, planeData, planeData, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2994 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2918:2934 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","55","55","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 2 * stride + pixOff;
+        int p1Idx = offset - stride + pixOff;
+        int p0Idx = offset + pixOff;
+        int q0Idx = offset + stride + pixOff;
+        int q1Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else {
+            int p2Idx = offset - 2 * stride + pixOff;
+            int p1Idx = offset - stride + pixOff;
+            int p0Idx = offset + pixOff;
+            int q0Idx = offset + stride + pixOff;
+            int q1Idx = offset + 2 * stride + pixOff;
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2918
+Prompt: !!!
+NOT YET APPLIED
+!!! --> !!!
+NOT YET APPLIED
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","56","56","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 2 * stride + pixOff;
+        int p1Idx = offset - stride + pixOff;
+        int p0Idx = offset + pixOff;
+        int q0Idx = offset + stride + pixOff;
+        int q1Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p0Idx, p1Idx, p2Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p0Idx, p1Idx, p2Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2804 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2832 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","57","57","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = y * stride + x - 2 * stride + pixOff;
+        int p1Idx = y * stride + x - stride + pixOff;
+        int p0Idx = y * stride + x + pixOff;
+        int q0Idx = y * stride + x + stride + pixOff;
+        int q1Idx = y * stride + x + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = y * stride + x - 4 * stride + pixOff;
+            int q3Idx = y * stride + x + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2831 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","58","58","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    byte[] planeData = pic.getPlaneData(comp);
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 2 * stride + pixOff;
+        int p1Idx = offset - stride + pixOff;
+        int p0Idx = offset + pixOff;
+        int q0Idx = offset + stride + pixOff;
+        int q1Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            filterBs4(indexAlpha, indexBeta, planeData, planeData, p2Idx - 2 * stride, p1Idx - stride, p0Idx, q0Idx, q1Idx, q1Idx + stride, q1Idx + 2 * stride, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, planeData, planeData, p1Idx - stride, p0Idx, q0Idx, q1Idx, q1Idx + stride, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3913 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2847 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","59","59","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2831
+Prompt: !!!
+NOT YET APPLIED
+!!! --> !!!
+NOT YET APPLIED
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","60","60","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+NOT YET APPLIED
+!!! --> !!!
+NOT YET APPLIED
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","61","61","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2918
+Prompt: !!!
+NOT YET APPLIED
+!!! --> !!!
+NOT YET APPLIED
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","62","62","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2993
+Prompt: !!!
+NOT YET APPLIED
+!!! --> !!!
+NOT YET APPLIED
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","63","63","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 2 * stride + pixOff;
+        int p1Idx = offset - stride + pixOff;
+        int p0Idx = offset + pixOff;
+        int q0Idx = offset + stride + pixOff;
+        int q1Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 3 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+NOT YET APPLIED
+!!! --> !!!
+NOT YET APPLIED
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","64","64","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! | gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3224
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    // <<PLACEHOLDER>>
+    ;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    // Logging the current time
+    long currentTime = System.currentTimeMillis();
+    System.out.println(""Current Time: "" + currentTime);
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","65","65","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":4305 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2934 |","true","true","3720.1895","3720.0","603.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","66","66","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 2 * stride + pixOff;
+        int p1Idx = offset - stride + pixOff;
+        int p0Idx = offset + pixOff;
+        int q0Idx = offset + stride + pixOff;
+        int q1Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 3 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":4305 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2934 | gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2918
+Prompt: !!!
+NOT YET APPLIED
+!!! --> !!!
+NOT YET APPLIED
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","67","67","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! | gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":4305 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2934 | gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2993
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int[] planeDataComp = pic.getPlaneData(comp);
+    filterBs(bs, indexAlpha, indexBeta, planeDataComp, planeDataComp, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","68","68","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":4305 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2934 | gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3224
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    // <<PLACEHOLDER>>
+    ;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    // No operation (NO-OP)
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","69","69","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":4305 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2934 | gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2913 |","true","true","4075.2297","4075.0","248.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","70","70","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":4305 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2934 | gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2898 |","true","true","3661.491","3661.0","662.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","71","71","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! | gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":4305 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2934 | gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2898 | gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3224
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    // <<PLACEHOLDER>>
+    ;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    for (int i = 0; i < 10; i++) {
+        System.out.println(""Iteration "" + i);
+    }
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","72","72","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":4305 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2934 | gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2898 | gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2489 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2993:2993 |","true","true","3425.72","3425.0","898.0"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","73","73","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    byte[] planeData = pic.getPlaneData(comp);
+    int stride = planeData.length / (pic.getHeight() * pic.getWidth());
+    int offset = y * stride + x;
+    
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p3Idx = (y - 1) * stride + x - 1 + pixOff;
+        int p2Idx = (y - 1) * stride + x + pixOff;
+        int p1Idx = y * stride + x - 1 + pixOff;
+        int p0Idx = y * stride + x + pixOff;
+        int q0Idx = y * stride + x + blkW - 2 + pixOff;
+        int q1Idx = (y + 1) * stride + x + blkW - 2 + pixOff;
+        int q2Idx = (y + 1) * stride + x + pixOff;
+        
+        if (bs == 4) {
+            int p4Idx = (y - 2) * stride + x - 1 + pixOff;
+            int q3Idx = (y + 1) * stride + x + blkW - 1 + pixOff;
+            
+            filterBs4(indexAlpha, indexBeta, planeData, planeData, p4Idx, p3Idx, p2Idx, p1Idx, p0Idx,
+                      q0Idx, q1Idx, q2Idx, q3Idx, hasAlpha);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, planeData, planeData, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, hasAlpha);
+        }
+    }
+}
+
+!!! | gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":4305 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2934 | gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2898 | gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2489 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2993:2993 | gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3224
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    // <<PLACEHOLDER>>
+    ;
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    // Implementation using a simple loop
+    int sum = 0;
+    for (int i = 0; i < 10; i++) {
+        sum += i;
+    }
+    System.out.println(""Sum is: "" + sum);
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","74","74","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    byte[] planeData = pic.getPlaneData(comp);
+    for (int yOff = 0; yOff < blkH; yOff++) {
+        int offset = y * stride + x;
+        for (int pixOff = 0; pixOff < blkW; pixOff++) {
+            int p2Idx = offset - 3 * stride + pixOff;
+            int p1Idx = offset - 2 * stride + pixOff;
+            int p0Idx = offset - stride + pixOff;
+            int q0Idx = offset + pixOff;
+            int q1Idx = offset + stride + pixOff;
+            int q2Idx = offset + 2 * stride + pixOff;
+            if (bs == 4) {
+                int p3Idx = offset - 4 * stride + pixOff;
+                int q3Idx = offset + 3 * stride + pixOff;
+                filterBs4(indexAlpha, indexBeta, planeData[p3Idx], planeData[p2Idx], planeData[p1Idx], planeData[p0Idx], planeData[q0Idx], planeData[q1Idx], planeData[q2Idx], planeData[q3Idx], comp != 0);
+            } else if (bs > 0) {
+                filterBs(bs, indexAlpha, indexBeta, planeData[p2Idx], planeData[p1Idx], planeData[p0Idx], planeData[q0Idx], planeData[q1Idx], planeData[q2Idx], comp != 0);
+            }
+        }
+    }
+}
+
+!!! | gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":4305 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2934 | gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2898 | gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2489 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2993:2993 | gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":1609 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2994 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","75","75","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int[] data = pic.getPlaneData(comp);
+        int p2Idx = offset - 2 * stride + pixOff;
+        int p1Idx = offset - stride + pixOff;
+        int p0Idx = offset + pixOff;
+        int q0Idx = offset + stride + pixOff;
+        int q1Idx = offset + 2 * stride + pixOff;
+        int q2Idx = offset + 3 * stride + pixOff;
+        
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, data[p3Idx], data[p2Idx], data[p1Idx], data[p0Idx], data[q0Idx], data[q1Idx], data[q2Idx], data[q3Idx], comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, data[p2Idx], data[p1Idx], data[p0Idx], data[q0Idx], data[q1Idx], data[q2Idx], comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":4305 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2934 | gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2898 | gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2489 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2993:2993 | gin.edit.statement.SwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2885 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2847 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","76","76","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 2 * stride + pixOff;
+        int p1Idx = offset - stride + pixOff;
+        int p0Idx = offset + pixOff;
+        int q0Idx = offset + stride + pixOff;
+        int q1Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 3 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":4305 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2934 | gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2898 | gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2489 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2993:2993 | gin.edit.matched.MatchedSwapStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2252 <-> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2898 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","77","77","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! | gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":4305 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2934 | gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2898 | gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2489 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2993:2993 | gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2918
+Prompt: !!!
+Give me 2 different Java implementations of this method body:```
+{
+    int p3Idx = offset - 4 * stride + pixOff;
+    {
+        // <<PLACEHOLDER>>
+        ;
+        int q3 = pelsQ[q3Idx];
+        int q0n = (p1 + 2 * p0 + 2 * q0 + 2 * q1 + q2 + 4) >> 3;
+        int q1n = (p0 + q0 + q1 + q2 + 2) >> 2;
+        int q2n = (2 * q3 + 3 * q2 + q1 + q0 + p0 + 4) >> 3;
+        pelsQ[q0Idx] = (byte) clip(q0n, -128, 127);
+        pelsQ[q1Idx] = (byte) clip(q1n, -128, 127);
+        pelsQ[q2Idx] = (byte) clip(q2n, -128, 127);
+    }
+    filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int p3Idx = offset - 4 * stride + pixOff;
+    {
+        int q3 = pelsQ[q3Idx];
+        int q0n = (p1 + 2 * p0 + 2 * q0 + 2 * q1 + q2 + 4) >> 3;
+        int q1n = (p0 + q0 + q1 + q2 + 2) >> 2;
+        int q2n = (2 * q3 + 3 * q2 + q1 + q0 + p0 + 4) >> 3;
+        pelsQ[q0Idx] = (byte) clip(q0n, -128, 127);
+        pelsQ[q1Idx] = (byte) clip(q1n, -128, 127);
+        pelsQ[q2Idx] = (byte) clip(q2n, -128, 127);
+    }
+    filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+}
+
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","78","78","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":4305 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2934 | gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2898 | gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2489 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2993:2993 | gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2918
+Prompt: !!!
+NOT YET APPLIED
+!!! --> !!!
+NOT YET APPLIED
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","79","79","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    byte[] planeData = pic.getPlaneData(comp);
+
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 2 * stride + pixOff;
+        int p1Idx = offset - stride + pixOff;
+        int p0Idx = offset + pixOff;
+        int q0Idx = offset + stride + pixOff;
+        int q1Idx = offset + 2 * stride + pixOff;
+
+        if (bs == 4) {
+            int p3Idx = offset - 3 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, planeData[p3Idx], planeData[p2Idx], planeData[p1Idx], planeData[p0Idx], planeData[q0Idx], planeData[q1Idx], planeData[q2Idx], planeData[q3Idx], comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, planeData[p2Idx], planeData[p1Idx], planeData[p0Idx], planeData[q0Idx], planeData[q1Idx], planeData[q2Idx], comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":4305 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2934 | gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2898 | gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2489 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2993:2993 | gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":1110 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":3224:3224 |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)","80","80","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2792
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            int p3Idx = offset - 4 * stride + pixOff;
+            int q3Idx = offset + 3 * stride + pixOff;
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int stride = pic.getPlaneWidth(comp);
+    int offset = y * stride + x;
+    for (int pixOff = 0; pixOff < blkW; pixOff++) {
+        int p2Idx = offset - 3 * stride + pixOff;
+        int p1Idx = offset - 2 * stride + pixOff;
+        int p0Idx = offset - stride + pixOff;
+        int q0Idx = offset + pixOff;
+        int q1Idx = offset + stride + pixOff;
+        int q2Idx = offset + 2 * stride + pixOff;
+        if (bs == 4) {
+            filterBs4(indexAlpha, indexBeta, pic.getPlaneData(comp), p3Idx, p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, q3Idx, comp != 0);
+        } else if (bs > 0) {
+            filterBs(bs, indexAlpha, indexBeta, pic.getPlaneData(comp), p2Idx, p1Idx, p0Idx, q0Idx, q1Idx, q2Idx, comp != 0);
+        }
+    }
+}
+
+!!! | gin.edit.statement.ReplaceStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":4305 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2934 | gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2898 | gin.edit.matched.MatchedCopyStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2489 -> ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2993:2993 | gin.edit.llm.LLMMaskedStatement ""src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java"":2918
+Prompt: !!!
+NOT YET APPLIED
+!!! --> !!!
+NOT YET APPLIED
+!!! |","false","false","0.0","1.7976931348623157E308","-1.7976931348623157E308"
+"org.jcodec.codecs.h264.decode.debl

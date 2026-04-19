@@ -1,0 +1,42 @@
+MethodName,BaselineRuntime(ms),BestRuntime(ms),RuntimeReduction(ms),ImprovementPercent,BestPatch
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs(int,int,int,byte[],byte[],int,int,int,int,int,int,boolean)",3776.00,3153.00,623.00,16.50,"| gin.edit.modifynode.UnaryOperatorReplacement  'src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java':3726 MINUS -> BITWISE_COMPLEMENT |"
+"org.jcodec.codecs.h264.encode.MotionEstimator.org.jcodec.codecs.h264.encode.MotionEstimator.estimateQPix(Picture,byte[],int[],int,int)",3960.00,1220.00,2740.00,69.19,"| gin.edit.statement.CopyStatement 'src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java':2973 -> 'src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java':2779:2780 | gin.edit.modifynode.UnaryOperatorReplacement  'src/main/java/org/jcodec/codecs/h264/encode/MotionEstimator.java':2305 MINUS -> BITWISE_COMPLEMENT |"
+"org.jcodec.codecs.h264.encode.MBEncoderHelper.org.jcodec.codecs.h264.encode.MBEncoderHelper.takeSafe(byte[],int,int,int,int,byte[],int,int)",3491.00,2647.00,844.00,24.18,"| gin.edit.statement.CopyStatement 'src/main/java/org/jcodec/codecs/h264/encode/MBEncoderHelper.java':493 -> 'src/main/java/org/jcodec/codecs/h264/encode/MBEncoderHelper.java':492:492 |"
+"org.jcodec.codecs.h264.encode.IntraPredEstimator.org.jcodec.codecs.h264.encode.IntraPredEstimator.getLumaPred4x4(Picture,EncodingContext,int,int,int)",3814.00,2083.00,1731.00,45.39,"|"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeHoris(Picture,int,int,int,int,int,int,int)",5886.00,4693.00,1193.00,20.27,"| gin.edit.llm.LLMReplaceStatement 'src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java':2993
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    filterBs(bs; indexAlpha; indexBeta; pic.getPlaneData(comp); pic.getPlaneData(comp); p2Idx; p1Idx; p0Idx; q0Idx; q1Idx; q2Idx; comp != 0);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces; if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    filterBs(bs; indexAlpha; indexBeta; pic.getPlaneData(comp); pic.getPlaneData(comp); p2Idx; p1Idx; p0Idx; q0Idx; q1Idx; q2Idx; comp != 0);
+}
+
+!!! | gin.edit.statement.SwapStatement 'src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java':2875 <-> 'src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java':2898 |"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBlockEdgeVert(Picture,int,int,int,int,int,int,int)",7081.00,3976.00,3105.00,43.85,"|"
+"org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.org.jcodec.codecs.h264.decode.deblock.DeblockingFilter.filterBs4(int,int,byte[],byte[],int,int,int,int,int,int,int,int,boolean)",6343.00,4636.00,1707.00,26.91,"| gin.edit.llm.LLMReplaceStatement 'src/main/java/org/jcodec/codecs/h264/decode/deblock/DeblockingFilter.java':4261
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    int p0n = (2 * p1 + p0 + q1 + 2) >> 2;
+    pelsP[p0Idx] = (byte) clip(p0n; -128; 127);
+}
+```
+This code belongs to project jcodec. Wrap all code in curly braces; if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+
+{
+    int p0n = (2 * p1 + p0 + q1 + 2) >> 2;
+    pelsP[p0Idx] = (byte) Math.max(-128; Math.min(127; p0n));
+}
+
+!!! |"
+"org.jcodec.codecs.h264.decode.MBlockDecoderUtils.org.jcodec.codecs.h264.decode.MBlockDecoderUtils.mergeResidual(Picture,int[][][],int[][],int[][])",4881.00,2674.00,2207.00,45.22,"|"
+"org.jcodec.scale.BaseResampler.org.jcodec.scale.BaseResampler.resample(Picture,Picture)",164.00,154.00,10.00,6.10,"|"
+"org.jcodec.common.model.Picture.org.jcodec.common.model.Picture.getPlaneWidth(int)",1147.00,1131.00,16.00,1.39,"|"
+"TOTAL",40543.00,26367.00,14176.00,34.97,""

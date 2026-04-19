@@ -1,0 +1,240 @@
+"MethodName","Iteration","EvaluationNumber","Patch","Compiled","AllTestsPassed","TotalExecutionTime(ms)","Fitness","FitnessImprovement"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","-1","0","|","true","false","2459.437","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","1","1","| gin.edit.statement.SwapStatement ""src/main/java/org/junit/runner/Description.java"":868 <-> ""src/main/java/org/junit/runner/Description.java"":868 |","true","false","2408.5796","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","2","2","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/junit/runner/Description.java"":781 -> ""src/main/java/org/junit/runner/Description.java"":855:855 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","3","3","| gin.edit.statement.SwapStatement ""src/main/java/org/junit/runner/Description.java"":855 <-> ""src/main/java/org/junit/runner/Description.java"":868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","4","4","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/junit/runner/Description.java"":559 <-> ""src/main/java/org/junit/runner/Description.java"":868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","5","5","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","6","6","| gin.edit.statement.CopyStatement ""src/main/java/org/junit/runner/Description.java"":136 -> ""src/main/java/org/junit/runner/Description.java"":855:856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","7","7","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/junit/runner/Description.java"":855
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    Matcher matcher = METHOD_AND_CLASS_NAME_PATTERN.matcher(toString());
+    return matcher.matches() ? matcher.group(group) : defaultString;
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","8","8","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/junit/runner/Description.java"":855
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    Matcher matcher = METHOD_AND_CLASS_NAME_PATTERN.matcher(toString());
+    return matcher.matches() ? matcher.group(group) : defaultString;
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","9","9","| gin.edit.statement.CopyStatement ""src/main/java/org/junit/runner/Description.java"":590 -> ""src/main/java/org/junit/runner/Description.java"":855:856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","10","10","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/junit/runner/Description.java"":471 -> ""src/main/java/org/junit/runner/Description.java"":855:855 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","11","11","| gin.edit.statement.ReplaceStatement ""src/main/java/org/junit/runner/Description.java"":607 -> ""src/main/java/org/junit/runner/Description.java"":868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","12","12","| gin.edit.statement.SwapStatement ""src/main/java/org/junit/runner/Description.java"":868 <-> ""src/main/java/org/junit/runner/Description.java"":856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","13","13","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/junit/runner/Description.java"":856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","14","14","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","15","15","| gin.edit.statement.SwapStatement ""src/main/java/org/junit/runner/Description.java"":855 <-> ""src/main/java/org/junit/runner/Description.java"":856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","16","16","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/junit/runner/Description.java"":855
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    Matcher matcher = METHOD_AND_CLASS_NAME_PATTERN.matcher(toString());
+    return matcher.matches() ? matcher.group(group) : defaultString;
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","17","17","| gin.edit.statement.ReplaceStatement ""src/main/java/org/junit/runner/Description.java"":868 -> ""src/main/java/org/junit/runner/Description.java"":868 |","true","false","2432.9946","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","18","18","| gin.edit.statement.ReplaceStatement ""src/main/java/org/junit/runner/Description.java"":568 -> ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","19","19","| gin.edit.statement.DeleteStatement ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","20","20","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/junit/runner/Description.java"":590 -> ""src/main/java/org/junit/runner/Description.java"":855:856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","21","21","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/junit/runner/Description.java"":413 -> ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","22","22","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/junit/runner/Description.java"":490 -> ""src/main/java/org/junit/runner/Description.java"":856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","23","23","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/junit/runner/Description.java"":624 -> ""src/main/java/org/junit/runner/Description.java"":855:868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","24","24","| gin.edit.statement.ReplaceStatement ""src/main/java/org/junit/runner/Description.java"":670 -> ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","25","25","| gin.edit.statement.SwapStatement ""src/main/java/org/junit/runner/Description.java"":855 <-> ""src/main/java/org/junit/runner/Description.java"":856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","26","26","| gin.edit.statement.DeleteStatement ""src/main/java/org/junit/runner/Description.java"":856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","27","27","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/junit/runner/Description.java"":107 <-> ""src/main/java/org/junit/runner/Description.java"":868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","28","28","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/junit/runner/Description.java"":855
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    Matcher matcher = METHOD_AND_CLASS_NAME_PATTERN.matcher(toString());
+    return matcher.matches() ? matcher.group(group) : defaultString;
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","29","29","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/junit/runner/Description.java"":868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","30","30","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/junit/runner/Description.java"":483 <-> ""src/main/java/org/junit/runner/Description.java"":856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","31","31","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/junit/runner/Description.java"":573 <-> ""src/main/java/org/junit/runner/Description.java"":868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","32","32","| gin.edit.statement.CopyStatement ""src/main/java/org/junit/runner/Description.java"":681 -> ""src/main/java/org/junit/runner/Description.java"":855:868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","33","33","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/junit/runner/Description.java"":855
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    Matcher matcher = METHOD_AND_CLASS_NAME_PATTERN.matcher(toString());
+    return matcher.matches() ? matcher.group(group) : defaultString;
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","34","34","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/junit/runner/Description.java"":856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","35","35","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/junit/runner/Description.java"":632 -> ""src/main/java/org/junit/runner/Description.java"":855:856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","36","36","| gin.edit.statement.DeleteStatement ""src/main/java/org/junit/runner/Description.java"":856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","37","37","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/junit/runner/Description.java"":855
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    Matcher matcher = METHOD_AND_CLASS_NAME_PATTERN.matcher(toString());
+    return matcher.matches() ? matcher.group(group) : defaultString;
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","38","38","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/junit/runner/Description.java"":681 -> ""src/main/java/org/junit/runner/Description.java"":855:855 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","39","39","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/junit/runner/Description.java"":855
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    Matcher matcher = METHOD_AND_CLASS_NAME_PATTERN.matcher(toString());
+    return matcher.matches() ? matcher.group(group) : defaultString;
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","40","40","| gin.edit.statement.SwapStatement ""src/main/java/org/junit/runner/Description.java"":856 <-> ""src/main/java/org/junit/runner/Description.java"":856 |","true","false","2421.1836","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","41","41","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/junit/runner/Description.java"":785 <-> ""src/main/java/org/junit/runner/Description.java"":856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","42","42","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/junit/runner/Description.java"":855
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    Matcher matcher = METHOD_AND_CLASS_NAME_PATTERN.matcher(toString());
+    return matcher.matches() ? matcher.group(group) : defaultString;
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","43","43","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/junit/runner/Description.java"":855
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    Matcher matcher = METHOD_AND_CLASS_NAME_PATTERN.matcher(toString());
+    return matcher.matches() ? matcher.group(group) : defaultString;
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","44","44","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/junit/runner/Description.java"":285 -> ""src/main/java/org/junit/runner/Description.java"":855:868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","45","45","| gin.edit.statement.ReplaceStatement ""src/main/java/org/junit/runner/Description.java"":235 -> ""src/main/java/org/junit/runner/Description.java"":868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","46","46","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/junit/runner/Description.java"":559 <-> ""src/main/java/org/junit/runner/Description.java"":868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","47","47","| gin.edit.statement.DeleteStatement ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","48","48","| gin.edit.statement.ReplaceStatement ""src/main/java/org/junit/runner/Description.java"":572 -> ""src/main/java/org/junit/runner/Description.java"":856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","49","49","| gin.edit.statement.ReplaceStatement ""src/main/java/org/junit/runner/Description.java"":635 -> ""src/main/java/org/junit/runner/Description.java"":868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","50","50","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/junit/runner/Description.java"":868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","51","51","| gin.edit.statement.DeleteStatement ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","52","52","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/junit/runner/Description.java"":868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","53","53","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/junit/runner/Description.java"":868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","54","54","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/junit/runner/Description.java"":670 -> ""src/main/java/org/junit/runner/Description.java"":855:868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","55","55","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/junit/runner/Description.java"":497 <-> ""src/main/java/org/junit/runner/Description.java"":856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","56","56","| gin.edit.statement.CopyStatement ""src/main/java/org/junit/runner/Description.java"":671 -> ""src/main/java/org/junit/runner/Description.java"":855:855 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","57","57","| gin.edit.statement.ReplaceStatement ""src/main/java/org/junit/runner/Description.java"":624 -> ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","58","58","| gin.edit.statement.DeleteStatement ""src/main/java/org/junit/runner/Description.java"":868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","59","59","| gin.edit.statement.CopyStatement ""src/main/java/org/junit/runner/Description.java"":589 -> ""src/main/java/org/junit/runner/Description.java"":855:868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","60","60","| gin.edit.statement.DeleteStatement ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","61","61","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/junit/runner/Description.java"":855
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    Matcher matcher = METHOD_AND_CLASS_NAME_PATTERN.matcher(toString());
+    return matcher.matches() ? matcher.group(group) : defaultString;
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","62","62","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/junit/runner/Description.java"":856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","63","63","| gin.edit.statement.CopyStatement ""src/main/java/org/junit/runner/Description.java"":784 -> ""src/main/java/org/junit/runner/Description.java"":855:855 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","64","64","| gin.edit.matched.MatchedReplaceStatement ""src/main/java/org/junit/runner/Description.java"":763 -> ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","65","65","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/junit/runner/Description.java"":855
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    Matcher matcher = METHOD_AND_CLASS_NAME_PATTERN.matcher(toString());
+    return matcher.matches() ? matcher.group(group) : defaultString;
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","66","66","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/junit/runner/Description.java"":868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","67","67","| gin.edit.statement.ReplaceStatement ""src/main/java/org/junit/runner/Description.java"":471 -> ""src/main/java/org/junit/runner/Description.java"":856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","68","68","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/junit/runner/Description.java"":856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","69","69","| gin.edit.statement.DeleteStatement ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","70","70","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/junit/runner/Description.java"":589 -> ""src/main/java/org/junit/runner/Description.java"":855:855 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","71","71","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/junit/runner/Description.java"":443 <-> ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","72","72","| gin.edit.statement.ReplaceStatement ""src/main/java/org/junit/runner/Description.java"":816 -> ""src/main/java/org/junit/runner/Description.java"":856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","73","73","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/junit/runner/Description.java"":263 -> ""src/main/java/org/junit/runner/Description.java"":855:868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","74","74","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/junit/runner/Description.java"":483 <-> ""src/main/java/org/junit/runner/Description.java"":856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","75","75","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/junit/runner/Description.java"":464 -> ""src/main/java/org/junit/runner/Description.java"":855:856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","76","76","| gin.edit.statement.CopyStatement ""src/main/java/org/junit/runner/Description.java"":549 -> ""src/main/java/org/junit/runner/Description.java"":855:868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","77","77","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/junit/runner/Description.java"":868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","78","78","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/junit/runner/Description.java"":315 -> ""src/main/java/org/junit/runner/Description.java"":855:856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","79","79","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/junit/runner/Description.java"":855
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    Matcher matcher = METHOD_AND_CLASS_NAME_PATTERN.matcher(toString());
+    return matcher.matches() ? matcher.group(group) : defaultString;
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","80","80","| gin.edit.statement.SwapStatement ""src/main/java/org/junit/runner/Description.java"":855 <-> ""src/main/java/org/junit/runner/Description.java"":856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","81","81","| gin.edit.llm.LLMReplaceStatement ""src/main/java/org/junit/runner/Description.java"":855
+Prompt: !!!
+Give me 5 different Java implementations of this method body:```
+{
+    Matcher matcher = METHOD_AND_CLASS_NAME_PATTERN.matcher(toString());
+    return matcher.matches() ? matcher.group(group) : defaultString;
+}
+```
+This code belongs to project junit4. Wrap all code in curly braces, if it is not already.Do not include any method or class declarations.label all code as java.
+!!! --> !!!
+LLM GAVE NO SUGGESTIONS
+!!! |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","82","82","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/junit/runner/Description.java"":632 <-> ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","83","83","| gin.edit.statement.SwapStatement ""src/main/java/org/junit/runner/Description.java"":855 <-> ""src/main/java/org/junit/runner/Description.java"":868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","84","84","| gin.edit.statement.DeleteStatement ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","85","85","| gin.edit.statement.ReplaceStatement ""src/main/java/org/junit/runner/Description.java"":589 -> ""src/main/java/org/junit/runner/Description.java"":855 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","86","86","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/junit/runner/Description.java"":79 -> ""src/main/java/org/junit/runner/Description.java"":855:855 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","87","87","| gin.edit.statement.ReplaceStatement ""src/main/java/org/junit/runner/Description.java"":235 -> ""src/main/java/org/junit/runner/Description.java"":856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","88","88","| gin.edit.statement.SwapStatement ""src/main/java/org/junit/runner/Description.java"":856 <-> ""src/main/java/org/junit/runner/Description.java"":868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","89","89","| gin.edit.matched.MatchedSwapStatement ""src/main/java/org/junit/runner/Description.java"":734 <-> ""src/main/java/org/junit/runner/Description.java"":868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","90","90","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/junit/runner/Description.java"":868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","91","91","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/junit/runner/Description.java"":856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","92","92","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/junit/runner/Description.java"":856 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","93","93","| gin.edit.matched.MatchedCopyStatement ""src/main/java/org/junit/runner/Description.java"":414 -> ""src/main/java/org/junit/runner/Description.java"":855:855 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","94","94","| gin.edit.matched.MatchedDeleteStatement ""src/main/java/org/junit/runner/Description.java"":868 |","false","false","0.0","1.7976931348623157E308","0.0"
+"org.junit.runner.Description.org.junit.runner.Description.methodAndClassNamePatternGroupOrDefault(int,String)","95","95","| gin.edit.statement.DeleteStatement ""src/main/java/org/junit/runner/Des

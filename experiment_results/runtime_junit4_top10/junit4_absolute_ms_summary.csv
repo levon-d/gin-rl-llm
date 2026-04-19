@@ -1,0 +1,14 @@
+JUnit4: Absolute runtime improvement (ms) — median and max per experiment
+Exp3+Exp5 use 7B model (qwen2.5-coder), NPE-fixed run (timestamp 164655).
+
+Method,E1_median_ms,E1_max_ms,E2_median_ms,E2_max_ms,E3_median_ms,E3_max_ms,E4_median_ms,E4_max_ms,E5_median_ms,E5_max_ms
+methodAndClassNamePatternGroupOrDefault,189.0,238.0,1047.0,1387.0,0.0,54.0,976.0,1349.0,0.0,0.0
+shouldRun,169.0,256.0,460.0,682.0,0.0,0.0,169.0,323.0,0.0,0.0
+getAnnotations,196.0,229.0,368.0,638.0,0.0,0.0,494.0,1245.0,0.0,0.0
+wrapIfNotThreadSafe,198.0,236.0,338.0,434.0,0.0,0.0,222.0,323.0,0.0,0.0
+getSuite,171.0,208.0,203.0,278.0,0.0,0.0,147.0,484.0,0.0,0.0
+formatDisplayName,112.0,206.0,187.0,362.0,36.0,79.0,190.0,302.0,1.0,1.0
+IgnoredBuilder.runnerForClass,125.0,180.0,99.0,341.0,30.5,40.0,321.0,379.0,0.0,0.0
+JUnit4Builder.runnerForClass,99.0,168.0,91.0,181.0,39.5,48.0,71.0,224.0,0.0,0.0
+runsTopToBottom,124.0,146.0,42.0,125.0,193.0,358.0,32.0,311.0,0.0,0.0
+elapsedTimeAsString,15.0,17.0,7.0,34.0,62.0,120.0,77.0,111.0,0.0,0.0

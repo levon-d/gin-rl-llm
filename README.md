@@ -83,7 +83,7 @@ gin-rl/
 Experiments run against external Java projects cloned separately. Each must be built at least once so Maven has its dependencies cached.
 
 | Project | Repository | Branch/Tag |
-|---|---|---|---|
+|---|---|---|
 | jcodec | github.com/jcodec/jcodec | master (7e52834) |
 | JUnit4 | github.com/junit-team/junit4 | r4.13.2  |
 | gson | github.com/google/gson | gson-parent-2.10.1  |
